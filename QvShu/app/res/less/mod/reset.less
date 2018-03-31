@@ -1,0 +1,100 @@
+@import "var.less";
+
+// 通过媒体查询改变根节点的字号从而实现自适应
+@media screen and (min-width: 320px) {html {font-size: 32px;}}
+@media screen and (min-width: 360px) {html {font-size: 36px;}}
+@media screen and (min-width: 375px) {html {font-size: 37.5px;}}
+@media screen and (min-width: 400px) {html {font-size: 40px;}}
+@media screen and (min-width: 414px) {html {font-size: 41.4px;}}
+@media screen and (min-width: 480px) {html {font-size: 48px;}}
+@media screen and (min-width: 540px) {html {font-size: 54px;}}
+@media screen and (min-width: 600px) {html {font-size: 60px;}}
+@media screen and (min-width: 768px) {html {font-size: 76.8px;}}
+body{
+    margin: 0;
+    // mac OS 和 ios, 英文: Helvetica Neue, Helvetica, 中文: "PingFang SC"(苹方), "Hiragino Sans GB"(冬青黑体)
+    // Android, 默认中英文字体: "Droid Sans", 无需单独设置
+    // Windows, 英文: Tahoma, Arial, 中文: "Microsoft Yahei"(微软雅黑)
+    // 结尾补充字体族名称: sans-serif(无衬线体)
+    // 参考资料: https://segmentfault.com/a/1190000006110417
+    font-family: "Helvetica Neue", Helvetica, Tahoma, Arial, PingFang SC, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+    font-size: 24px/@p;
+    // 禁止用户复制文字
+    -webkit-user-select: none;
+    user-select: none;
+    // webkit内核浏览器在触发可点击元素时默认会显示灰色背景，此处将背景色设为透明
+    -webkit-tap-highlight-color: transparent;
+    color: @text-dark;
+    background-color: @body-bgcolor;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    font-weight: normal;
+}
+ul,ol{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+dl,dd,p{
+    margin: 0;
+}
+em{
+    font-style: normal;
+}
+input,textarea,select{
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;    // 去除获取焦点出现的蓝色边框
+    font-family: "Helvetica Neue", Helvetica, Tahoma, Arial, PingFang SC, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+    color: @text-dark;
+    background-color: #fff;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);    // 去除点击时出现的半透明灰色背景
+    -webkit-appearance: none;
+}
+// 重置输入框不可输入时的样式
+input[disabled],
+input:disabled{
+    background-color: #fff;
+    opacity: 1;
+}
+// 去除number输入框默认的数字快捷按钮
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+textarea{
+    resize: none;    // 去除文本域拖动功能
+    vertical-align: bottom;    // 解决文本域上下间的空隙
+    -webkit-appearance: none; 
+}
+// 重置placeholder的样式
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
+    color: @text-light;
+}
+select{
+    // 去除select选择框的默认样式
+    -webkit-appearance: textfield;
+}
+img{
+    // 图片左右间的空隙可以通过给父元素设置font-size: 0;来解决
+    vertical-align: bottom;    // 解决图片上下间的空隙
+}
+a, a:link, a:hover, a:focus, a:visited{
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);    // 去除点击时出现的半透明灰色背景
+    -webkit-touch-callout: none;    // 禁用长按链接时弹出的菜单
+    color: @blue;
+}
+
+// 配合vue.js使用
+[v-cloak] {
+    display:none !important;
+}
+
+

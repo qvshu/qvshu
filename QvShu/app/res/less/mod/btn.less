@@ -1,0 +1,41 @@
+@import "fn.less";
+
+.btn-box{
+    padding: 28px/@p 0 0;
+    // 伸缩布局容器
+    .db();
+    .btn{
+        display: block;
+        height: 88px/@p;
+        line-height: 88px/@p;
+        text-align: center;
+        border-radius: 8px/@p;
+        font-size: 34px/@p;
+        font-weight: 700;
+        color: #fff;
+        background-color: #f56923;
+        // 伸缩性为1
+        .fx1();
+    }
+    .disabled{
+        color: #fbe5df;
+        background-color: #ffc4a7;
+    }
+    .btn-border{
+        box-sizing: border-box;
+        border: 1px solid #f56923;
+        color: #f56923;
+        background-color: #fff;
+    }
+    .on{
+        color: #fff;
+        background-color: @primary;
+    }
+}
+.btn-bottom{
+    position: fixed;
+    right: 0;
+    bottom: 30px/@p;
+    left: 0;
+    margin: 0 auto;
+}

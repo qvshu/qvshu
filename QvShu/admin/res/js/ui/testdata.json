@@ -1,0 +1,14 @@
+{
+	"code":0,
+	"data":{
+		"total":121,
+		"list":[{
+			"name":"1111",
+			"district":"1111",
+			"merchant":"11111",
+			"address":"11111",
+			"phone":"18888888888",
+			"remark":"1111"
+		}]
+	}
+}

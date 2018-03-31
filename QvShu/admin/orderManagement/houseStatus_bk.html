@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>房态控制</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+</head>
+<body>
+    <!-- header start-->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    <!-- header end-->
+    
+    <article class="content">
+        <!-- 左边菜单  开始-->
+        <!--#include virtual="/admin/layout/orderManagement_sidenav.html"-->
+        <!-- 左边菜单  结束-->
+        
+        <main class="main-body">
+            <div class="top-location">
+                当前位置：订单管理<span class="fn-st">&gt;</span>房态控制
+            </div>
+            <div class="clearfix">
+            	<div id="timePanel" style="width:500px;">
+            		<div style="float:left;">
+            			<div id="month1Name"></div>
+						<table>
+							<thead>
+								<tr>
+      								<th style="padding:10px;color:red;">日</th>
+      								<th style="padding:10px;">一</th>
+      								<th style="padding:10px;">二</th>
+      								<th style="padding:10px;">三</th>
+      								<th style="padding:10px;">四</th>
+      								<th style="padding:10px;">五</th>
+      								<th style="padding:10px;color:red;">六</th>
+    							</tr>
+							</thead>
+							<tbody id="month1" style="text-align:center;"></tbody>
+						</table>
+					</div>
+            		<div style="float:right;">
+            			<div id="month2Name"></div>
+            			<table>
+							<thead>
+								<tr>
+      								<th style="padding:10px;color:red;">日</th>
+      								<th style="padding:10px;">一</th>
+      								<th style="padding:10px;">二</th>
+      								<th style="padding:10px;">三</th>
+      								<th style="padding:10px;">四</th>
+      								<th style="padding:10px;">五</th>
+      								<th style="padding:10px;color:red;">六</th>
+    							</tr>
+							</thead>
+							<tbody id="month2" style="text-align:center;"></tbody>
+						</table>
+            		</div>
+            		<div style="clear:both;"></div>
+            	</div>
+    		</div>
+ 		</main>
+	</article>
+
+<script type="text/javascript" src="/admin/res/js/ui/TableWiget.js"></script>
+<script type="text/javascript" src="../res/js/orderManagement/houseStatus.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+@import "fn.less";
+
+/* 报错 */
+.error{
+    padding: 80px/@p 30px/@p 0;
+    /* 伸缩布局容器 */
+    .db();
+    .error-pic{
+        text-align: right;
+        /* 伸缩性为1 */
+        .fx1();
+        img{
+            width: 80px/@p;
+            height: 80px/@p;
+        }
+    }
+    .error-text{
+        padding: 0 30px/@p;
+        word-wrap: break-word;
+        word-break: break-all;
+        /* 伸缩性为2 */
+        .fx1(2);
+        dt{
+            font-size: 40px/@p;
+            color: #666;
+        }
+        dd{
+            font-size: 24px/@p;
+            color: #bfbfbf;
+        }
+    }
+}

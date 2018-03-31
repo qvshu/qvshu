@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <!-- 强制让文档宽度和设备宽度保持1:1，初始缩放比例和最大缩放比例都是1.0，不允许用户缩放页面 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <!-- 开启对web app程序的支持 -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- 在web app应用下设置 屏幕顶部状态条 的颜色 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#3b9bff">
+        <!-- 设备浏览网页时对数字不启用电话功能 -->
+        <meta name="format-detection" content="telephone=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>砍砍砍，0元住别墅</title>
+		<link rel="stylesheet" href="../res/css/global.css" type="text/css"/>
+		<link rel="stylesheet" href="../res/css/hotel/index.css" type="text/css"/>
+		<script src="../res/libs/flexible/flexible.js"></script>
+		
+		<script type="text/javascript" src="../res/js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="../res/js/common.js"></script>
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	</head>
+	<body>
+		<!-- 头部 start -->
+		<div class="header-container">
+			<div class="header">
+				<a href="javascript:;" class="g-back"><!-- 返回按钮 --></a>
+				<h1>0元砍价活动</h1>
+			</div>
+		</div>
+		<!-- 头部 end -->
+
+        <div class="content">
+            <div class="cont-top">
+            <div class="swiper-container">
+            	<div class="swiper-wrapper">
+		            <div class="swiper-slide hotel-img"><img id="img1" width="100%" src="" alt="" /></div>
+		            <div class="swiper-slide hotel-img"><img id="img2" width="100%" src="" alt="" /></div>
+		            <div class="swiper-slide hotel-img"><img id="img3" width="100%" src="" alt="" /></div>
+		        </div>
+		        
+		        <div class="hotel-txt">
+		        	<div class="title"><span id="name" ></span><span id="bedroom"></span></div>
+		        	<!-- 分页器，显示页数 -->
+		        	<div class="page"><div class="swiper-pagination"></div></div>
+		        </div>
+		        
+            </div>	
+            	              
+            </div>
+            <div class="cont-min">
+            	<div class="hotel-price">
+            		<p>原价<span id="price" class="old-price"><span>元</p>
+            		<p class="time">活动距离结束：<span class="date">20:00:02</span></p>
+            	</div>
+            	<div class="hotel-bargain">
+            		<p>已砍价：<span id="hadKanjiaPrice" class="price">0元</span><span>(优惠2.24%)</span></p>
+            	</div>
+                <div class="btn-box">
+                    <a id="guideShareBtn" href="javascript:void(0);" class="btn">邀请好友砍</a>
+                </div>
+                <div class="btn-box">
+                    <a id="guideToCSBtn" href="javascript:void(0);" class="btn btn-border"></a>
+                </div>
+
+                
+				<div class="friend-list-warp">
+					<h3>帮你砍价的好友</h3>
+					<ul id="friendList" class="friend-list">
+					</ul>
+				</div>
+
+            </div>
+        </div>
+        
+        <!-- 邀请好友提示 -->
+        <div id="shareTipDiv" class="mask hide" style="background: rgba(0, 0, 0, 0.8)">
+	        <img width="100%" src="../res/img/hotel/share.png" class="code-img">
+	    </div>
+        
+	<script src="../res/libs/swiper/swiper.js"></script>
+	<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction'
+    });
+    </script>
+    <script type="text/javascript">
+    (function(){
+    	//获取自己的openId
+    	var openId=CommonUtils.getQueryString("openId");
+    	var actionId=CommonUtils.getQueryString("actionId");
+    	var houseId=CommonUtils.getQueryString("houseId");
+    	
+    	//查询当前砍了多少价
+    	CommonUtils.async({
+			url:"/hiweb/action/getKanJiaSum.json",
+			data:{openId:openId,actionId:actionId,houseId:houseId},
+			success:function(result){
+				if(result.code==0){
+					var data=result.data;
+					//已砍价
+					$("#hadKanjiaPrice").html(data.amount);
+					var house=data.house;
+					var imgs=house.houseImgs||[];
+					if(imgs.length>2){
+						$("#img1").attr("src",imgs[0].url);
+						$("#img2").attr("src",imgs[1].url);
+						$("#img3").attr("src",imgs[2].url);
+					}else if(imgs.length>1){
+						$("#img1").attr("src",imgs[0].url);
+						$("#img2").attr("src",imgs[1].url);
+					}else if(imgs.length>0){
+						$("#img1").attr("src",imgs[0].url);
+					}
+					
+					$("#name").html(house.name);
+					$("#bedroom").html("("+house.layoutRoom+"房"+house.bedCount+"床)");
+					$("#price").html(house.price);
+					
+					//剩余价格
+					var lessAmount=house.price-data.amount;
+					if(lessAmount<0){
+						lessAmount=0;
+					}
+					$("#guideToCSBtn").html("￥"+lessAmount+"元预定");
+					
+				}
+			},
+			error:function(error){
+				//默认错误
+				//alert(error.msg);
+			}
+		});
+    	
+    	//查询帮用户砍价的好友
+    	CommonUtils.async({
+			url:"/hiweb/action/getKanJiaFiendList.json",
+			data:{openId:openId,actionId:actionId,houseId:houseId,pageSize:5},
+			success:function(result){
+				if(result.code==0){
+					var _html='';
+					var list=result.data||[];
+					
+					for(var i=0,len=list.length;i<len;i++){
+						var friend=list[i];
+						_html+='<li>'
+							+'<div class="user-img"><img width="100%" src="'+friend.headUrl+'"></div>'
+							+'<div class="user-text">'
+							+'<p class="phone">'+friend.name+'</p>'
+							+'<p class="text">砍价<span>0元入住</span>“惠州南昆养生谷”</p>'
+							+'</div>'
+							+'</li>';
+					}
+					$("#friendList").html(_html);
+				}
+			},
+			error:function(error){
+				//默认错误
+				//alert(error.msg);
+			}
+		});
+    	
+    	//提示分享
+    	$("#guideShareBtn").unbind("click").click(function(){
+    		$("#shareTipDiv").removeClass("hide");
+    	});
+    	$("#shareTipDiv").click(function(){
+    		$("#shareTipDiv").addClass("hide");
+    	});
+    	
+    	//提示分享
+    	$("#guideToCSBtn").unbind("click").click(function(){
+    		alert("请联系客服");
+    	});
+    	
+    	//设置分享
+    	WechatUtils.init();
+    	wx.ready(function(){
+    		//设置微信分享
+    		var host=CommonUtils.getHost();
+    		var link="http://"+host+"/hiweb/wx/share.json?target=app0action0bangkanjia0html"
+    				+"&param1Name=friendOpenId&param1Value="+openId
+    				+"&param2Name=actionId&param2Value="+actionId
+    				+"&param3Name=houseId&param3Value="+houseId;
+    		
+    		var imgUrl="http://"+host+"/app/res/img/hotel/kanjia.jpg";
+    		
+    		//分享朋友圈
+    		wx.onMenuShareTimeline({
+    		    title: '砍价活动', // 分享标题
+    		    link: link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+    		    imgUrl: imgUrl, // 分享图标
+    		    success: function () { 
+    		        // 用户确认分享后执行的回调函数
+    		    },
+    		    cancel: function () { 
+    		        // 用户取消分享后执行的回调函数
+    		    }
+    		});
+    		
+    		//分享朋友
+    		wx.onMenuShareAppMessage({
+    		    title: '砍价活动', // 分享标题
+    		    desc: '喊朋友帮忙来砍价，喜迎国庆与中秋', // 分享描述
+    		    link: link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+    		    imgUrl: imgUrl, // 分享图标
+    		    type: 'link', // 分享类型,music、video或link，不填默认为link
+    		    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+    		    success: function () { 
+    		        // 用户确认分享后执行的回调函数
+    		    },
+    		    cancel: function () { 
+    		        // 用户取消分享后执行的回调函数
+    		    }
+    		});
+    		
+    		//分享qq
+    		wx.onMenuShareQQ({
+    		    title: '砍价活动', // 分享标题
+    		    desc: '喊朋友帮忙来砍价，喜迎国庆与中秋', // 分享描述
+    		    link: link, // 分享链接
+    		    imgUrl: imgUrl, // 分享图标
+    		    success: function () { 
+    		       // 用户确认分享后执行的回调函数
+    		    },
+    		    cancel: function () { 
+    		       // 用户取消分享后执行的回调函数
+    		    }
+    		});
+    		
+    	});
+    	
+    	
+    	
+    })();
+    </script>
+	</body>
+</html>

@@ -1,0 +1,183 @@
+@charset "utf-8";
+/* 常用函数，只能通过less引用 start */
+/* 伸缩布局容器 */
+/* 伸缩性 */
+/* 伸缩方向为垂直方向 */
+/* 水平方向居中对齐 */
+/* 侧轴方向居中对齐 */
+/* 垂直方向居中对齐 */
+/* 水平和垂直方向居中对齐 */
+/* 文字溢出隐藏--控制文本单行溢出用省略号表示 */
+/* 文字溢出隐藏--控制文本多行溢出用省略号表示 */
+/* 旋转变换 */
+/* 清除浮动 */
+/* 1:横向border 一般在伪类中引用 (配合定位使用) */
+/* 2:纵向border 一般在伪类中引用 (配合定位使用) */
+/* 常用函数，只能通过less引用 end */
+body {
+  padding-bottom: 2.13333333rem;
+}
+.header-container {
+  height: 88px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 88px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #333333;
+  z-index: 99;
+}
+.header .g-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 88px;
+  height: 88px;
+}
+.header .g-back:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: 16px;
+  height: 16px;
+  margin-top: -11px;
+  margin-left: -11px;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 0 0 5px 5px;
+  /* 旋转变换 */
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.header h1 {
+  height: 88px;
+  line-height: 88px;
+  margin: 0 auto;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  /* 文字溢出用省略号表示，参数是width，默认值是initial */
+  width: 76%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.header .g-right {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  min-width: 58px;
+  height: 88px;
+  line-height: 88px;
+  font-size: 30px;
+  text-align: right;
+  color: #fff;
+}
+.header .g-right .svg-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  fill: #fff;
+}
+.header .add-parttime {
+  position: absolute;
+  display: block;
+  width: 104px;
+  height: 88px;
+  line-height: 88px;
+  color: #fff !important;
+  font-size: 30px;
+  font-weight: 100;
+  top: 0px;
+  right: 0px;
+}
+.header .add-parttime img {
+  margin: 0 auto 0 auto;
+  vertical-align: middle;
+  width: 64px;
+  height: 64px;
+}
+.ios-header {
+  padding-top: 40px;
+}
+.ios-header .header {
+  padding-top: 40px;
+}
+.ios-header .header .g-back,
+.ios-header .header .g-right {
+  top: 40px;
+}
+.android-header {
+  padding-top: 50px;
+}
+.android-header .header {
+  padding-top: 50px;
+}
+.android-header .header .g-back,
+.android-header .header .g-right {
+  top: 50px;
+}
+.index-foot {
+  position: fixed;
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+  height: 1.46666667rem;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  border-top: 1px #dedede solid;
+  background: #fff;
+}
+.index-foot .icon-link {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  position: relative;
+  display: block;
+  width: 0.8rem;
+  height: 1.06666667rem;
+  text-align: center;
+  white-space: nowrap;
+  color: #333333;
+}
+.index-foot .icon-link .middle {
+  display: block;
+  position: absolute;
+  top: -0.8rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2.66666667rem;
+  background: #fff;
+  font-size: 0.4rem;
+  line-height: 2rem;
+  border: 1px #dedede solid;
+}
+.index-foot .icon-link span {
+  display: block;
+}
+.index-foot .icon-link .yd-ico,
+.index-foot .icon-link .fx-ico,
+.index-foot .icon-link .hd-ico,
+.index-foot .icon-link .wd-ico {
+  display: block;
+  margin: 0.13333333rem auto 0.06666667rem;
+  width: 0.66666667rem;
+  height: 0.66666667rem;
+  background: red;
+}

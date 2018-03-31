@@ -1,0 +1,133 @@
+@charset "utf-8";
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 37.5px;
+  }
+}
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 41.4px;
+  }
+}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 540px) {
+  html {
+    font-size: 54px;
+  }
+}
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 76.8px;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Tahoma, Arial, PingFang SC, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  font-size: 0.32rem;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  color: #5b5b5b;
+  background-color: #f5f7f6;
+  -webkit-overflow-scrolling: touch;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+dl,
+dd,
+p {
+  margin: 0;
+}
+em {
+  font-style: normal;
+}
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  font-family: "Helvetica Neue", Helvetica, Tahoma, Arial, PingFang SC, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  color: #5b5b5b;
+  background-color: #fff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none;
+}
+input[disabled],
+input:disabled {
+  background-color: #fff;
+  opacity: 1;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+textarea {
+  resize: none;
+  vertical-align: bottom;
+  -webkit-appearance: none;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #b4b4b4;
+}
+select {
+  -webkit-appearance: textfield;
+}
+img {
+  vertical-align: bottom;
+}
+a,
+a:link,
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  color: #5c9dff;
+}
+[v-cloak] {
+  display: none !important;
+}

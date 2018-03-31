@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>房态控制</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+<link rel="stylesheet" href="/admin/res/css/ddgl/index.css">
+</head>
+<body>
+    <!-- header start-->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    <!-- header end-->
+    
+    <article class="content">
+        <!-- 左边菜单  开始-->
+        <!--#include virtual="/admin/layout/orderManagement_sidenav.html"-->
+        <!-- 左边菜单  结束-->
+        
+        <main class="main-body">
+            <div class="top-location">
+                当前位置：订单管理<span class="fn-st">&gt;</span>房态控制
+            </div>
+            <div class="clearfix">
+            	<div class="">
+	                <form action="" class="form-horizontal">
+	                    <div class="form-group text-right">
+	                    </div>
+	                    <div class="form-group">
+	    
+	                        <div id="cityWidget" class="col-sm-1 pr0">
+	                        </div>
+	                        <div id="districtWidget" class="col-sm-1 pr0">
+	                        </div>
+	                        <div id="houseCountWidget" class="col-sm-1 pr0">
+	                        </div>
+	                        <div id="liveCountWidget" class="col-sm-1 pr0">
+	                        </div>
+	                        <div class="col-sm-1 pr0">
+	                            <input id="name" class="form-control" placeholder="别墅名称">
+	                        </div>
+	                        <div id="merchantWidget" class="col-sm-1 pr0">
+	                        </div>
+	                        <div class="col-sm-1">
+	                            <a id="searchBtn" href="javascript:void(0);" class="btn btn-success btn-block">搜索</a>
+	                        </div>
+	                        <a href="#">全屏展示</a>
+	                    </div>
+	
+	
+	                    <div class="top-location"></div>
+	
+	                    <div class="col-sm-12 ">
+	                        <!-- 左侧容器 -->
+	                        <div class="col-sm-6 left-warp">
+	                            <div id="tableList"></div>
+	                        </div>
+	                        <!-- 右侧容器 -->
+	                        <div class="col-sm-6 right-warp">
+	                            <table class="table">
+	                                <thead class="table-center">
+	                                    <tr class="active">
+	                                        <th colspan="7">
+	                                        	<a id="previousMonth" class="arraw" href="javascript:void(0);"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	                                            <span id="yyyyMM"></span>
+	                                            <a id="nextMonth" class="arraw" href="javascript:void(0);"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	                                        </th>
+	                                    </tr>
+	                                </thead>
+	                                <tbody id="">
+	                                    <tr>
+	                                        <th>
+	                                            周一
+	                                        </th>
+	                                        <th>
+	                                            周二
+	                                        </th>
+	                                        <th>
+	                                            周三
+	                                        </th>
+	                                        <th>
+	                                            周四
+	                                        </th>
+	                                        <th class="friday-title">
+	                                            周五
+	                                        </th>
+	                                        <th class="setday-title">
+	                                            周六
+	                                        </th>
+	                                        <th>
+	                                            周日
+	                                        </th>
+	                                    </tr>
+	                                    <tr>
+	                                        <td id="id0" class="date">
+	                                        </td>
+	                                        <td id="id1" class="date">
+	                                        </td>
+	                                        <td id="id2" class="date">
+	                                        </td>
+	                                        <td id="id3" class="date">
+	                                        </td>
+	                                        <td id="id4" class="friday date">
+	                                        </td>
+	                                        <td id="id5" class="setday date">
+	                                        </td>
+	                                        <td id="id6" class="date">
+	                                        </td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td id="id7" class="date">
+	                                        </td>
+	                                        <td id="id8" class="date">
+	                                        </td>
+	                                        <td id="id9" class="date">
+	                                        </td>
+	                                        <td id="id10" class="date">
+	                                        </td>
+	                                        <td id="id11" class="friday date">
+	                                        </td>
+	                                        <td id="id12" class="setday date">
+	                                        </td>
+	                                        <td id="id13" class="date">
+	                                        </td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td id="id14" class="date">
+	                                        </td>
+	                                        <td id="id15" class="date">
+	                                        </td>
+	                                        <td id="id16" class="date">
+	                                        </td>
+	                                        <td id="id17" class="date">
+	                                        </td>
+	                                        <td id="id18" class="friday date">
+	                                        </td>
+	                                        <td id="id19" class="setday date">
+	                                        </td>
+	                                        <td id="id20" class="date">
+	                                        </td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td id="id21" class="date">
+	                                        </td>
+	                                        <td id="id22" class="date">
+	                                        </td>
+	                                        <td id="id23" class="date">
+	                                        </td>
+	                                        <td id="id24" class="date">
+	                                        </td>
+	                                        <td id="id25" class="friday date">
+	                                        </td>
+	                                        <td id="id26" class="setday date">
+	                                        </td>
+	                                        <td id="id27" class="date">
+	                                        </td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td id="id28" class="date">
+	                                        </td>
+	                                        <td id="id29" class="date">
+	                                        </td>
+	                                        <td id="id30" class="date">
+	                                        </td>
+	                                        <td id="id31" class="date">
+	                                        </td>
+	                                        <td id="id32" class="friday date">
+	                                        </td>
+	                                        <td id="id33" class="setday date">
+	                                        </td>
+	                                        <td id="id34" class="date">
+	                                        </td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td id="id35" class="date">
+	                                        </td>
+	                                        <td id="id36" class="date">
+	                                        </td>
+	                                        <td id="id37" class="date">
+	                                        </td>
+	                                        <td id="id38" class="date">
+	                                        </td>
+	                                        <td id="id39" class="friday date">
+	                                        </td>
+	                                        <td id="id40" class="setday date">
+	                                        </td>
+	                                        <td id="id41" class="date">
+	                                        </td>
+	                                    </tr>
+	                                </tbody>
+	                            </table>
+	
+	                        </div>
+	                    </div>
+	                </form>
+	            </div>
+    		</div>
+ 		</main>
+	</article>
+<!-- 点击 -->
+<div class="modal fade" id="showRoom" tabindex="-1" role="dialog" aria-labelledby="confirmTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+            	<p id="row1"></p>
+            	<p id="row2"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../res/js/orderManagement/houseStatus.js"></script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>订单管理</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+<link rel="stylesheet" href="/admin/res/css/ddgl/index.css">
+</head>
+<body>
+    <!-- header start-->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    <!-- header end-->
+    
+    <article class="content">
+        <!-- 左边菜单  开始-->
+        <!--#include virtual="/admin/layout/orderManagement_sidenav.html"-->
+        <!-- 左边菜单  结束-->
+        
+        <main class="main-body">
+            <div class="top-location">
+                当前位置：订单管理<span class="fn-st">&gt;</span>订单管理
+            </div>
+            <div class="clearfix">
+            	<div class="">
+	                <form action="" class="form-horizontal">
+	                    <div class="form-group text-right">
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">订单号：</label>
+	                        <div class="col-sm-2 pr0">
+	                            <input id="orderNo" class="form-control" placeholder="">
+	                        </div>
+	                        <label class="col-sm-1 control-label ">跟单人：</label>
+	                        <div class="col-sm-2 pr0">
+	                            <input id="operatorName" class="form-control" placeholder="">
+	                        </div>
+	                        <label class="col-sm-1 control-label ">客户姓名：</label>
+	                        <div class="col-sm-2 pr0">
+	                            <input id="userName" class="form-control" placeholder="">
+	                        </div>
+	                        
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">房源名称：</label>
+	                        <div class="col-sm-2 pr0">
+	                            <input id="houseName" class="form-control" placeholder="">
+	                        </div>
+	                        <label class="col-sm-1 control-label ">商户名称：</label>
+	                        <div class="col-sm-2 pr0">
+	                            <input id="merchantName" class="form-control" placeholder="">
+	                        </div>
+	                        <label class="col-sm-1 control-label ">客户电话：</label>
+	                        <div class="col-sm-2 pr0">
+	                            <input id="userPhone" class="form-control" placeholder="">
+	                        </div>
+	                        
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">小区：</label>
+	                        <div class="col-sm-2 pr0">
+	                            <input id="districtName" class="form-control" placeholder="">
+	                        </div>
+	                        <label class="col-sm-1 control-label ">下单时间：</label>
+	                        <div class="col-sm-2 pr0">
+	                            <input id="bookTime" class="form-control" placeholder="yyyy-MM-dd">
+	                        </div>
+	                        <label class="col-sm-1 control-label ">入住时间：</label>
+	                        <div class="col-sm-2 pr0">
+	                            <input id="bookLiveTime" class="form-control" placeholder="yyyy-MM-dd">
+	                        </div>
+	                        
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">&nbsp;</label>
+	                        <div class="col-sm-7 pr0">
+	                            <label class="control-label fl mr20"><input id="paymentStatus_unpaid" class="ml10" type="checkbox" >&nbsp;未支付</label>
+	                            <label class="control-label fl mr20"><input id="paymentStatus_pay_timeout" class="ml10" type="checkbox" >&nbsp;支付超时</label>
+	                            <label class="control-label fl mr20"><input id="paymentStatus_paid_check" class="ml10" type="checkbox" >&nbsp;支付完成-确认中</label>
+	                            <label class="control-label fl mr20"><input id="paymentStatus_pay_fail" class="ml10" type="checkbox" >&nbsp;支付失败</label>
+	                            <label class="control-label fl mr20"><input id="orderStatus_reserve_fail" class="ml10" type="checkbox" >&nbsp;预订失败</label>
+	                            <label class="control-label fl mr20"><input id="orderStatus_cancel" class="ml10" type="checkbox" >&nbsp;已取消</label>
+	                            <label class="control-label fl mr20"><input id="orderStatus_wait_refund" class="ml10" type="checkbox" >&nbsp;等待退款</label>
+	                            <label class="control-label fl mr20"><input id="orderStatus_refund_fail" class="ml10" type="checkbox" >&nbsp;退款失败</label>
+	                            <label class="control-label fl mr20"><input id="liveStatus_wait_for_live" class="ml10" type="checkbox" >&nbsp;待入住</label>
+	                            <label class="control-label fl mr20"><input id="liveStatus_live" class="ml10" type="checkbox" >&nbsp;已入住</label>
+	                            <label class="control-label fl mr20"><input id="liveStatus_leave" class="ml10" type="checkbox" >&nbsp;已退房</label>
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">&nbsp;</label>
+	                        <div class="col-sm-1">
+	                            <a id="queryBtn" href="javascript:void(0);" class="btn btn-block btn-success">查找订单</a>
+	                        </div>
+	                        <div class="col-sm-1">
+	                            <a id="exportBtn" href="javascript:void(0);" class="btn btn-block btn-success">导出Excel</a>
+	                        </div>
+	                        
+	                    </div>
+	                    </div>
+	                    <div class="top-location"></div>
+	
+	                    <div id="listWidget" class="col-sm-12 " style="max-width: 1200px; overflow-x: scroll;">
+	                        <!--  
+	                        <table class="table table-hover" style="width: 2500px">
+	                            <thead>
+	                                <tr class="active">
+	                                    <th>
+	                                        订单状态
+	                                    </th>
+	                                    <th>
+	                                        财务状态
+	                                    </th>
+	                                    <th>
+	                                        订单证明
+	                                    </th>
+	                                    <th>
+	                                        跟单人
+	                                    </th>
+	                                    <th>
+	                                        客户昵称
+	                                    </th>
+	                                    <th>
+	                                        客户姓名
+	                                    </th>
+	                                    <th>
+	                                        订单号
+	                                    </th>
+	                                    <th>
+	                                        客户电话
+	                                    </th>
+	                                    <th>
+	                                        下单时间
+	                                    </th>
+	                                    <th>
+	                                        房源名称
+	                                    </th>
+	                                    <th>
+	                                        订单价
+	                                    </th>
+	                                    <th>
+	                                        支付价
+	                                    </th>
+	                                    <th>
+	                                        优惠金额
+	                                    </th>
+	                                    <th>
+	                                        线下房号
+	                                    </th>
+	                                    <th>
+	                                        预定栋数
+	                                    </th>
+	                                    <th>
+	                                        入住时间
+	                                    </th>
+	                                    <th>
+	                                        退房时间
+	                                    </th>
+	                                    <th>
+	                                        订单来源
+	                                    </th>
+	                                    <th>
+	                                        下单平台
+	                                    </th>
+	                                    <th>
+	                                        支付方式
+	                                    </th>
+	                                    <th>
+	                                        商户名称
+	                                    </th>
+	                                    <th>
+	                                        结算方式
+	                                    </th>
+	                                </tr>
+	                            </thead>
+	                            <tbody id="school_list">
+	                                <tr>
+	                                    <th>
+	                                        未支付
+	                                    </th>
+	                                    <th>
+	                                        未处理
+	                                    </th>
+	                                    <th>
+	                                        <a href="">查看</a>/<a href="">下载</a>
+	                                    </th>
+	                                    <th>
+	                                        彭威
+	                                    </th>
+	                                    <th>
+	                                        ChenSir
+	                                    </th>
+	                                    <th>
+	                                        陈咬金
+	                                    </th>
+	                                    <th>
+	                                        V171500-1555
+	                                    </th>
+	                                    <th>
+	                                        18877756666
+	                                    </th>
+	                                    <th>
+	                                        17-15-15
+	                                    </th>
+	                                    <th>
+	                                        悠闲养生度假6房12床双拼别墅
+	                                    </th>
+	                                    <th>
+	                                        1700.00
+	                                    </th>
+	                                    <th>
+	                                        1700.00
+	                                    </th>
+	                                    <th>
+	                                        700.00
+	                                    </th>
+	                                    <th>
+	                                        25444
+	                                    </th>
+	                                    <th>
+	                                        1
+	                                    </th>
+	                                    <th>
+	                                        17-15-15
+	                                    </th>
+	                                    <th>
+	                                        17-15-15
+	                                    </th>
+	                                    <th>
+	                                        微信公众号
+	                                    </th>
+	                                    <th>
+	                                        微信公众号
+	                                    </th>
+	                                    <th>
+	                                        线下
+	                                    </th>
+	                                    <th>
+	                                        南昆山养生谷-悠闲别墅
+	                                    </th>
+	                                    <th>
+	                                        定金+尾款结算
+	                                    </th>
+	                                </tr>
+	                                <tr>
+	                                    <th>
+	                                        未支付
+	                                    </th>
+	                                    <th>
+	                                        未处理
+	                                    </th>
+	                                    <th>
+	                                        <a href="">查看</a>/<a href="">下载</a>
+	                                    </th>
+	                                    <th>
+	                                        彭威
+	                                    </th>
+	                                    <th>
+	                                        ChenSir
+	                                    </th>
+	                                    <th>
+	                                        陈咬金
+	                                    </th>
+	                                    <th>
+	                                        V171500-1555
+	                                    </th>
+	                                    <th>
+	                                        18877756666
+	                                    </th>
+	                                    <th>
+	                                        17-15-15
+	                                    </th>
+	                                    <th>
+	                                        悠闲养生度假6房12床双拼别墅
+	                                    </th>
+	                                    <th>
+	                                        1700.00
+	                                    </th>
+	                                    <th>
+	                                        1700.00
+	                                    </th>
+	                                    <th>
+	                                        700.00
+	                                    </th>
+	                                    <th>
+	                                        25444
+	                                    </th>
+	                                    <th>
+	                                        1
+	                                    </th>
+	                                    <th>
+	                                        17-15-15
+	                                    </th>
+	                                    <th>
+	                                        17-15-15
+	                                    </th>
+	                                    <th>
+	                                        微信公众号
+	                                    </th>
+	                                    <th>
+	                                        微信公众号
+	                                    </th>
+	                                    <th>
+	                                        线下
+	                                    </th>
+	                                    <th>
+	                                        南昆山养生谷-悠闲别墅
+	                                    </th>
+	                                    <th>
+	                                        定金+尾款结算
+	                                    </th>
+	                                </tr>
+	                            </tbody>
+	                        </table>
+	                        -->
+	                    </div>
+	                </form>
+	            </div>
+	            
+    		</div>
+ 		</main>
+	</article>
+
+<script type="text/javascript" src="/admin/res/js/orderManagement/orderList.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+</style>
+<script type="text/javascript">
+function addPoint(){
+	var lonlat=parent.document.getElementById("lonlat").value;
+	var items=lonlat.split(",");
+	if(items&&items.length>1){
+		setTimeout(function(){
+			var longitude=items[0];
+			var latitude=items[1];
+			var _point=new BMap.Point(longitude,latitude);
+			var o={
+				point:_point
+			}
+			showInfo(o);
+		},1000);
+	}
+}
+</script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=I41iAGFaTPXFt7LKMECH0IcCoVRiYDQP"></script>
+<title>地图展示</title>
+</head>
+<body>
+	<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+// 百度地图API功能
+var map = new BMap.Map("allmap");    // 创建Map实例
+map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+//添加地图类型控件
+var size = new BMap.Size(10, 20);
+map.addControl(new BMap.CityListControl({
+   	anchor: BMAP_ANCHOR_TOP_LEFT,
+   	offset: size,
+   	// 切换城市之间事件
+   	// onChangeBefore: function(){
+   	//    alert('before');
+   	// },
+   	// 切换城市之后事件
+   	// onChangeAfter:function(){
+   	//   alert('after');
+   	// }
+}));	 
+
+//map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+var geolocation = new BMap.Geolocation();
+geolocation.getCurrentPosition(function(r){
+	if(this.getStatus() == BMAP_STATUS_SUCCESS){
+		//var mk = new BMap.Marker(r.point);
+		//map.addOverlay(mk);
+		map.panTo(r.point);
+		//alert('您的位置：'+r.point.lng+','+r.point.lat);
+	}
+	else {
+		//alert('failed'+this.getStatus());
+	}        
+},{enableHighAccuracy: true});
+
+function showInfo(e){
+	//alert(e.point.lng + ", " + e.point.lat);
+	map.clearOverlays();
+	var mk = new BMap.Marker(e.point);
+	map.addOverlay(mk);
+	map.panTo(e.point);
+	parent.document.getElementById("lonlat").value=e.point.lng+","+e.point.lat;
+}
+map.addEventListener("click", showInfo);
+</script>

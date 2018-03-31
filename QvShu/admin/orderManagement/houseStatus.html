@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>房态控制</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+<link rel="stylesheet" href="/admin/res/css/ddgl/index.css">
+</head>
+<body>
+    <!-- header start-->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    <!-- header end-->
+    
+    <article class="content">
+        <!-- 左边菜单  开始-->
+        <!--#include virtual="/admin/layout/orderManagement_sidenav.html"-->
+        <!-- 左边菜单  结束-->
+        
+        <main class="main-body">
+            <div class="top-location">
+                当前位置：订单管理<span class="fn-st">&gt;</span>房态控制
+            </div>
+            <div class="clearfix">
+            	<div class="">
+	                <form action="" class="form-horizontal">
+	                    <div class="form-group text-right">
+	                    </div>
+	                    <div class="form-group">
+	    
+	                        <div id="cityWidget" class="col-sm-1 pr0">
+	                        </div>
+	                        <div id="districtWidget" class="col-sm-1 pr0">
+	                        </div>
+	                        <div id="houseCountWidget" class="col-sm-1 pr0">
+	                        </div>
+	                        <div id="liveCountWidget" class="col-sm-1 pr0">
+	                        </div>
+	                        <div class="col-sm-1 pr0">
+	                            <input id="name" class="form-control" placeholder="别墅名称">
+	                        </div>
+	                        <div id="merchantWidget" class="col-sm-1 pr0">
+	                        </div>
+	                        <div class="col-sm-1">
+	                            <a id="searchBtn" href="javascript:void(0);" class="btn btn-success btn-block">搜索</a>
+	                        </div>
+	                        <a href="#">全屏展示</a>
+	                    </div>
+	
+	
+	                    <div class="top-location"></div>
+	
+	                    <div class="col-sm-12 ">
+	                        <!-- 左侧容器 -->
+                            <div class="col-sm-6 left-warp">
+                                <div class="table-top-space"><!-- 站位 --></div>
+                                <table class="table table-hover">
+                                    <tbody id="houseList">
+                                    <!--  
+                                        <tr>
+                                            <td>
+                                               惠州
+                                            </td>
+                                            <td>
+                                                十里银滩
+                                            </td>
+                                            <td>
+                                                罗周纯
+                                            </td>
+                                            <td>
+                                                棕榈滩5房7床
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                               惠州
+                                            </td>
+                                            <td>
+                                                十里银滩
+                                            </td>
+                                            <td>
+                                                罗周纯
+                                            </td>
+                                            <td>
+                                                棕榈滩5房7床
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                               惠州
+                                            </td>
+                                            <td>
+                                                十里银滩
+                                            </td>
+                                            <td>
+                                                罗周纯
+                                            </td>
+                                            <td>
+                                                棕榈滩5房7床
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                               惠州
+                                            </td>
+                                            <td>
+                                                十里银滩
+                                            </td>
+                                            <td>
+                                                罗周纯
+                                            </td>
+                                            <td>
+                                                棕榈滩5房7床
+                                            </td>
+
+                                        </tr>
+                                        -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- 左侧容器结束 -->
+                            
+                            <!-- 右侧容器 -->
+                            <div class="col-sm-6 right-warp">
+                                <div style="width: 700px;overflow-y: scroll;">
+                                    <table class="table">
+                                    <thead class="table-center">
+                                        <tr class="active">
+                                            <th colspan="30">
+                                                7月
+                                            </th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody id="houseStatusList">
+                                        <!--  
+                                        <tr>
+                                            <th>
+                                                1
+                                            </th>
+                                            <th>
+                                                2
+                                            </th>
+                                            <th>
+                                                3
+                                            </th>
+                                            <th>
+                                                4
+                                            </th>
+                                            <th class="friday-title">
+                                                5
+                                            </th>
+                                            <th class="setday-title">
+                                                6
+                                            </th>
+                                            <th>
+                                                7
+                                            </th>
+                                            <th>
+                                                8
+                                            </th>
+                                            <th>
+                                                9
+                                            </th>
+                                            <th>
+                                                10
+                                            </th>
+                                            <th>
+                                                11
+                                            </th>
+                                            <th>
+                                                12
+                                            </th>
+                                            <th>
+                                                13
+                                            </th>
+                                            <th>
+                                                14
+                                            </th>
+                                            <th class="friday-title">
+                                                15
+                                            </th>
+                                            <th class="setday-title">
+                                                16
+                                            </th>
+                                            <th>
+                                                17
+                                            </th>
+                                            <th>
+                                                18
+                                            </th>
+                                            <th>
+                                                19
+                                            </th>
+                                            <th>
+                                                20
+                                            </th>
+                                            <th>
+                                                21
+                                            </th>
+                                            <th>
+                                                22
+                                            </th>
+                                            <th>
+                                                23
+                                            </th>
+                                            <th>
+                                                24
+                                            </th>
+                                            <th class="friday-title">
+                                                25
+                                            </th>
+                                            <th 2class="setday-title">
+                                                6
+                                            </th>
+                                            <th>
+                                                27
+                                            </th>
+                                            <th>
+                                                28
+                                            </th>
+                                            <th>
+                                                29
+                                            </th>
+                                            <th>
+                                                30
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td class="friday">
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td class="setday">
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td class="friday no-room">
+                                                无房
+                                            </td>
+                                            <td class="stay-room">
+                                                保留
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td class="friday">
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td class="setday">
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td class="friday no-room">
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td class="stay-room">
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td class="friday">
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td class="setday">
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td class="friday no-room">
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td class="stay-room">
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td class="friday">
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td class="setday">
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td class="friday no-room">
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td class="stay-room">
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+                                            <td>
+                                                <p>7月5日</p>
+                                                <p>￥3899</p>
+                                            </td>
+
+                                        </tr>
+                                        -->
+                                    </tbody>
+                                	</table>
+                            	</div>
+                                <!-- 如果有分页器在这个DIV层级上加 -->
+                            </div>
+	                        <!-- 右侧容器结束 -->
+	                        
+	                    </div>
+	                </form>
+	            </div>
+    		</div>
+ 		</main>
+	</article>
+<!-- 点击 -->
+<div class="modal fade" id="showRoom" tabindex="-1" role="dialog" aria-labelledby="confirmTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+            	<p id="row1"></p>
+            	<p id="row2"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../res/js/orderManagement/houseStatus.js"></script>
+</body>
+</html>

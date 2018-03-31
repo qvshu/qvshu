@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测试接口页面</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+</head>
+<body>
+    <!-- header start-->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    <!-- header end-->
+    
+    <article class="content">
+        <main class="main-body">
+        	<div>
+        	省份管理
+        		<div>
+        			新增省份
+        			<table>
+        				<tr>
+        					<td>省份名称：</td>
+        					<td><input id="provice_name" type="text" placeholder="广东省" /></td>
+        				</tr>
+        				<tr>
+        					<td>省份编码：</td>
+        					<td><input id="provice_code" type="text" placeholder="guangdong" /></td>
+        				</tr>
+        				<tr>
+        					<td>省份类型：</td>
+        					<td><input id="provice_type" type="text" placeholder="provice-省份，special_city-特级市" /></td>
+        				</tr>
+        				<tr>
+        					<td>城市热度：</td>
+        					<td><input id="provice_hot" type="text" placeholder="0-9999" /></td>
+        				</tr>
+        			</table>
+        			<div><a href="javascript:saveProvice();">保存</a></div>
+        		</div>
+        	</div>
+        	
+        	
+        	<div>
+        	城市管理
+        		<div>
+        			新增城市
+        			<table>
+        				<tr>
+        					<td>城市名称：</td>
+        					<td><input id="city_name" type="text" placeholder="深圳" /></td>
+        				</tr>
+        				<tr>
+        					<td>城市编码：</td>
+        					<td><input id="city_code" type="text" placeholder="shenzhen" /></td>
+        				</tr>
+        				<tr>
+        					<td>省份Id：</td>
+        					<td><input id="city_provinceId" type="text" placeholder="1" /></td>
+        				</tr>
+        			</table>
+        			<div><a href="javascript:saveCity();">保存</a></div>
+        		</div>
+        	</div>
+        	
+        	<div>
+        	小区管理
+        		<div>
+        			新增小区
+        			<table>
+        				<tr>
+        					<td>小区名称：</td>
+        					<td><input id="district_name" type="text" placeholder="保安小区" /></td>
+        				</tr>
+        				<tr>
+        					<td>城市：</td>
+        					<td><input id="district_cityId" type="text" placeholder="1" /></td>
+        				</tr>
+        				<tr>
+        					<td>经度：</td>
+        					<td><input id="district_longitude" type="text" value="113.696526" placeholder="113.696526" /></td>
+        				</tr>
+        				<tr>
+        					<td>纬度：</td>
+        					<td><input id="district_latitude" type="text" value="29.3658902" /></td>
+        				</tr>
+        				<tr>
+        					<td>描述：</td>
+        					<td><input id="district_introduce" type="text" value="和平小区" /></td>
+        				</tr>
+        				<tr>
+        					<td>周边介绍：</td>
+        					<td><input id="district_peripheral" type="text" value="和平小区" /></td>
+        				</tr>
+        				<tr>
+        					<td>关键字：</td>
+        					<td><input id="district_keyWords" type="text" value="别墅,和平小区" /></td>
+        				</tr>
+        				<tr>
+        					<td>Tag词：</td>
+        					<td><input id="district_tagWords" type="text" value="别墅,和平小区" /></td>
+        				</tr>
+        				<tr>
+        					<td>优化标题：</td>
+        					<td><input id="district_seoTitle" type="text" value="和平小区" /></td>
+        				</tr>
+        			</table>
+        			<div><a href="javascript:saveDistrict();">保存</a></div>
+        		</div>
+        	</div>
+        </main>
+    </article>
+
+
+<script>
+function getProviceList(){
+	CommonUtils.async({
+		url:"/hishu/admin/getProviceList.json",
+		data:{}
+	});
+}
+function getProvice(){
+	CommonUtils.async({
+		url:"/hishu/admin/getProvice.json",
+		data:{id:1}
+	});
+}
+function deleteProvice(){
+	CommonUtils.async({
+		url:"/hishu/admin/deleteProvice.json",
+		data:{id:0}
+	});
+}
+function updateProvice(){
+	var provice={
+		id:1,
+		name:"广东省",
+		type:"provice",
+		code:"guangdong",
+		hot:99
+	};
+	CommonUtils.async({
+		url:"/hishu/admin/updateProvice.json",
+		data:provice
+	});
+}
+function saveProvice(){
+	var provice_name=$("#provice_name").val();
+	var provice_code=$("#provice_code").val();
+	var provice_type=$("#provice_type").val();
+	var provice_hot=$("#provice_hot").val();
+	
+	var provice={
+		name:provice_name,
+		code:provice_code,
+		type:provice_type,
+		hot:provice_hot
+	};
+	
+	CommonUtils.async({
+		url:"/hishu/admin/addProvice.json",
+		data:provice
+	});
+}
+(function(){
+	//getProviceList();
+	//getProvice();
+	//deleteProvice();
+	//updateProvice();
+})();
+
+//*****************************/
+
+function getCityList(){
+	CommonUtils.async({
+		url:"/hishu/admin/getCityList.json",
+		data:{}
+	});
+}
+function getCity(){
+	CommonUtils.async({
+		url:"/hishu/admin/getCity.json",
+		data:{id:1}
+	});
+}
+function deleteCity(){
+	CommonUtils.async({
+		url:"/hishu/admin/deleteCity.json",
+		data:{id:0}
+	});
+}
+function updateCity(){
+	var provice={
+		id:1,
+		name:"深圳",
+		code:"shenzhen",
+		provinceId:1
+	};
+	CommonUtils.async({
+		url:"/hishu/admin/updateCity.json",
+		data:provice
+	});
+}
+function saveCity(){
+	var city_name=$("#city_name").val();
+	var city_code=$("#city_code").val();
+	var city_provinceId=$("#city_provinceId").val();
+	
+	var city={
+		name:city_name,
+		code:city_code,
+		provinceId:city_provinceId
+	};
+	
+	CommonUtils.async({
+		url:"/hishu/admin/addCity.json",
+		data:city
+	});
+}
+(function(){
+	//getCityList();
+	//getCity();
+	//deleteCity();
+	//updateCity();
+})();
+
+
+//*********************************
+function getDistrictList(){
+	CommonUtils.async({
+		url:"/hishu/admin/getDistrictList.json",
+		data:{}
+	});
+}
+function getDistrict(){
+	CommonUtils.async({
+		url:"/hishu/admin/getDistrict.json",
+		data:{id:1}
+	});
+}
+function deleteDistrict(){
+	CommonUtils.async({
+		url:"/hishu/admin/deleteDistrict.json",
+		data:{id:0}
+	});
+}
+function updateDistrict(){
+	var district={
+		id:1,
+		name:"和平小区",
+		cityId:1,
+		longitude:113.123456,
+		latitude:29.123456,
+		introduce:"测试",
+		peripheral:"周边介绍",
+		keyWords:"关键字1,关键字2",
+		tagWords:"Tag1,Tag2",
+		seoTitle:"标题1"
+	};
+	CommonUtils.async({
+		url:"/hishu/admin/updateDistrict.json",
+		data:district
+	});
+}
+function saveDistrict(){
+	var district_name=$("#district_name").val();
+	var district_cityId=$("#district_cityId").val();
+	var district_longitude=$("#district_longitude").val();
+	var district_latitude=$("#district_latitude").val();
+	var district_introduce=$("#district_introduce").val();
+	var district_peripheral=$("#district_peripheral").val();
+	var district_keyWords=$("#district_keyWords").val();
+	var district_tagWords=$("#district_tagWords").val();
+	var district_seoTitle=$("#district_seoTitle").val();
+	
+	var district={
+		name:district_name,
+		cityId:district_cityId,
+		longitude:district_longitude,
+		latitude:district_latitude,
+		introduce:district_introduce,
+		peripheral:district_peripheral,
+		keyWords:district_keyWords,
+		tagWords:district_tagWords,
+		seoTitle:district_seoTitle
+	};
+	
+	CommonUtils.async({
+		url:"/hishu/admin/addDistrict.json",
+		data:district
+	});
+}
+(function(){
+	getDistrictList();
+	getDistrict();
+	deleteDistrict();
+	updateDistrict();
+})();
+
+
+
+
+</script>
+</body>
+</html>

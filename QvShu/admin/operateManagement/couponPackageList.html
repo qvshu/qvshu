@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>优惠套餐</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+</head>
+<body>
+    <!-- header start-->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    <!-- header end-->
+    
+    <article class="content">
+        <!-- 左边菜单  开始-->
+        <!--#include virtual="/admin/layout/operateManagement_sidenav.html"-->
+        <!-- 左边菜单  结束-->
+        
+        <main class="main-body">
+            <div class="top-location">
+                当前位置：运营管理<span class="fn-st">&gt;</span>优惠套餐
+            </div>
+            <div class="clearfix">
+            	
+            	<div class="form-group text-right">
+                   <a href="/admin/operateManagement/addCouponPackage.html" class="btn btn-success">添加优惠券</a>
+                </div>
+            	<div id="tableList" class="panel-body"></div>
+    		</div>
+ 		</main>
+	</article>
+
+<script type="text/javascript" src="/admin/res/js/operateManagement/couponPackageList.js"></script>
+</body>
+</html>

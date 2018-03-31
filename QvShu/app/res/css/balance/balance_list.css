@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/* 常用函数，只能通过less引用 start */
+/* 伸缩布局容器 */
+/* 伸缩性 */
+/* 伸缩方向为垂直方向 */
+/* 水平方向居中对齐 */
+/* 侧轴方向居中对齐 */
+/* 垂直方向居中对齐 */
+/* 水平和垂直方向居中对齐 */
+/* 文字溢出隐藏--控制文本单行溢出用省略号表示 */
+/* 文字溢出隐藏--控制文本多行溢出用省略号表示 */
+/* 旋转变换 */
+/* 清除浮动 */
+/* 1:横向border 一般在伪类中引用 (配合定位使用) */
+/* 2:纵向border 一般在伪类中引用 (配合定位使用) */
+/* 常用函数，只能通过less引用 end */
+/* 付款管理列表 */
+.content {
+  padding-bottom: 1.2rem;
+}
+.balance-list {
+  position: relative;
+}
+.balance-list:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  content: "";
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #efefef;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.balance-list .date {
+  padding: 0.50666667rem 0 0.21333333rem 0.4rem;
+  color: #B4B4B4;
+  font-size: 0.32rem;
+}
+.balance-list .balance-wrap {
+  position: relative;
+  background: #fff;
+  margin-bottom: 0.21333333rem;
+}
+.balance-list .balance-wrap > a {
+  padding: 0.4rem;
+  /* 伸缩布局容器 */
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+  /* 侧轴方向居中对齐 */
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+}
+.balance-list .balance-wrap:after {
+  bottom: -1px;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #efefef;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.balance-list .balance-wrap .info .balance-info {
+  margin-bottom: 0.21333333rem;
+  color: #566272;
+}
+.balance-list .balance-wrap .info .balance-info .name {
+  margin-right: 0.32rem;
+  font-size: 0.4rem;
+}
+.balance-list .balance-wrap .info .balance-info .svg-icon {
+  width: 0.34666667rem;
+  height: 0.34666667rem;
+  vertical-align: -0.02666667rem;
+  margin-right: 0.21333333rem;
+  fill: #cacaca;
+}
+.balance-list .balance-wrap .info .manager-info {
+  font-size: 0.4rem;
+  color: #566272;
+}
+.balance-list .balance-wrap .info .manager-info .svg-icon {
+  width: 0.34666667rem;
+  height: 0.34666667rem;
+  vertical-align: -0.02666667rem;
+  margin-right: 0.18666667rem;
+  fill: #cacaca;
+}
+.balance-list .balance-wrap .status {
+  /* 伸缩性为1 */
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 0.4rem;
+  text-align: right;
+}
+.balance-list .balance-wrap .status .payment {
+  color: #3B9BFF;
+  margin-bottom: 0.13333333rem;
+}
+.balance-list .balance-wrap .status .payment.fail {
+  color: #FF5145;
+}
+.balance-list .balance-wrap .status .price {
+  font-size: 0.48rem;
+  color: #566272;
+}
+.balance-list .balance-wrap:last-child {
+  margin-bottom: 0 !important;
+}
+/* 点击加载更多 */
+.loading {
+  text-align: center;
+  font-size: 0.32rem;
+  color: #B4B4B4 !important;
+}

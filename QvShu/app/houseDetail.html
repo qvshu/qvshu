@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- libs start -->
+<!--#include virtual="/app/layout/libs.html"-->
+<!-- libs end -->
+<title>房源详情</title>
+<link rel="stylesheet" href="/app/res/css/hotel/index.css" type="text/css"/>
+</head>
+<body>
+	<!-- 头部 start -->
+	<div class="header-container">
+		<div class="header">
+			<a href="javascript:;" class="g-back"><!-- 返回按钮 --></a>
+			<h1>房源详情</h1>
+		</div>
+	</div>
+	<!-- 头部 end -->
+
+    <div class="content">
+        <div class="cont-top">
+        <div class="swiper-container-one">
+        <div id="banerList" class="swiper-wrapper">
+        	<!--  
+        	<div class="swiper-slide hotel-img"><img id="banerImg1" width="100%" src="" alt="" /></div>
+          	<div class="swiper-slide hotel-img"><img id="banerImg2" width="100%" src="" alt="" /></div>
+          	<div class="swiper-slide hotel-img"><img id="banerImg3" width="100%" src="" alt="" /></div>
+      		-->
+      	</div>
+      
+      <div class="hotel-txt">
+      	<!-- 分页器，显示页数 -->
+      	<div class="page"><div class="swiper-pagination"></div></div>
+      </div>
+      
+        </div>	
+        	              
+        </div>
+        <div class="cont-min">
+        	<div class="hotel-title">
+        		<p class="title-l" id="houseName"></p>
+        		<p id="isSpotCheck" class="title-r hide"><a class="btn" href="">实地考察</a></p>
+        	</div>
+        	<p class="room-tips">
+        		<span class="room-icon"><img id="houseIcon" src="" alt=""></span>
+        		<span id="houseRoom"></span>
+        	</p>
+            
+            <div class="banner-wrap"><a href="">
+            	<img id="contentImg1" src="" alt="">
+            </a></div>
+            <div class="map-wrap"><a href="">
+            	<img id="contentImg2" src="" alt="">
+            </a></div>
+
+            <div class="hotel-detail">
+            	<h3 class="ta-c">房源详情</h3>
+            	<ul id="detailDescription">
+            		<!--  
+            		<li>
+            			<p class="txt">特色：私家无边际泳池、大院子、观景台、私家KTV影院、SPA区、台球棋牌娱乐、烧烤配套俱全。</p>
+            		</li>
+            		<li>
+            			<p class="txt">详情：大户型四层别墅；总面积1380平米，室内面积700平米，庭院面积480平米，阳台面积200平米，6房4厅1厨8卫多庭院；</p>
+            		</li>
+            		<li>
+            			<p class="txt">一楼：海景SPA专区，KTV及私家影院，娱乐房（酒吧，斯洛克，棋牌），观影休息厅；</p>
+            		</li>
+            		<li>
+            			<p class="txt">二楼：开放海景厨房、独立中式厨房，海景餐厅，品茶专区，3间豪华海景大卧室（均带独立卫浴）、1间双床房；</p>
+            		</li>
+            		-->
+            	</ul>
+			 <div class="btn-box hide">
+                 <a href="javascript:;" class="btn-more">查看全部</a>
+             </div>
+
+            </div>
+            <div class="fy-detail">
+            	<h3>房源设施</h3>
+            	<ul id="houseFacilityList" class="fy-list">
+            	<!--  
+            		<li>
+            			<img src="/app/res/img/hotel/hotel.jpg" alt="">
+            			<p class="fy-txt">庭院</p>		
+            		</li>
+            		<li>
+            			<img src="/app/res/img/hotel/hotel.jpg" alt="">
+            			<p class="fy-txt">庭院</p>		
+            		</li>
+            		<li>
+            			<img src="/app/res/img/hotel/hotel.jpg" alt="">
+            			<p class="fy-txt">庭院</p>		
+            		</li>
+            		<li>
+            			<img src="/app/res/img/hotel/hotel.jpg" alt="">
+            			<p class="fy-txt">庭院</p>		
+            		</li>
+            		<li>
+            			<img src="/app/res/img/hotel/hotel.jpg" alt="">
+            			<p class="fy-txt">庭院</p>		
+            		</li>
+            		<li>
+            			<img src="/app/res/img/hotel/hotel.jpg" alt="">
+            			<p class="fy-txt">庭院</p>		
+            		</li>
+            		-->
+            	</ul>
+			<div class="btn-box hide">
+                 <a href="javascript:;" class="btn-more">查看全部 39个</a>
+             </div>
+            </div>
+
+	<div id="commentList" class="fy-detail">
+            	<h3>评论</h3>
+            	<!-- 
+	<div class="user-list">
+		<div class="user-wrap">
+			<img class="user-img" src="/app/res/img/hotel/hotel.jpg" alt="">
+			<div class="user-name">
+				<p class="title">SUN</p>
+				<p>4.5分</p>
+			</div>
+
+		</div>
+		<p class="users-write">太美了！房东接待超满意~</p>
+         	<ul class="users-photo">
+         		<li>
+         			<img src="/app/res/img/hotel/hotel.jpg" alt="">	
+         		</li>
+         		<li>
+         			<img src="/app/res/img/hotel/hotel.jpg" alt="">	
+         		</li>
+         		<li>
+         			<img src="/app/res/img/hotel/hotel.jpg" alt="">	
+         		</li>
+         	</ul>
+	</div>
+	
+	<div class="user-list">
+		<div class="user-wrap">
+		<img class="user-img" src="/app/res/img/hotel/hotel.jpg" alt="">
+		<div class="user-name">
+			<p class="title">SUN</p>
+			<p>4.5分</p>
+		</div>
+
+	</div>
+	<p class="users-write">太美了！房东接待超满意~</p>
+            	<ul class="users-photo">
+            		<li>
+            			<img src="/app/res/img/hotel/hotel.jpg" alt="">	
+            		</li>
+            		<li>
+            			<img src="/app/res/img/hotel/hotel.jpg" alt="">	
+            		</li>
+            		<li>
+            			<img src="/app/res/img/hotel/hotel.jpg" alt="">	
+            		</li>
+            	</ul>
+	</div>
+	<div class="user-list">
+		<div class="user-wrap">
+		<img class="user-img" src="/app/res/img/hotel/hotel.jpg" alt="">
+		<div class="user-name">
+			<p class="title">SUN</p>
+			<p>4.5分</p>
+		</div>
+
+	</div>
+	<p class="users-write">太美了！房东接待超满意~</p>
+            	<ul class="users-photo">
+            		<li>
+            			<img src="/app/res/img/hotel/hotel.jpg" alt="">	
+            		</li>
+            		<li>
+            			<img src="/app/res/img/hotel/hotel.jpg" alt="">	
+            		</li>
+            		<li>
+            			<img src="/app/res/img/hotel/hotel.jpg" alt="">	
+            		</li>
+            	</ul>
+	</div>
+	
+	<div class="btn-box">
+                 <a href="javascript:;" class="btn-more">查看全部 5个评论</a>
+             </div>
+             -->
+             
+            </div>
+
+<div class="fy-detail">
+            	<h3>周边游玩</h3>
+            	
+	<!-- Swiper -->
+             <div class="swiper-container-two">
+                 <div id="districtImgList" class="swiper-wrapper">
+                     <!--  
+                     <div class="swiper-slide fist" style="background-image:url(/app/res/img/hotel/hotel.jpg)"></div>
+                     <div class="swiper-slide" style="background-image:url(/app/res/img/hotel/hotel.jpg)"></div>
+                     <div class="swiper-slide" style="background-image:url(/app/res/img/hotel/hotel.jpg)"></div>
+                     <div class="swiper-slide" style="background-image:url(/app/res/img/hotel/hotel.jpg)"></div>
+                     <div class="swiper-slide" style="background-image:url(/app/res/img/hotel/hotel.jpg)"></div>
+                 	-->
+                 </div>
+                 <!-- Add Pagination -->
+            </div>
+
+               </div>
+
+
+               <div class="ruler">
+               	<h3 class="ta-c">预订须知</h3>
+               	<ul>
+               		<li id="checkInTime"></li>
+               		<li id="checkOutTime"></li>
+               		<li id="receptionTime"></li>
+               		<li id="deposit"></li>
+               		<li>
+               			<p>接待情况：</p>
+						<p id="receptionList">
+							<!--  
+							<label for="1"><input class="check-box" id="1" type="checkbox"> 接待儿童</label>
+							<label for="2"><input class="check-box" id="2" type="checkbox"> 接待儿童</label>
+							<label for="3"><input class="check-box" id="3" type="checkbox"> 接待儿童</label>
+							<label for="4"><input class="check-box" id="4" type="checkbox"> 接待儿童</label>
+							-->
+						</p>
+               		</li>
+               	</ul>
+               </div>
+
+			<div class="ruler">
+               	<h3 class="ta-c">退改政策</h3>
+               	<ul>
+               		<li>取消订单：</li>
+               		<li>入住前15天及以上，如客户取消订单，房款全额退还</li>
+               		<li>入住前7-15天，如客户取消订单，房款扣除30%</li>
+               		<li>入住前1-6天，如客户取消订单，房款扣除50%</li>
+               		<li>入住当天，如客户取消订单，房款扣除100%</li>
+               		<li>更改日期：</li>
+               		<li>入住前1天，如客户需要改期，房款扣除30%</li>
+               		<li>入住当天，如客户需要改期，房款扣除50%</li>
+               	</ul>
+               </div>
+               <div class="btn-box">
+               		<a id="bookBtn" href="" class="btn">预定</a>
+               </div>
+               
+           </div>
+       </div>
+
+<script src="/app/res/js/houseDetail.js"></script>  
+</body>
+</html>

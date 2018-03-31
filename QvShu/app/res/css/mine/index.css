@@ -1,0 +1,362 @@
+@charset "utf-8";
+/* 常用函数，只能通过less引用 start */
+/* 伸缩布局容器 */
+/* 伸缩性 */
+/* 伸缩方向为垂直方向 */
+/* 水平方向居中对齐 */
+/* 侧轴方向居中对齐 */
+/* 垂直方向居中对齐 */
+/* 水平和垂直方向居中对齐 */
+/* 文字溢出隐藏--控制文本单行溢出用省略号表示 */
+/* 文字溢出隐藏--控制文本多行溢出用省略号表示 */
+/* 旋转变换 */
+/* 清除浮动 */
+/* 1:横向border 一般在伪类中引用 (配合定位使用) */
+/* 2:纵向border 一般在伪类中引用 (配合定位使用) */
+/* 常用函数，只能通过less引用 end */
+.content {
+  color: #333;
+}
+.cont-top {
+  background: #fff;
+  border-bottom: 1px #dedede solid;
+  padding-bottom: 0.26666667rem;
+  padding-top: 0.66666667rem;
+}
+.cont-top .user-img {
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0 auto 0.66666667rem;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px #dedede solid;
+}
+.cont-top .user-img img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+.cont-top .user-name {
+  font-size: 0.37333333rem;
+}
+.cont-top .usericon-wrap {
+  display: block;
+  text-align: center;
+}
+.cont-top .usericon-wrap li {
+  display: inline-block;
+  margin: 0 0.13333333rem;
+  width: 1.46666667rem;
+}
+.cont-top .usericon-wrap li .icon-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.cont-top .usericon-wrap li .icon-link .icon {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: 0 auto 0.13333333rem;
+  background: red;
+}
+.cont-top .hotel-detail-wrap {
+  margin: 0 0.42666667rem;
+}
+.cont-min {
+  padding: 0 0.42666667rem;
+}
+.hotel-detail-wrap {
+  margin-top: 0.42666667rem;
+}
+.detail {
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+  margin-bottom: 0.4rem;
+  background: #fff;
+  border: 1px #dedede solid;
+}
+.hotel-group {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.hotel-group .red {
+  color: red;
+}
+.hotel-group .top-wrap {
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+  padding-right: 0.13333333rem;
+}
+.hotel-group .top-wrap .wrap-l {
+  width: 3.2rem;
+  margin-right: 0.33333333rem;
+  padding: 0.13333333rem;
+}
+.hotel-group .top-wrap .wrap-l img {
+  display: block;
+  width: 100%;
+  height: 1.86666667rem;
+}
+.hotel-group .top-wrap .wrap-r {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 0.32rem;
+  color: #999;
+}
+.hotel-group .top-wrap .wrap-r .hotel-title {
+  font-size: 0.37333333rem;
+  color: #333;
+  padding-top: 0.13333333rem;
+  line-height: 0.53333333rem;
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+}
+.hotel-group .top-wrap .wrap-r .hotel-title .w-l {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.hotel-group .top-wrap .wrap-r .hotel-title .w-r {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: right;
+  font-size: 0.26666667rem;
+}
+.hotel-group .top-wrap .wrap-r .hotel-txt {
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+  margin-top: 0.13333333rem;
+}
+.hotel-group .top-wrap .wrap-r .hotel-txt .w-l {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 0.29333333rem;
+}
+.hotel-group .top-wrap .wrap-r .hotel-txt .w-r {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: right;
+  font-size: 0.26666667rem;
+}
+.hotel-group .top-wrap .wrap-r .hotel-txt .w-r .icon {
+  display: inline-block;
+  width: 0.26666667rem;
+  height: 0.26666667rem;
+  margin-right: 0.13333333rem;
+  background: red;
+}
+.hotel-group .top-wrap .wrap-r .hotel-txt .w-r .btn {
+  display: inline-block;
+  width: 1.46666667rem;
+  height: 0.37333333rem;
+  border: 1px red solid;
+  text-align: center;
+  line-height: 0.37333333rem;
+  color: red;
+}
+.hotel-group .top-wrap .wrap-r .hotel-icon-wrap {
+  margin-top: 0.26666667rem;
+  font-size: 0.24rem;
+  white-space: nowrap;
+}
+.hotel-group .top-wrap .wrap-r .hotel-icon-wrap a {
+  display: inline-block;
+  color: #333;
+}
+.hotel-group .top-wrap .wrap-r .hotel-icon-wrap a .icon {
+  display: inline-block;
+  width: 0.16rem;
+  height: 0.16rem;
+  margin-right: 0.02666667rem;
+  background: red;
+}
+.hotel-group .bot-wrap {
+  border-top: 1px #dedede solid;
+  padding: 0.13333333rem 0.29333333rem;
+}
+.hotel-group .bot-wrap .title-txt {
+  font-size: 0.37333333rem;
+  line-height: 0.37333333rem;
+}
+.hotel-group .bot-wrap .title-txt .time {
+  font-size: 0.32rem;
+  color: #999;
+  margin-left: 0.4rem;
+}
+.hotel-group .bot-wrap .min-txt {
+  margin-top: 0.08rem;
+  font-size: 0.29333333rem;
+}
+.hotel-group .bot-wrap .discuss {
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+  padding-top: 0.26666667rem;
+}
+.hotel-group .bot-wrap .discuss .w-l {
+  width: 1.33333333rem;
+  margin-right: 0.53333333rem;
+}
+.hotel-group .bot-wrap .discuss .w-l img {
+  width: 1.33333333rem;
+  height: 1.33333333rem;
+  border-radius: 50%;
+  border: 1px #dedede solid;
+}
+.hotel-group .bot-wrap .discuss .w-r {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  padding-top: 0.4rem;
+}
+.hotel-group .bot-wrap .discuss .w-r .discuss-txt {
+  margin-bottom: 0.26666667rem;
+}
+.hotel-group .bot-wrap .discuss .w-r .photo-wrap {
+  text-align: left;
+  margin-bottom: 0.26666667rem;
+}
+.hotel-group .bot-wrap .discuss .w-r .photo-wrap img {
+  display: inline-block;
+  width: 1.73333333rem;
+  margin-right: 0.13333333rem;
+}
+.delet-wrap {
+  width: 0.53333333rem;
+  border-left: 1px #dedede solid;
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: center;
+  align-items: center;
+}
+.discuess-star {
+  margin: 0 0.42666667rem;
+}
+.discuess-star .star-wrap {
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+}
+.discuess-star .txt-title {
+  width: 1.06666667rem;
+}
+.discuess-star .star span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.13333333rem;
+}
+.discuess-star .star span img {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+.discuess-star .discuess-txt {
+  margin-top: 0.4rem;
+  min-height: 6.66666667rem;
+  border: 1px #dedede solid;
+  padding: 0.16rem;
+}
+.discuess-star .discuess-txt textarea {
+  display: block;
+  min-height: 6.66666667rem;
+  font-size: 0.32rem;
+  color: #333;
+  resize: none;
+}
+.discuess-star .add-photo {
+  display: block;
+  margin-top: 0.26666667rem;
+  width: 2.13333333rem;
+  height: 0.8rem;
+  text-align: center;
+  line-height: 0.8rem;
+  border: 1px #dedede solid;
+}
+.ticket-wrap {
+  margin-top: 0.42666667rem;
+}
+.ticket-wrap li {
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+  padding: 0.53333333rem;
+  background: #fff;
+  margin-bottom: 0.42666667rem;
+  border: 1px #dedede solid;
+}
+.ticket-wrap .w-l {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.ticket-wrap .w-r {
+  width: 2rem;
+}
+.ticket-wrap .w-r a {
+  display: block;
+  text-align: center;
+}
+.ticket-wrap .w-r a.use-btn {
+  border-radius: 0.10666667rem;
+  margin-bottom: 0.21333333rem;
+  font-size: 0.37333333rem;
+  width: 2rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  background: green;
+  color: #fff;
+}
+.ticket-wrap .w-r a.use-btn.red {
+  background: red;
+}
+a.cofion-btn {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.06666667rem;
+  background: green;
+  font-size: 0.42666667rem;
+  color: #fff;
+  line-height: 1.06666667rem;
+  text-align: center;
+}

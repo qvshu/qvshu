@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@import "../mod/fn.less";
+/* 付款管理列表 */
+.content{
+    padding-bottom: 90px/@p;
+}
+.balance-list {
+    position: relative;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        .setBorderHeight1px(#efefef);
+    }
+    .date {
+        padding: 38px/@p 0 16px/@p 30px/@p;
+        color: #B4B4B4;
+        font-size: 24px/@p;
+    }
+    .balance-wrap {
+        position: relative;
+        background: #fff;
+        margin-bottom: 16px/@p;
+        & > a {
+            padding: 30px/@p;
+            /* 伸缩布局容器 */
+            .db();
+            /* 侧轴方向居中对齐 */
+            .vh();
+        }
+        &:after {
+            bottom: -1px;
+            left: 0;
+            .setBorderHeight1px(#efefef);
+        }
+        .info {
+            .balance-info {
+                margin-bottom: 16px/@p;
+                color: #566272;
+                .name {
+                    margin-right: 24px/@p;
+                    font-size: 30px/@p;
+                }
+                .svg-icon{
+                    width: 26px/@p;
+                    height: 26px/@p;
+                    vertical-align: -2px/@p;
+                    margin-right: 16px/@p;
+                    fill: #cacaca;
+                }
+            }
+            .manager-info {
+                font-size: 30px/@p;
+                color: #566272;
+                .svg-icon{
+                    width: 26px/@p;
+                    height: 26px/@p;
+                    vertical-align: -2px/@p;
+                    margin-right: 14px/@p;
+                    fill: #cacaca;
+                }
+            }
+        }
+        .status {
+            /* 伸缩性为1 */
+            .fx1();
+            font-size: 30px/@p;
+            text-align: right;
+            .payment {
+                color: #3B9BFF;
+                margin-bottom: 10px/@p;
+                &.fail {
+                    color: #FF5145;
+                }
+            }
+            .price {
+                font-size: 36px/@p;
+                color: #566272;
+            }
+        }
+        &:last-child{
+            margin-bottom: 0 !important;
+        }
+    }
+    
+}
+
+/* 点击加载更多 */
+.loading {
+    text-align: center;
+    font-size: 24px/@p;
+    color: #B4B4B4 !important;
+}

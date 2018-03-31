@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* 常用函数，只能通过less引用 start */
+/* 伸缩布局容器 */
+/* 伸缩性 */
+/* 伸缩方向为垂直方向 */
+/* 水平方向居中对齐 */
+/* 侧轴方向居中对齐 */
+/* 垂直方向居中对齐 */
+/* 水平和垂直方向居中对齐 */
+/* 文字溢出隐藏--控制文本单行溢出用省略号表示 */
+/* 文字溢出隐藏--控制文本多行溢出用省略号表示 */
+/* 旋转变换 */
+/* 清除浮动 */
+/* 1:横向border 一般在伪类中引用 (配合定位使用) */
+/* 2:纵向border 一般在伪类中引用 (配合定位使用) */
+/* 常用函数，只能通过less引用 end */
+.mod-detail {
+  margin-bottom: 0.21333333rem;
+}
+.mod-detail:last-of-type {
+  margin-bottom: 0;
+}
+.mod-detail .detail-list .photo {
+  display: block;
+}
+.mod-detail .detail-list .photo .list-title {
+  margin-bottom: 0.32rem;
+  letter-spacing: 0.01333333rem;
+}
+.mod-detail .detail-list .photo .list-img {
+  width: 100%;
+  max-height: 8rem;
+  overflow: hidden;
+}
+.mod-detail .remark-list {
+  padding: 0.42666667rem 0.4rem;
+}
+.mod-detail .remark-list li {
+  position: relative;
+  max-height: 10000px;
+  padding: 0 0 0.32rem 0.42666667rem;
+}
+.mod-detail .remark-list li:before {
+  position: absolute;
+  top: 0.21333333rem;
+  left: 0;
+  display: block;
+  content: "";
+  height: 100%;
+  box-sizing: border-box;
+  border-right: 1px solid #333333;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.mod-detail .remark-list li:last-child:before {
+  display: none;
+}
+.mod-detail .remark-list .remark-title {
+  position: relative;
+  margin-bottom: 0.21333333rem;
+  color: #b4b4b4;
+}
+.mod-detail .remark-list .remark-title:before {
+  position: absolute;
+  top: 50%;
+  left: -0.50666667rem;
+  content: "";
+  display: block;
+  width: 0.16rem;
+  height: 0.16rem;
+  margin-top: -0.08rem;
+  border-radius: 50%;
+  background-color: #333333;
+}
+.mod-detail .remark-list .remark-content {
+  font-size: 0.37333333rem;
+  line-height: 1.5;
+}
+.mask .img-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: hidden;
+}
+.mask img {
+  position: absolute;
+  top: 50%;
+  transform: translate3D(0, -50%, 0);
+  -webkit-transform: translate3D(0, -50%, 0);
+}

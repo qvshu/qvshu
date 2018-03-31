@@ -1,0 +1,292 @@
+@charset "UTF-8";
+/* 常用函数，只能通过less引用 start */
+/* 伸缩布局容器 */
+/* 伸缩性 */
+/* 伸缩方向为垂直方向 */
+/* 水平方向居中对齐 */
+/* 侧轴方向居中对齐 */
+/* 垂直方向居中对齐 */
+/* 水平和垂直方向居中对齐 */
+/* 文字溢出隐藏--控制文本单行溢出用省略号表示 */
+/* 文字溢出隐藏--控制文本多行溢出用省略号表示 */
+/* 旋转变换 */
+/* 清除浮动 */
+/* 1:横向border 一般在伪类中引用 (配合定位使用) */
+/* 2:纵向border 一般在伪类中引用 (配合定位使用) */
+/* 常用函数，只能通过less引用 end */
+.min-top {
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+}
+.min-top .wrap-l {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  margin-right: 0.33333333rem;
+}
+.min-top .wrap-l img {
+  display: block;
+  width: 100%;
+  height: 2.90666667rem;
+}
+.min-top .wrap-r {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 0.32rem;
+  color: #999;
+}
+.min-top .wrap-r .hotel-title {
+  font-size: 0.42666667rem;
+  color: #333;
+}
+.min-top .wrap-r .top-space {
+  margin-top: 0.26666667rem;
+}
+.min-top .wrap-r .tap span {
+  display: inline-block;
+  margin-right: 0.10666667rem;
+  padding: 0.05333333rem 0.08rem;
+  background: #999;
+  color: #fff;
+}
+.min-wrap .date-title {
+  margin-top: 0.4rem;
+  text-align: center;
+  color: #333;
+  font-size: 0.37333333rem;
+}
+.min-wrap .chouse-date {
+  padding: 0 0.53333333rem;
+  width: 100%;
+  font-size: 0.32rem;
+  color: #333;
+  text-align: center;
+}
+.min-wrap .chouse-date th {
+  height: 1.17333333rem;
+  border: 0;
+}
+.min-wrap .chouse-date td {
+  border: 1px #dedede solid;
+  height: 1.17333333rem;
+}
+.min-wrap .chouse-date td.gray {
+  color: #999;
+}
+.min-wrap .chouse-date td.on {
+  background: green;
+  color: #fff;
+}
+.min-form {
+  margin-top: 0.53333333rem;
+  padding: 0 0.8rem;
+}
+.min-form .ticket-wrap {
+  display: inline-block;
+  width: 100%;
+  height: 1.33333333rem;
+  line-height: 1.33333333rem;
+  border: 1px #dedede solid;
+  text-align: center;
+  color: #333;
+  background: #fff;
+  font-size: 0.42666667rem;
+  margin-bottom: 0.53333333rem;
+}
+.min-form .cofiom-price {
+  margin-top: 0.26666667rem;
+  font-size: 0.37333333rem;
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+}
+.min-form .cofiom-price .w-l {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: left;
+}
+.min-form .cofiom-price .w-r {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: right;
+}
+.min-form .cofiom-price .w-r .tips-txt {
+  margin-right: 1.33333333rem;
+}
+.min-form .cut-line {
+  margin-top: 0.26666667rem;
+  border-top: 1px #dedede solid;
+}
+.min-form .pay-ok {
+  width: 1.33333333rem;
+  height: 1.33333333rem;
+  margin: 0 auto;
+}
+.min-form .pay-ok img {
+  width: 100%;
+  height: 100%;
+}
+.min-form .kefu {
+  margin-top: 0.53333333rem;
+  margin-bottom: 1.06666667rem;
+  text-align: center;
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  border: 1px #dedede solid;
+  color: #333;
+  background: #fff;
+}
+.min-form .wechect-pay {
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+  background: #fff;
+  margin-top: 1.06666667rem;
+  height: 1.33333333rem;
+  line-height: 1.33333333rem;
+  padding: 0 0.26666667rem;
+}
+.min-form .wechect-pay .wx {
+  display: inline-block;
+  margin-top: 0.13333333rem;
+  width: 1.06666667rem;
+  height: 1.06666667rem;
+}
+.min-form .wechect-pay .wx img {
+  vertical-align: middle;
+}
+.min-form .wechect-pay .min-txt {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  text-indent: 0.26666667rem;
+  color: #999;
+  font-size: 0.42666667rem;
+}
+.min-form .wechect-pay .right-icon {
+  display: inline-block;
+  width: 0.53333333rem;
+}
+.min-form .wechect-pay .right-icon img {
+  width: 0.53333333rem;
+  height: 0.53333333rem;
+  vertical-align: middle;
+}
+.from {
+  display: block;
+}
+.from li {
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+  margin-bottom: 0.26666667rem;
+  font-size: 0.37333333rem;
+}
+.from li .input-title {
+  width: 1.01333333rem;
+}
+.from li .input-title img {
+  width: 100%;
+  height: 1.01333333rem;
+  line-height: 1.01333333rem;
+}
+.from li .input-wrap {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  margin-left: 0.26666667rem;
+}
+.from li .input-wrap input {
+  display: block;
+  width: 100%;
+  height: 1.01333333rem;
+  font-size: 0.37333333rem;
+  text-indent: 0.42666667rem;
+  border: 1px #dedede solid;
+}
+.from li .input-wrap .error-text {
+  font-size: 0.32rem;
+  color: #999;
+}
+a.bot-btn {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.06666667rem;
+  background: orange;
+  font-size: 0.48rem;
+  text-align: center;
+  color: #fff;
+  line-height: 1.06666667rem;
+}
+a.bot-btn .detail {
+  position: absolute;
+  width: 4rem;
+  height: 1.06666667rem;
+  top: 0;
+  left: 0;
+  font-size: 0.32rem;
+  text-align: left;
+}
+a.bot-btn .detail p {
+  padding-left: 0.42666667rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+a.bot-btn .detail .price {
+  padding-top: 0.16rem;
+  font-size: 0.42666667rem;
+}
+a.cofion-btn {
+  position: fixed;
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.06666667rem;
+  background: #fff;
+  font-size: 0.42666667rem;
+  color: #fff;
+  line-height: 1.06666667rem;
+}
+a.cofion-btn .w-l {
+  width: 6.4rem;
+  text-align: right;
+  color: #333;
+  padding-right: 0.53333333rem;
+}
+a.cofion-btn .w-r {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  background: orange;
+  text-align: center;
+}
+a.cofion-btn.green {
+  color: #fff;
+}
+a.cofion-btn.green .w-r {
+  background: green;
+}

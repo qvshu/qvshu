@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- 强制让文档宽度和设备宽度保持1:1，初始缩放比例和最大缩放比例都是1.0，不允许用户缩放页面 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- 开启对web app程序的支持 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 在web app应用下设置 屏幕顶部状态条 的颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- 设备浏览网页时对数字不启用电话功能 -->
+    <meta name="format-detection" content="telephone=no">
+    <title>公共列表</title>
+    <link rel="stylesheet" href="../../res/css/global.css">
+    <link rel="stylesheet" href="/res/css/mod/list_private.css">
+    <script src="/res/libs/flexible/flexible.js"></script>
+<body>
+    <!-- 头部 start -->
+    <div class="header-container">
+        <div class="header">
+            <a href="javascript:;" class="g-back"><!-- 返回按钮 --></a>
+            <h1>公共列表</h1>
+        </div>
+    </div>
+    <!-- 头部 end -->
+
+    <div class="tab-container">
+        <ul class="choose-tab hide">
+            <!-- 选中则在li标签上添加类名"on" -->
+            <li class="on"><span>标签</span></li>
+            <li><span>排序</span></li>
+            <li><span>状态</span></li>
+        </ul>
+        <ul class="choose-tab">
+            <!-- 选中则在li标签上添加类名"on" -->
+            <li class="on"><span>A类用户</span></li>
+            <li><span>剩余有效转化时间倒序</span></li>
+            <li><span>待转化</span></li>
+        </ul>
+    </div>
+
+    <ul class="normal-list">
+        <li>
+            <!-- 可点击添加类名"click" -->
+            <a href="javascript:;" class="link">
+                <p class="text">代理入职如何走加白流程？</p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" class="link click">
+                <p class="text">如何开通信用钱包，如何开通信用钱包，如何开通信用钱包？</p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" class="link click">
+                <svg class="svg-icon">
+                    <use xlink:href="/res/svg/mod.svg#icon-qrcode"><!-- 关闭图标 --></use>
+                </svg>
+                <p class="text">销售系统二维码下载</p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" class="link click">
+                <i><!-- 背景图标 --></i>
+                <p class="text">代理入职如何走加白流程？</p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" class="link click">
+                <p class="text score">
+                    <span class="title">12月评分</span>
+                    <span class="item">2.73</span>
+                </p>
+            </a>
+        </li>
+    </ul>
+
+    <dl class="order-list">
+        <dt>
+            <span class="title">开户成功</span>
+            <span class="item">10.00元</span>
+        </dt>
+        <dd>
+            <svg class="svg-icon">
+                <use xlink:href="/res/svg/global.svg#icon-male"><!-- 男性图标 --></use>
+            </svg>
+            <span class="name">杨雨奇（先生）</span>
+            <!-- 手机号支持点击拨打，不支持长按复制 -->
+            <a href="javascript:;">13548419900</a>
+        </dd>
+        <dd>
+            <svg class="svg-icon">
+                <use xlink:href="/res/svg/global.svg#icon-female"><!-- 女性图标 --></use>
+            </svg>
+            <span class="name">迪丽热巴（女士）</span>
+            <!-- 手机号支持点击拨打，不支持长按复制 -->
+            <a href="javascript:;">13515646215</a>
+        </dd>
+        <dd>
+            <svg class="svg-icon">
+                <use xlink:href="/res/svg/mod.svg#icon-time"><!-- 时间图标 --></use>
+            </svg>
+            <span>2017-09-09 12:09:09</span>
+        </dd>
+        <dd>
+            <svg class="svg-icon">
+                <use xlink:href="/res/svg/mod.svg#icon-location"><!-- 位置图标 --></use>
+            </svg>
+            <p class="location">北京师范大学香港浸会大学联合国际学院北京师范大学香港浸会大学联合国际学院</p>
+        </dd>
+        <dd>
+            <svg class="svg-icon">
+                <use xlink:href="/res/svg/global.svg#icon-order"><!-- 订单图标 --></use>
+            </svg>
+            <!-- 订单号支持长按复制 -->
+            <span class="order-number copy">O2016102500190883322777</span>
+        </dd>
+    </dl>
+
+    <dl class="order-list">
+        <dt>
+            <span class="title">开户成功</span>
+            <span class="item">10.00元</span>
+        </dt>
+        <dd class="order-detail">
+            <img class="order-img" src="/res/img/index/apple.jpg" alt="苹果手机商品示例图">
+            <div class="order-info">
+                <p class="order-title">小米5s移动联通电信4G手机小米5s</p>
+                <p class="order-item">
+                    <span>刘玉宣（先生）</span>
+                    <a href="javascript:;" class="tel">130****6666</a>
+                </p>
+                <p class="order-item copy">O2019334656546333366</p>
+            </div>
+            <div class="order-price">36000.00元</div>
+        </dd>
+    </dl>
+
+    <div class="mod-detail">
+        <div class="detail-title">收益详情</div>
+        <ul class="detail-list">
+            <li>
+                <p class="list-title">授信完成时间</p>：
+                <p class="list-content">2017-03-10</p>
+            </li>
+            <li>
+                <p class="list-title">交易完成时间</p>：
+                <p class="list-content">2017-03-20</p>
+            </li>
+            <li>
+                <p class="list-title">交易类型</p>：
+                <p class="list-content">授信后 当月交易</p>
+            </li>
+            <li>
+                <p class="list-title">提成比例</p>：
+                <p class="list-content">1.0%</p>
+            </li>
+            <li>
+                <p class="list-title">交易金额</p>：
+                <p class="list-content">120.00元</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mod-detail">
+        <div class="detail-title">订单详情</div>
+        <ul class="detail-list">
+            <li>
+                <p class="list-title">商品名称</p>：
+                <p class="list-content">小米5s 移动联通电信4G手机小米5s 移动联通电信4G手机</p>
+            </li>
+            <li>
+                <p class="list-title">订单金额</p>：
+                <p class="list-content">5888.00元</p>
+            </li>
+            <li>
+                <p class="list-title">用户姓名</p>：
+                <p class="list-content copy">黄小晓（女士）</p>
+            </li>
+            <li>
+                <p class="list-title">手机号码</p>：
+                <p class="list-content copy">13547845154</p>
+            </li>
+            <li>
+                <p class="list-title">订单状态</p>：
+                <p class="list-content">已退货</p>
+            </li>
+            <li>
+                <p class="list-title">退货时间</p>：
+                <p class="list-content">2017-03-20</p>
+            </li>
+            <li>
+                <p class="list-title">订 单 号</p>：
+                <p class="list-content copy">O201687390997363838545</p>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

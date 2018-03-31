@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页</title>
+<!-- libs start -->
+<!--#include virtual="/app/layout/libs.html"-->
+<!-- libs end -->
+<link rel="stylesheet" href="/app/res/css/index/index.css" type="text/css"/>
+
+<!-- 地图 -->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=I41iAGFaTPXFt7LKMECH0IcCoVRiYDQP"></script>
+</head>
+<body>
+	<!-- 头部 start -->
+	<div class="header-container">
+		<div class="header">
+			<a href="javascript:;" class="g-back"><!-- 返回按钮 --></a>
+			<h1>首页</h1>
+		</div>
+	</div>
+	<!-- 头部 end -->
+
+       <div class="content">
+
+           <!-- 顶部banner开始 -->
+           <div class="cont-top">
+            <div class="swiper-container">
+            	<div class="swiper-wrapper">
+		            <div class="swiper-slide hotel-img"><img width="100%" src="/app/res/img/hotel/hotel.jpg" alt="" /></div>
+		            <div class="swiper-slide hotel-img"><img width="100%" src="/app/res/img/hotel/hotel.jpg" alt="" /></div>
+		            <div class="swiper-slide hotel-img"><img width="100%" src="/app/res/img/hotel/hotel.jpg" alt="" /></div>
+		        </div>
+		        
+		        <div class="hotel-txt">
+		        	<div class="title"><span>养生谷度假别墅</span>(5房7床)</div>
+		        	<!-- 分页器，显示页数 -->
+		        	<div class="page"><div class="swiper-pagination"></div></div>
+		        </div>
+		        
+            </div>	
+           	              
+           </div>
+           <!-- 顶部banner结束 -->
+           <div class="cont-min">
+           	<a class="search-icon" href="">搜索</a>
+           	<a class="hongbao-icon" href="">领红包</a>
+           	<p class="wrap-title">热门选择</p>
+           	<ul class="hot-chouse">
+           		<li>
+           			<a><img id="hotHouse1" src=""></a>
+           		</li>
+                <li>
+                    <a><img id="hotHouse2" src=""></a>
+                </li>
+                <li>
+                    <a><img id="hotHouse3" src=""></a>
+                </li>
+                <li>
+                    <a><img id="hotHouse4" src=""></a>
+                </li>
+                <li>
+                    <a><img id="hotHouse5" src=""></a>
+                </li>
+           	</ul>
+           	<p class="wrap-title">热门目的地</p>
+           	<ul id="hotCityList" class="hot-mudidi">
+           	<!-- 
+           	<li><a href="">广州</a></li>
+           		<li class="on"><a href="">深圳</a></li>
+                   <li><a href="">广州</a></li>
+                   <li><a href="">广州</a></li>
+                   <li><a href="">广州</a></li>
+                   <li><a href="">更多...</a></li>
+           	 -->
+           	</ul>
+           	<ul id="districtList" class="hotle-banner-list">
+           		<!--  
+           		<li class="banner-warp">
+                       <img class="banner" src="" alt="">
+                       <div class="banner-txt">
+                           <p class="banner-title">南昆山养身谷</p>
+                           <p class="banner-des">4-8房温泉度假别墅，备考南昆山森林公园</p>
+                           <p class="long">距离：180km</p>
+                       </div>
+                       
+                   </li>
+                   <li class="banner-warp">
+                       <img class="banner" src="" alt="">
+                       <div class="banner-txt">
+                           <p class="banner-title">南昆山养身谷</p>
+                           <p class="banner-des">4-8房温泉度假别墅，备考南昆山森林公园</p>
+                           <p class="long">距离：180km</p>
+                       </div>
+                       
+                   </li>
+                   -->
+           	</ul>
+               <a class="more-mididi" href="/app/moreCity.html">更多目的地&gt;</a>
+               <p class="wrap-title">推荐</p>
+               <ul id="houseListOfRecommended" class="recommend-hotle">
+               <!--  
+                   <li>
+                       <div class="top-wrap">
+                           <a class="banner" href=""><img src="/app/res/img/hotel/hotel.jpg" alt=""></a>
+                           <div class="tag-wrap">
+                               <div class="w-l">
+                                   <span class="tag">温泉</span>
+                                   <span class="tag">KTV</span> 
+                                   <span class="tag">庭院</span>    
+                               </div>
+                               <div class="w-r">
+                                   <span class="tag">领券立减200活动中</span>
+                                   
+                               </div>
+                           </div>
+                           
+                       </div>
+                       <div class="min-wrap">
+                           <p class="top-group">
+                               <span class="w-l">
+                                   [优选]嗨墅4房度假别墅
+                               </span>
+                               <span class="w-r">
+                                   ￥1999
+                               </span>
+                           </p>
+                           <p class="min-group">
+                               <span class="w-l">
+                                   5房8床/宜住8人
+                               </span>
+                               <span class="w-r">
+                                   人均：￥80
+                               </span>
+                          </p>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="top-wrap">
+                           <a class="banner" href=""><img src="/app/res/img/hotel/hotel.jpg" alt=""></a>
+                           <div class="tag-wrap">
+                               <div class="w-l">
+                                   <span class="tag">温泉</span>
+                                   <span class="tag">KTV</span> 
+                                   <span class="tag">庭院</span>    
+                               </div>
+                               <div class="w-r">
+                                   <span class="tag">领券立减200活动中</span>
+                                   
+                               </div>
+                           </div>
+                           
+                       </div>
+                       <div class="min-wrap">
+                           <p class="top-group">
+                               <span class="w-l">
+                                   [优选]嗨墅4房度假别墅
+                               </span>
+                               <span class="w-r">
+                                   ￥1999
+                               </span>
+                           </p>
+                           <p class="min-group">
+                               <span class="w-l">
+                                   5房8床/宜住8人
+                               </span>
+                               <span class="w-r">
+                                   人均：￥80
+                               </span>
+                          </p>
+                       </div>
+                   </li>
+                   -->
+               </ul>
+           </div>
+
+
+       </div>
+       <!-- 底部菜单 开始 -->
+       <!--#include virtual="/app/layout/footer.html"-->
+	   <!-- 底部菜单 开始 -->
+		
+		<div id="map" class="hide"></div>
+<script src="/app/res/js/index.js"></script>
+</body>
+</html>

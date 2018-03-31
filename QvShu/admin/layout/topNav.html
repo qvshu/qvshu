@@ -1,0 +1,126 @@
+<header>
+	<div class="head-top clearfix">
+	    <div class="pull-left">
+	        <a href="#" class="head-logo"></a>
+	        <span class="logo-text">管理系统</span>
+	    </div>
+	    <div class="pull-right head-info">
+	        欢迎您！
+	        <a id="headerUserName" href="javascript:void(0)">周润发</a>
+	        |
+	        <a href="#">修改密码</a>
+	        |
+	        <a id="exitBtn" href="javascript:void(0);">退出</a>
+	    </div>
+	</div>
+	<!-- 头部导航 -->
+	<nav class="head-nav">
+	    <ul class="clearfix">
+	        <li>
+	            <a href="/factory/index.html">
+	                第三方产品
+	            </a>
+	        </li>
+	        <li id="menu_house_merchant_management" class="">
+	            <a href="/admin/houseMerchantManager/houseList.html">
+	                <span class=""></span>房源商户管理
+	            </a>
+	        </li>
+	        <li id="menu_order_management" class="">
+	            <a href="/admin/orderManagement/orderList.html">                     
+	                订单管理
+	            </a>
+	        </li>
+	        <li class="">
+	            <a href="###">                     
+	                网站管理
+	            </a>
+	            
+	        </li>
+	        <li id="menu_operate_management" class="">
+	            <a href="/admin/operateManagement/couponPackageList.html">
+	                内容运营
+	            </a>
+	        </li>
+	        <li class="">
+	            <a href="###">
+	                
+	                自营别墅合作
+	            </a>
+	        </li>
+	        <li class="">
+	            <a href="###">
+	                
+	                销售渠道管理
+	            </a>
+	        </li>
+	        <li class="">
+	            <a href="###">
+	                
+	                财务
+	            </a>
+	        </li>
+	        <li class="">
+	            <a href="###">
+	                
+	                权限
+	            </a>
+	        </li>
+	    </ul>
+	</nav>
+	<!-- 头部导航 -->
+</header>
+<script src="/admin/res/js/topNav.js"></script>
+	
+<!-- 消息提示 -->
+<div class="modal fade" id="msgInfoWidget" tabindex="-1" role="dialog" aria-labelledby="msgInfoTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="msgInfoTitle">
+                消息提示
+                </h4>
+            </div>
+            <div id="msgInfoContent" class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 错误提示 -->
+<div class="modal fade" id="errorInfoWidget" tabindex="-1" role="dialog" aria-labelledby="errorInfoTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="errorInfoTitle">
+                错误提示
+                </h4>
+            </div>
+            <div id="errorInfoContent" class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 询问 -->
+<div class="modal fade" id="confirmWidget" tabindex="-1" role="dialog" aria-labelledby="confirmTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="confirmTitle">
+                    确认
+                </h4>
+            </div>
+            <div id="confirmContent" class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                </button>
+                <a id="confirmWidgetYes" href="javascript:void(0);" type="button" class="btn btn-primary">
+                    确认
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>房源录入</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+</head>
+<body>
+    <!-- 头部 -->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    
+    <article class="content">
+    	<!-- 左边菜单 -->
+        <!--#include virtual="/admin/layout/houseMerchantManagement_sidenav.html"-->
+        
+        <main class="main-body">
+            <div class="top-location">
+                当前位置：房源商户管理<span class="fn-mlr5">&gt;</span>房源列表
+            </div>
+            <div class="clearfix">
+                <div class="">
+	                <form action="" class="form-horizontal">
+	                    <div class="form-group text-right">
+	                        <a class="btn btn-success">标签管理</a>
+	                        <a class="btn btn-success">新增城市</a>
+	                        <a href="/admin/houseMerchantManager/addDistrict.html" class="btn btn-success">新增小区</a>
+	                    </div>
+	                    <div class="form-group">
+	    
+	                        <div id="cityWidget" class="col-sm-2"></div>
+	                        <div id="districtWidget" class="col-sm-2"></div>
+	                        <div class="col-sm-1">
+	                            <a id="searchBtn" href="javascript:void(0);" class="btn btn-success btn-block">搜索</a>
+	                        </div>
+	                    </div>
+	                    <div class="top-location"></div>
+	                    <table class="table table-hover">
+	                        <tbody>
+	                            <tr>
+	                                <td width="20%">
+	                                    <span id="district_name"></span>
+	                                </td>
+	                                <td width="10%" colspan="2" >
+	                                    房源：<span id="houseTotalCount"></span>
+	                                </td>
+	                                <td colspan="2">
+	                                    <span id="city_name"></span>
+	                                </td>
+	
+	                                <td width="35%">
+	                                    <span class="c-red">待上线：1</span>
+	                                </td>
+	                                <td colspan="4" class="text-right">
+	                                    <a class="mr15" href="/admin/houseMerchantManager/addHouse.html">
+	                                        新增房源
+	                                    </a>
+	                                    <a href="#" class="mr15" data-id="" data-type="">查看房源</a>
+	                                    <a href="#" class="" data-id="" data-type="">编辑小区</a>
+	                                </td>
+	                            </tr>
+	                        </tbody>
+	                    </table>
+	                    <div id="tableList"></div>
+	                    <!--  
+	                    
+	                    <table class="table table-hover">
+	                        <tr class="">
+	                            <td width="160"><img src="" width="150" height="150"></td>
+	                            <td>
+	                                <p>明月一号别墅 <span class="c-red"></span></p>
+	                                <p>13区一街29号</p>
+	                                <p>商户：小萍</p>
+	                            </td>
+	                            <td width="50%"></td>
+	                            <td class="text-right">
+	                                <div>
+	                                    <a class="btn btn-success" href="" target="_blank">上线</a>
+	                                </div>
+	                                <p class="bot-txt"><a href="###">浏览</a>|<a href="###">编辑</a><a href="###">编辑</a>|<a href="">删除</a></p>
+	                            </td>
+	                        </tr>
+	                        <tr class="">
+	                            <td width="160"><img src="" width="150" height="150"></td>
+	                            <td>
+	                                <p>明月一号别墅 <span class="c-red"></span></p>
+	                                <p>13区一街29号</p>
+	                                <p>商户：小萍</p>
+	                            </td>
+	                            <td width="50%"></td>
+	                            <td class="text-right">
+	                                <div>
+	                                    <a class="btn btn-default" href="" target="_blank">房源下线</a>
+	                                    <a class="btn btn-default" href="" target="_blank">问题下线</a>
+	                                </div>
+	                                <p class="bot-txt"><a href="###">浏览</a>|<a href="###">编辑</a><a href="###">编辑</a>|<a href="">删除</a></p>
+	                            </td>
+	                        </tr>
+	                    <tbody>
+	                    -->
+	                </form>
+	            </div>
+            </div>
+        </main>
+    </article>
+</body>
+<script src="/admin/res/js/houseMerchantManager/houseList2.js"></script>
+</html>

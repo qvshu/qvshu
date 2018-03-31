@@ -1,0 +1,55 @@
+@charset "UTF-8";
+@import "../mod/fn.less";
+/* 输入框组件 */
+
+body{
+    padding-bottom: 90px/@p;
+}
+//表单样式重置
+
+.form-new,
+.form-new li {
+    position: relative;
+    background: transparent;
+    margin: 0;
+}
+.form-new {
+    border-color: #E8EAEE;
+    .form-input{
+        background: #fff;
+        padding-left: 30px/@p;
+    }
+    .title-wrap {
+        padding: 32px/@p 0 16px/@p 30px/@p;
+        color: #B4B4B4;
+        font-size: 24px/@p;
+        display: block;
+        .del {
+            position: absolute;
+            top: 36px/@p;
+            right: 30px/@p;;
+            display: block;
+
+            height: 28px/@p;
+            color: #B4B4B4;
+            .svg-icon{
+                vertical-align: middle;
+                width: 28px/@p;
+                height: 26px/@p;
+                fill: #B4B4B4;
+            }
+        }
+    }
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        .setBorderHeight1px(#efefef);
+    }
+    li:last-child {
+        &:after {
+            display: none;
+        }
+    }
+}

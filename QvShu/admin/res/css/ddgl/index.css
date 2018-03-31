@@ -1,0 +1,13 @@
+.col-sm-6{padding: 0}
+.table-top-space{height: 74px;}
+.friday-title{background: #399d09;color: #fff}
+.setday-title{background: #0d6733;color: #fff}
+.friday{background: #cee9c7}
+.setday{background: #c2d9bd}
+
+.no-room{background: #970002;color: #fff}
+.stay-room{background: #0c6766;color: #fff}
+.left-warp .table{border-top: 1px #ddd solid; border-left:1px #ddd solid !important; }
+.left-warp .table tr td{padding-top: 25px;padding-bottom: 25px;}
+.right-warp tr,.right-warp td,.right-warp th{ border: 1px #ddd solid; cursor: default;}
+.right-warp .table > tbody > tr > td:hover{background: #ffffcc}

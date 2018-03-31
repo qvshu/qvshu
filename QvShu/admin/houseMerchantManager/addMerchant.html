@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>商户录入</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+</head>
+<body>
+    <!-- header start-->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    <!-- header end-->
+    
+    <article class="content">
+        <!-- 左边菜单  开始-->
+        <!--#include virtual="/admin/layout/houseMerchantManagement_sidenav.html"-->
+        <!-- 左边菜单  结束-->
+        
+        <main class="main-body">
+            <div class="top-location">
+                当前位置：房源与商户管理<span class="fn-st">&gt;</span>商户录入
+            </div>
+            <div class="clearfix">
+	            <div class="">
+	                <form action="" class="form-horizontal">
+	                    <p class="mb15">基础信息</p>
+	
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">所属省份：</label>
+	                        <div id="proviceWidget" class="col-sm-2 pr0">
+	                        </div>
+	                        <div id="cityWidget" class="col-sm-2 pr0">
+	                        </div>
+	                        <div id="districtWidget" class="col-sm-2">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">商户名称</label>
+	                        <div class="col-sm-3">
+	                            <input id="account" class="form-control" placeholder="请输入商户名称">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">商户姓名：</label>
+	                        <div class="col-sm-3">
+	                            <input id="name" class="form-control" placeholder="请输入商户姓名：">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">性别：</label>
+	                        <div class="col-sm-3">
+	                            <label class="control-label fl mr10"><input class="ml10" type="checkbox" id="sexMale" value="1">&nbsp;男</label>
+	                            <label class="control-label fl mr10"><input class="ml10" type="checkbox" name="sexFemale" value="0">&nbsp;女</label>
+	                        </div>
+	                    </div>
+	                    <div class="top-location"></div>
+	                    <p class="mb15">沟通信息</p>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label">主负责人：</label>
+	                        <div class="col-sm-2">
+	                            <input id="mainChargeMan_name" class="form-control" placeholder="">
+	                        </div>
+	                        <label class="col-sm-1 control-label ">联系电话：</label>
+	                        <div class="col-sm-2">
+	                            <input id="mainChargeMan_phone" class="form-control" placeholder="">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label">辅负责人：</label>
+	                        <div class="col-sm-2">
+	                            <input id="subChargeMan1_name" class="form-control" placeholder="">
+	                        </div>
+	                        <label class="col-sm-1 control-label ">联系电话：</label>
+	                        <div class="col-sm-2">
+	                            <input id="subChargeMan1_phone" class="form-control" placeholder="">
+	                        </div>
+	                        <a id="subChargeManAddBtn1" class="btn btn-success" href="javascript:addSubChargeMan('subChargeManAddBtn1');">添加</a>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label">管家：</label>
+	                        <div class="col-sm-2">
+	                            <input id="homeKeeper1_name" class="form-control" placeholder="">
+	                        </div>
+	                        <label class="col-sm-1 control-label honmeKeeperPhone">联系电话：</label>
+	                        <div class="col-sm-2">
+	                            <input id="homeKeeper1_phone" class="form-control" placeholder="">
+	                        </div>
+	                        <div class="col-sm-2">
+	                            <select id="homeKeeper1_district" class="form-control homeKeeperDistrict">
+	                            </select>
+	                        </div>
+	                        <a id="homeKeeperAddBtn1" class="btn btn-success" href="javascript:addHousekeeper('homeKeeperAddBtn1');">添加</a>
+	                    </div>
+	                    
+	                    <div class="top-location"></div>
+	                    <p class="mb15">银行信息</p>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label">收款人：</label>
+	                        <div class="col-sm-2">
+	                            <input id="bankName" class="form-control" placeholder="">
+	                        </div>
+	                        <label class="col-sm-1 control-label ">联系电话：</label>
+	                        <div class="col-sm-2">
+	                            <input id="bankPhone" class="form-control" placeholder="">
+	                        </div>
+	
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">开户行：</label>
+	                        <div id="bankProviceWidget" class="col-sm-2">
+	                        </div>
+	                        <label class="col-sm-1 control-label">支行：</label>
+	                        <div class="col-sm-2">
+	                            <input id="bankSubBank" class="form-control" placeholder="">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label">账户账号：</label>
+	                        <div class="col-sm-2">
+	                            <input id="bankAccount" class="form-control" placeholder="">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">结算方式：</label>
+	                        <div id="bankSettlementWidget" class="col-sm-2">
+	                        </div>    
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">备注：</label>
+	                        <div class="col-sm-10">
+	                            <textarea id="bankRemark" cols="30" rows="5" class="form-control" placeholder=""></textarea>
+	                        </div>
+	                    </div>
+	                   
+	
+	                    <div class="top-location"></div>
+	                    <p class="mb15">其他信息</p>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">预定须知：</label>
+	                        <div class="col-sm-10">
+	                            <textarea id="bookInstruction" cols="30" rows="5" class="form-control" placeholder=""></textarea>
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">退改政策：</label>
+	                        <div id="cancelBookTypeWidget" class="col-sm-2">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">    
+	                        <label class="col-sm-1 control-label ">退改内容：</label>
+	                        <div class="col-sm-10">
+	                            <textarea id="cancelBookDes" cols="30" rows="5" class="form-control" placeholder=""></textarea>
+	                        </div>
+	                    </div>
+	
+	
+	                    <div class="top-location"></div>
+	                    <div class="form-group">
+	                        <div class="col-sm-1">
+	                            <a id="saveBtn" href="javascript:void(0);" class="btn btn-block btn-success">确定</a>
+	                        </div>
+	                        <div class="col-sm-1">
+	                            <a href="/admin/houseMerchantManager/merchantList.html" class="btn btn-block btn-dufaul">取消</a>
+	                        </div>
+	                    </div>
+	
+	                </form>
+	            </div>
+    		</div>
+ 		</main>
+	</article>
+
+<script type="text/javascript" src="../res/js/houseMerchantManager/addMerchant.js"></script>
+</body>
+</html>

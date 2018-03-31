@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>房源编辑</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+</head>
+<body>
+    <!-- header start-->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    <!-- header end-->
+    
+    <article class="content">
+        <!-- 左边菜单  开始-->
+        <!--#include virtual="/admin/layout/houseMerchantManagement_sidenav.html"-->
+        <!-- 左边菜单  结束-->
+        
+        <main class="main-body">
+            <div class="top-location">
+                当前位置：房源与商户管理<span class="fn-st">&gt;</span>编辑房源
+            </div>
+            <div class="clearfix">
+	            <div class="">
+	                <form action="" class="form-horizontal">
+	                    <p class="mb15">SEO优化</p>
+	
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">优化标题：</label>
+	                        <div class="col-sm-5">
+	                            <input id="seoTitle" class="form-control" placeholder="请输入标题">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">TAG词：</label>
+	                        <div class="col-sm-5">
+	                            <input id="tagWords" class="form-control" placeholder="请输入TAG词">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">关键词：</label>
+	                        <div class="col-sm-5">
+	                            <input id="keyWords" class="form-control" placeholder="请输入关键词">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">页面描述：</label>
+	                        <div class="col-sm-5">
+	                            <input id="webDescription" class="form-control" placeholder="请输入页面描述">
+	                        </div>
+	                    </div>
+	                    <div class="top-location"></div>
+	                    <p class="mb15">基本信息</p>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">趣墅房源：</label>
+	                        <div class="col-sm-2">
+	                            <input id="name" class="form-control" placeholder="请输入嗨墅房源名称">
+	                        </div>
+	                        <label class="col-sm-1 control-label ">商户房源：</label>
+	                        <div id="thirdPartHouse" class="col-sm-2"></div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">商户：</label>
+	                        <div id="merchantWidget" class="col-sm-2"></div>
+	                    </div>
+	                    <!--  
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">接待管家：</label>
+	                        <div class="col-sm-2">
+	                            <input class="form-control" placeholder="">
+	                        </div>
+	                    </div>
+	                    -->
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">房源类型：</label>
+	                        <!--  
+	                        <div class="col-sm-2">
+	                            <select class="form-control" id="business_id" name="business_id"><option value="">选择</option>
+	                            <option value="1" data-type="2">别墅</option>
+	                            <option value="1" data-type="2">楼房</option></select>
+	                        </div>
+	                        -->
+	                        <div id="houseTypeWidget" class="col-sm-2"></div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">地域归属：</label>
+	                        <div id="cityWidget" class="col-sm-2"></div>
+	                        <div id="districtWidget" class="col-sm-2"></div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">线下房号：</label>
+	                        <div class="col-sm-2">
+	                            <input id="offlineNo" class="form-control" placeholder="线下房号">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">房源简述：</label>
+	                        <div class="col-sm-4">
+	                            <input id="subIntroduction" class="form-control" placeholder="请输入关键词描述">
+	                        </div>
+	                    </div>
+	                    <div class="top-location"></div>
+	                    <p class="mb15">详细信息</p>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">房源类型：</label>
+	                        <div id="manageTypeWidget" class="col-sm-2"></div>
+	                        
+	                        <label class="col-sm-2 control-label">实地考察&nbsp;&nbsp;<input id="isSpotCheck" class="ml10" type="checkbox" value="1"> 是</label>
+	                        <label for="" class="checkbox-inline">
+	                        </label>
+	                        <label class="col-sm-2 control-label">停车场&nbsp;&nbsp;<input id="parkingExist" type="checkbox" value="1">&nbsp;有&nbsp;&nbsp;<input id="parkingFee" type="checkbox" value="1">&nbsp;收费</label>
+	
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">布草更换：</label>
+	                        <div id="lawnChangeWidget" class="col-sm-2"></div>
+	                        <!--  
+	                        <div class="col-sm-2">
+	                            <select class="form-control" id="business_id" name="business_id"><option value="">选择</option>
+	                            <option value="1" data-type="2">每日一换</option>
+	                            <option value="1" data-type="2">每日一换</option></select>
+	                        </div>
+	                        -->
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">同类房源：</label>
+	                        <div class="col-sm-2">
+	                            <input id="similarHouseCount" class="form-control" placeholder="1">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">房源面积：</label>
+	                        <div class="col-sm-1">
+	                            <input id="area" class="form-control" placeholder="1">
+	                        </div>
+	                        <label class="control-label fl">平米</label>
+	                        <label class="col-sm-1 control-label">房源层数：</label>
+	                        <div class="col-sm-1">
+	                            <input id="floorCount" class="form-control" placeholder="1">
+	                        </div>
+	                        <label class="control-label fl">层</label>     
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">户型：</label>
+	                        <div class="col-sm-1">
+	                            <input id="layoutRoom" class="form-control" placeholder="1">
+	                        </div>
+	                        <label class="control-label fl">室</label>
+	                        <div class="col-sm-1">
+	                            <input id="layoutOffice" class="form-control" placeholder="1">
+	                        </div>
+	                        <label class="control-label fl">厅</label>
+	                        <div class="col-sm-1">
+	                            <input id="layoutKitchen" class="form-control" placeholder="1">
+	                        </div>
+	                        <label class="control-label fl">厨</label>
+	                        <div class="col-sm-1">
+	                            <input id="layoutBalcony" class="form-control" placeholder="1">
+	                        </div>
+	                        <label class="control-label fl">阳台</label>
+	                            
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">卫生间：</label>
+	                        <div class="col-sm-2">
+	                            <input id="toiletCommon" class="form-control" placeholder="1">
+	                        </div>
+	                        <label class="control-label fl">公共</label>
+	                        <div class="col-sm-2">
+	                            <input id="toiletIndependen" class="form-control" placeholder="1">
+	                        </div>
+	                        <label class="control-label fl">独立</label>
+	                    </div>
+	
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">入住人数：</label>
+	                        <div class="col-sm-2">
+	                            <input id="liveCount" class="form-control" placeholder="1">
+	                        </div>
+	                        <label class="control-label fl">人</label>
+	                    </div>
+	
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">可玩人数：</label>
+	                        <div class="col-sm-2">
+	                            <input id="funCount" class="form-control" placeholder="1">
+	                        </div>
+	                        <label class="control-label fl">人</label>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">床铺：</label>
+	                        <div class="col-sm-2">
+	                            <input id="bed1_width" class="form-control" placeholder="200">
+	                        </div>
+	                        <label class="control-label fl">宽</label>
+	                        <div class="col-sm-2">
+	                            <input id="bed1_length" class="form-control" placeholder="200">
+	                        </div>
+	                        <label class="control-label fl">长</label>
+	                        <div class="col-sm-2">
+	                            <input id="bed1_count" class="form-control" placeholder="200">
+	                        </div>
+	                        <label class="control-label fl">张</label>
+	                        <div id="bedWidget1" class="col-sm-2"></div>
+	                        <label class="control-label fl">床垫</label>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">床铺：</label>
+	                        <div class="col-sm-2">
+	                            <input id="bed2_width" class="form-control" placeholder="200">
+	                        </div>
+	                        <label class="fl control-label">宽</label>
+	                        <div class="col-sm-2">
+	                            <input id="bed2_length" class="form-control" placeholder="200">
+	                        </div>
+	                        <label class="fl control-label">长</label>
+	                        <div class="col-sm-2">
+	                            <input id="bed2_count" class="form-control" placeholder="200">
+	                        </div>
+	                        <label class="fl control-label">张</label>
+	                        <div id="bedWidget2" class="col-sm-2"></div>
+	                        <label class="fl control-label">床垫</label>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">床铺：</label>
+	                        <div class="col-sm-2">
+	                            <input id="bed3_width" class="form-control" placeholder="200">
+	                        </div>
+	                        <label class="fl control-label">宽</label>
+	                        <div class="col-sm-2">
+	                            <input id="bed3_length" class="form-control" placeholder="200">
+	                        </div>
+	                        <label class="fl control-label">长</label>
+	                        <div class="col-sm-2">
+	                            <input id="bed3_count" class="form-control" placeholder="200">
+	                        </div>
+	                        <label class="fl control-label">张</label>
+	                        <div id="bedWidget3" class="col-sm-2"></div>
+	                        <label class="fl control-label">床垫</label>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">床铺：</label>
+	                        <div class="col-sm-2">
+	                            <input id="bed4_width" class="form-control" placeholder="200">
+	                        </div>
+	                        <label class="fl control-label">宽</label>
+	                        <div class="col-sm-2">
+	                            <input id="bed4_length" class="form-control" placeholder="200">
+	                        </div>
+	                        <label class="fl control-label">长</label>
+	                        <div class="col-sm-2">
+	                            <input id="bed4_count" class="form-control" placeholder="200">
+	                        </div>
+	                        <label class="fl control-label">张</label>
+	                        <div id="bedWidget4" class="col-sm-2"></div>
+	                        <label class="fl control-label">床垫</label>
+	                    </div>
+	
+	                    <div class="top-location"></div>
+	                    <p class="mb15">房源属性</p>
+	                    <div id="attribute_attr" class="form-group">
+	                        <label class="col-sm-1 control-label ">类型属性：</label>
+	                        <!--  
+	                        <label class="control-label fl mr10"><input class="ml10" type="checkbox" name="" value="">&nbsp;沙滩</label>
+	                        <label class="control-label fl mr10"><input class="ml10" type="checkbox" name="" value="">&nbsp;海边</label>
+	                        <label class="control-label fl mr10"><input class="ml10" type="checkbox" name="" value="">&nbsp;海边</label>
+	                        <label class="control-label fl mr10"><input class="ml10" type="checkbox" name="" value="">&nbsp;海边</label>
+	                        <label class="control-label fl mr10 "><input class="ml10" type="checkbox" name="" value="">&nbsp;海边</label>
+	                        <label class="control-label fl mr10"><input class="ml10" type="checkbox" name="" value="">&nbsp;海边</label>
+	                    	-->
+	                    </div>
+	                    <div id="attribute_crowd" class="form-group">
+	                        <label class="col-sm-1 control-label ">符合人群：</label>
+	                        <!--  
+	                        <label class="control-label fl mr10"><input class="ml10" type="checkbox" name="" value="">&nbsp;沙滩</label>
+	                        <label class="control-label fl mr10"><input class="ml10" type="checkbox" name="" value="">&nbsp;海边</label>
+	                        <label class="control-label fl mr10"><input class="ml10" type="checkbox" name="" value="">&nbsp;海边</label>
+	                        <label class="control-label fl mr10"><input class="ml10" type="checkbox" name="" value="">&nbsp;海边</label>
+	                        <label class="control-label fl mr10 "><input class="ml10" type="checkbox" name="" value="">&nbsp;海边</label>
+	                        <label class="control-label fl mr10"><input class="ml10" type="checkbox" name="" value="">&nbsp;海边</label>
+	                    	-->
+	                    </div>
+	                    <div class="top-location"></div>
+	                    <p class="mb15">别墅设施</p>
+	                    <div id="facility_entertainment" class="form-group">
+	                        <label class="col-sm-1 control-label ">娱乐设施：</label>
+	                    </div>
+	                    <div id="facility_outdoor" class="form-group">
+	                        <label class="col-sm-1 control-label ">室外设施：</label>
+	                    </div>
+	                    <div id="facility_indoor" class="form-group">
+	                        <label class="col-sm-1 control-label ">室内设施：</label>
+	                    </div>
+	                    <div id="facility_kitchen" class="form-group">
+	                        <label class="col-sm-1 control-label ">厨房设施：</label>
+	                    </div>
+	                    <div id="facility_clean" class="form-group">
+	                        <label class="col-sm-1 control-label ">清洁设施：</label>
+	                    </div>
+	                    
+	                    <div class="top-location"></div>
+	                    <p class="mb15">分享信息</p>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">分享标题：</label>
+	                        <div class="col-sm-2">
+	                            <input id="shareTitle" class="form-control" placeholder="">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">分享内容：</label>
+	                        <div class="col-sm-2">
+	                            <input id="shareContent" class="form-control" placeholder="">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">分享图片：</label>
+	                        <div class="col-sm-2">
+	                            <div class="upload-list">
+	                                <ul class="clearfix" id="">
+	                                    <li class=""><!--上传后在LI添加else样式 -->
+	                                        <div>
+	                                            <div id="shareImgWidget"></div>
+	                                        </div>
+	                                    </li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                    </div>
+	
+	                    <div class="top-location"></div>
+	                    <p class="mb15">房源描述</p>
+	                    <div class="form-group">
+	                        <div class="col-sm-10">
+	                            <textarea id="introduction" cols="30" rows="5" class="form-control" placeholder="请输入房源描述"></textarea>
+	                        </div>
+	                    </div>
+	                    <div class="top-location"></div>
+	                    <p class="mb15">房源描述</p>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">入住时间：</label>
+	                        <div class="col-sm-2">
+	                            <input id="checkInTime" class="form-control" placeholder="XX:XX">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">退房时间：</label>
+	                        <div class="col-sm-2">
+	                            <input id="checkOutTime" class="form-control" placeholder="XX:XX">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">接待时间：</label>
+	                        <div class="col-sm-2">
+	                            <input id="receptionTime" class="form-control" placeholder="XX:XX-XX:XX">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">入住押金：</label>
+	                        <div class="col-sm-2">
+	                            <input id="deposit" class="form-control" placeholder="100.00">
+	                        </div>
+	                    </div>
+	                    
+	                    <div id="house_reception" class="form-group">
+	                        <label class="col-sm-1 control-label">房屋接待：</label>
+	                        <!--  
+	                        <label class="control-label fl mr10"><input class="ml10" type="checkbox" name="" value="">&nbsp;接待儿童</label>
+	                        <label class="control-label fl mr10"><input class="ml10" type="checkbox" name="" value="">&nbsp;接待老人</label>
+	                        <label class="control-label fl mr10"><input class="ml10" type="checkbox" name="" value="">&nbsp;接待外宾</label>
+	                        <label class="control-label fl mr10"><input class="ml10" type="checkbox" name="" value="">&nbsp;带宠入住</label>
+	                        <label class="control-label fl mr10 "><input class="ml10" type="checkbox" name="" value="">&nbsp;吸烟</label>
+	                    	-->
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">备注：</label>
+	                        <div class="col-sm-10">
+	                            <textarea id="remark" cols="30" rows="5" class="form-control" placeholder=""></textarea>
+	                        </div>
+	                    </div>
+	                    <div class="top-location"></div>
+	                    <div class="form-group">
+	                        <div class="col-sm-1">
+	                            <a id="saveBtn" href="javascript:void(0);" class="btn btn-block btn-success">保存</a>
+	                        </div>
+	                        <div class="col-sm-1">
+	                            <a id="editHouseImgBtn" href="javascript:void(0);" class="btn btn-block btn-success">上传图片</a>
+	                        </div>
+	                        <div class="col-sm-1">
+	                            <a href="/admin/houseMerchantManager/houseList2.html" class="btn btn-block btn-dufaul">取消</a>
+	                        </div>
+	                        
+	                    </div>
+	
+	                </form>
+	            </div>
+    		</div>
+ 		</main>
+	</article>
+
+<script type="text/javascript" src="../res/js/houseMerchantManager/editHouse.js"></script>
+</body>
+</html>

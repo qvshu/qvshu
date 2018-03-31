@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* 常用函数，只能通过less引用 start */
+/* 伸缩布局容器 */
+/* 伸缩性 */
+/* 伸缩方向为垂直方向 */
+/* 水平方向居中对齐 */
+/* 侧轴方向居中对齐 */
+/* 垂直方向居中对齐 */
+/* 水平和垂直方向居中对齐 */
+/* 文字溢出隐藏--控制文本单行溢出用省略号表示 */
+/* 文字溢出隐藏--控制文本多行溢出用省略号表示 */
+/* 旋转变换 */
+/* 清除浮动 */
+/* 1:横向border 一般在伪类中引用 (配合定位使用) */
+/* 2:纵向border 一般在伪类中引用 (配合定位使用) */
+/* 常用函数，只能通过less引用 end */
+body {
+  background-color: #fff;
+}
+section {
+  padding-top: 0.96rem;
+  border-top: 1px solid #e7e7e7;
+  margin: 0 0.4rem;
+}
+section .title {
+  margin-bottom: 0.85333333rem;
+  font-size: 0.4rem;
+  text-align: center;
+  color: #5b5b5b;
+}
+section .status-list {
+  font-size: 0.37333333rem;
+  color: #5b5b5b;
+  line-height: 1;
+}
+section .status-list li {
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+  padding-bottom: 0.53333333rem;
+}
+section .status-list li:last-child {
+  padding-bottom: 0.74666667rem;
+}
+section .status-list li .item {
+  min-width: 2.4rem;
+  text-align: right;
+}
+section .status-list li .progress {
+  position: relative;
+  width: 3.73333333rem;
+  height: 0.37333333rem;
+  margin: 0 0.32rem;
+  background-color: #f5f7f6;
+}
+section .status-list li .progress span {
+  display: inline-block;
+  height: 0.37333333rem;
+}
+section .status-list li .progress .transform-percent {
+  background-color: #5c9dff;
+}
+section .status-list li .progress .credit-percent {
+  background-color: #00d3d1;
+}
+section .status-list li .number {
+  min-width: 1.6rem;
+  text-align: left;
+}
+section .detail {
+  text-align: center;
+  padding-bottom: 0.85333333rem;
+}
+section .detail a {
+  font-size: 0.37333333rem;
+  line-height: 1;
+  color: #333333;
+}
+section .detail a:after {
+  content: "";
+  position: relative;
+  top: -0.04rem;
+  display: inline-block;
+  width: 0.13333333rem;
+  height: 0.13333333rem;
+  margin-left: 0.05333333rem;
+  border-width: 0.02666667rem 0.02666667rem 0 0;
+  border-style: solid;
+  border-color: #333333;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* 常用函数，只能通过less引用 start */
+/* 伸缩布局容器 */
+/* 伸缩性 */
+/* 伸缩方向为垂直方向 */
+/* 水平方向居中对齐 */
+/* 侧轴方向居中对齐 */
+/* 垂直方向居中对齐 */
+/* 水平和垂直方向居中对齐 */
+/* 文字溢出隐藏--控制文本单行溢出用省略号表示 */
+/* 文字溢出隐藏--控制文本多行溢出用省略号表示 */
+/* 旋转变换 */
+/* 清除浮动 */
+/* 1:横向border 一般在伪类中引用 (配合定位使用) */
+/* 2:纵向border 一般在伪类中引用 (配合定位使用) */
+/* 常用函数，只能通过less引用 end */
+.payform {
+  margin-top: 0.21333333rem;
+  padding: 0.45333333rem 0 0 0.4rem;
+  background: #fff;
+  border-top: 1px #e8eaee solid;
+  color: #566272;
+}
+.payform .pay-title {
+  font-size: 0.4rem;
+  margin-bottom: 0.34666667rem;
+}
+.payform .paywrap {
+  border-bottom: 1px #f4f4f4 solid;
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+}
+.payform .paywrap .yen {
+  font-size: 0.64rem;
+  line-height: 0.64rem;
+  height: 0.64rem;
+  margin-top: 0.32rem;
+  font-weight: bold;
+  vertical-align: middle;
+}
+.payform .paywrap input {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 0.96rem;
+}
+.payform .pay-tips {
+  height: 1.06666667rem;
+  line-height: 0.8rem;
+  font-size: 0.32rem;
+  color: #B5BBC4;
+}

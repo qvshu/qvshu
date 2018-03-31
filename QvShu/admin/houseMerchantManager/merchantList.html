@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>商户列表</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+</head>
+<body>
+    <!-- header start-->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    <!-- header end-->
+    
+    <article class="content">
+        <!-- 左边菜单  开始-->
+        <!--#include virtual="/admin/layout/houseMerchantManagement_sidenav.html"-->
+        <!-- 左边菜单  结束-->
+        
+        <main class="main-body">
+            <div class="top-location">
+                当前位置：房源与商户管理<span class="fn-st">&gt;</span>商户列表
+            </div>
+            <div class="clearfix">
+            	<div class="form-group text-right">
+                </div>
+                <div class="form-group">
+                    <div id="cityWidget" class="col-sm-2 pr0">
+                    </div>
+                    <div id="districtWidget" class="col-sm-2 pr0">
+                    </div>
+                    <div class="col-sm-1">
+                        <a id="searchBtn" class="btn btn-success btn-block">搜索</a>
+                    </div>
+                    <div class="col-sm-7 pr0 text-right">
+                        <a href="/admin/houseMerchantManager/addMerchant.html" class="btn btn-success">新增商户</a>
+                    </div>
+                </div>
+            	
+            	<div id="tableList" class="panel-body">
+                            
+                </div>
+            	
+	            
+    		</div>
+ 		</main>
+	</article>
+
+<script type="text/javascript" src="/admin/res/js/houseMerchantManager/merchantList.js"></script>
+</body>
+</html>

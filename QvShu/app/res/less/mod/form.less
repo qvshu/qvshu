@@ -1,0 +1,119 @@
+@import "fn.less";
+
+.form-new{
+    border-top: 1px solid @border-outer;
+    border-bottom: 1px solid @border-outer;
+    background-color: #fff;
+    li{
+        position: relative;
+        padding: 26px/@p 30px/@p 26px/@p 0;
+        border-bottom: 1px solid @border-inner;
+        margin-left: 30px/@p;
+        font-size: 28px/@p;
+        color: #666;
+        &:last-child{
+            border-bottom: 0;
+        }
+    }
+    /* 输入框组件 start */
+    .form-input{
+        /* 伸缩布局容器 */
+        .db();
+        /* 侧轴方向居中对齐 */
+        .vc();
+        /* 输入框文本标题控件 */
+        .input-label{
+            display: inline-block;
+            min-width: 112px/@p;
+            margin-right: 40px/@p;
+            color: #5b5b5b;
+        }
+        .input-wrap{
+            position: relative;
+            padding-right: 64px/@p;
+            /* 伸缩性为1 */
+            .fx1();
+        }
+        /* input输入框 */
+        input{
+            width: 100%;
+            height: 36px/@p;
+            line-height: 36px/@p;
+            font-size: 28px/@p;
+            color: #5b5b5b;
+        }
+        /* 关闭按钮 */
+        .input-clear{
+            position: absolute;
+            top: -14px/@p;
+            right: 0;
+            z-index: 2;
+            display: block;
+            width: 64px/@p;
+            height: 64px/@p;
+            text-align: center;
+            .svg-icon{
+                width: 32px/@p;
+                height: 32px/@p;
+                margin-top: 16px/@p;
+                fill: #d9d9d9;
+            }
+        }  
+    }
+    /* 输入框组件 end */
+
+    /* 下拉选择框组件 start */
+    .form-select{
+        /* 伸缩布局容器 */
+        .db();
+        /* 侧轴方向居中对齐 */
+        .vc();
+        /* 下拉框文本标题控件 */
+        .select-label{
+            display: inline-block;
+            min-width: 112px/@p;
+            margin-right: 40px/@p;
+            color: #5b5b5b;
+        }
+        /* 自定义下拉框组件 */ 
+        .select-wrap{
+            position: relative;
+            text-align: right;
+            color: #b4b4b4;
+            overflow: hidden;
+            /* 伸缩性为1 */
+            .fx1();
+            .select-text{
+                position: relative;
+                /* 文字溢出隐藏 */
+                .ellipsis();
+            }
+            .click{
+                padding-right: 34px/@p;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    top: 11px/@p;
+                    right: 4px/@p;
+                    display: block;
+                    width: 14px/@p;
+                    height: 14px/@p;
+                    border-style: solid;
+                    border-color: #cacaca;
+                    border-width: 4px/@p 4px/@p 0 0;
+                    .tr(45deg);
+                }
+            }
+            select {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                width: 100%;
+                font-size: 28px/@p;
+                opacity: 0;
+            }
+        }
+    }
+    /* 下拉选择框组件 end */
+}

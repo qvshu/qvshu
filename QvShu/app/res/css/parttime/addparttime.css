@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/* 常用函数，只能通过less引用 start */
+/* 伸缩布局容器 */
+/* 伸缩性 */
+/* 伸缩方向为垂直方向 */
+/* 水平方向居中对齐 */
+/* 侧轴方向居中对齐 */
+/* 垂直方向居中对齐 */
+/* 水平和垂直方向居中对齐 */
+/* 文字溢出隐藏--控制文本单行溢出用省略号表示 */
+/* 文字溢出隐藏--控制文本多行溢出用省略号表示 */
+/* 旋转变换 */
+/* 清除浮动 */
+/* 1:横向border 一般在伪类中引用 (配合定位使用) */
+/* 2:纵向border 一般在伪类中引用 (配合定位使用) */
+/* 常用函数，只能通过less引用 end */
+/* 输入框组件 */
+/* 搜索页 start */
+.search-container {
+  height: 1.28rem;
+}
+.search-container .search-wrapper {
+  position: inherit;
+}
+.search-container .search-icon {
+  left: 0;
+}
+.search-container .search-input {
+  padding: 0.16rem 0.58666667rem 0.16rem 1.06666667rem !important;
+  background: #F5F7F6 !important;
+}
+.tips {
+  margin: 0.42666667rem 0 0.21333333rem 0.4rem;
+  font-size: 0.32rem;
+  color: #B4B4B4;
+}
+/* 列表 */
+.content {
+  padding-bottom: 1.46666667rem;
+}
+.question-list {
+  box-sizing: border-box;
+  padding-left: 0.4rem;
+  font-size: 0.37333333rem;
+  letter-spacing: 1px;
+  color: #5b5b5b;
+  background-color: #fff;
+  list-style-type: none;
+  /* 文本框 */
+  /* 被选中 */
+}
+.question-list dd {
+  vertical-align: middle;
+  position: relative;
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+  /* 输入框 */
+}
+.question-list dd:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #e7e7e7;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.question-list dd:first-child:before {
+  border: none;
+}
+.question-list dd span {
+  line-height: 1.2rem;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.question-list dd .circle {
+  display: block;
+  position: relative;
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  margin-top: 0.4rem;
+  margin-right: 0.29333333rem;
+  box-sizing: border-box;
+  border: 1px solid #DDDEE1;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 0.53333333rem;
+}
+.question-list dd .circle .svg-icon {
+  position: absolute;
+  top: 0.09333333rem;
+  left: 0.09333333rem;
+  width: 0.24rem;
+  height: 0.24rem;
+  fill: #fff;
+}
+.question-list dd .input {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 3.46666667rem;
+  height: 0.8ox;
+  margin: 0 0.16rem 0 0.26666667rem;
+  padding-left: 0.18666667rem;
+  border: 1px solid #e7e7e7;
+  border-radius: 0;
+  font-size: 0.37333333rem;
+  color: #5b5b5b;
+  background-color: #f1f1f1;
+}
+.question-list .question-text {
+  padding: 0;
+  padding-right: 0.01333333rem;
+  /* 伸缩布局 */
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+}
+.question-list .question-text textarea {
+  margin-left: 0;
+  padding: 0.26666667rem 0;
+  border-width: 0;
+  font-size: 0.37333333rem;
+  line-height: 0.64rem;
+  color: #5b5b5b;
+  /* 伸缩性为1 */
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.question-list .question-text textarea::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #ccc;
+}
+.question-list .question-text textarea:-moz-input-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ccc;
+}
+.question-list .question-text textarea::-moz-input-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ccc;
+}
+.question-list .question-text textarea:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #ccc;
+}
+.question-list .selected .circle {
+  border-width: 0;
+  color: #fff;
+  background-color: #ff5145;
+}
+/* 暂无兼职 */
+.no-parttime {
+  text-align: center;
+}
+.no-parttime img {
+  width: 3.12rem;
+  display: inline-block;
+  margin: 2.93333333rem 0 0 0.53333333rem;
+}
+.no-parttime p {
+  color: #B5BBC4;
+  font-size: 0.32rem;
+  text-align: center;
+}
+.no-parttime .no-title {
+  margin-top: 0.53333333rem;
+  margin-bottom: 0.16rem;
+  font-size: 0.42666667rem;
+}
+a.add-btn {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 1.2rem;
+  margin: 0 auto;
+  line-height: 1.2rem;
+  font-size: 0.42666667rem;
+  color: #ffffff;
+  background-color: #ff5145;
+  z-index: 10;
+}
+/* 点击加载更多 */
+.loading {
+  text-align: center;
+  font-size: 0.32rem;
+  color: #B4B4B4 !important;
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!-- 强制让文档宽度和设备宽度保持1:1，初始缩放比例和最大缩放比例都是1.0，不允许用户缩放页面 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- 开启对web app程序的支持 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- 在web app应用下设置 屏幕顶部状态条 的颜色 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#3b9bff">
+	<!-- 设备浏览网页时对数字不启用电话功能 -->
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>砍价活动首页</title>
+	<link rel="stylesheet" href="../res/css/global.css" type="text/css"/>
+	<link rel="stylesheet" href="../res/css/hotel/index.css" type="text/css"/>
+	<script src="../res/libs/flexible/flexible.js"></script>
+	
+	<script type="text/javascript" src="../res/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../res/js/common.js"></script>
+</head>
+<body>
+	<!-- 头部 start -->
+	<div class="header-container">
+		<div class="header">
+			<a href="javascript:;" class="g-back"><!-- 返回按钮 --></a>
+			<h1>0元砍价活动</h1>
+		</div>
+	</div>
+	<!-- 头部 end -->
+
+	<div class="content">
+		<div class="cont-top">
+			<div class="hotel-img"><img width="100%" src="../res/img/hotel/index_banner.jpg" alt="" /></div>
+
+		</div>
+
+	</div>
+	<div class="cont-min">
+		<ul id="houseList" class="item-section"> 
+		<!--  
+			<li class="hotel-flag" href="##">
+				<div class="flag-top">
+					<div class="holtimg">
+						<img height="100%" src="../res/img/hotel/hotel.jpg" alt="">
+					</div>
+					<div class="flag-item">
+						<div class="flag-title">惠州南昆啥养生谷</div> 
+						<div class="flag-text">
+							<p class="hotel-title">KTV，温泉，泳池，烧烤，庭院</p>
+							<p class="old-price">原价：<span>¥1222起</span>／每晚</p>
+							<p class="price">已砍<span>￥46.8</span></p>
+							
+						</div> 
+						<a class="flag-btn" href="javascript:gotoKanjiaPage(1,1);">立即砍价</a> 
+					</div>
+				</div>	
+				<div class="flag-bottom">
+					<p class="img-txt">5房7床 宜住13人</p>
+					<p class="text">
+						<span class="time">距离结束：00:45:60</span>
+						<span class="people">参与砍价 2405人</span>
+					</p>
+				</div> 
+
+				</li>
+				<li class="hotel-flag" href="##">
+				<div class="flag-top">
+					<div class="holtimg">
+						<img height="100%" src="../res/img/hotel/hotel.jpg" alt="">
+					</div>
+					<div class="flag-item">
+						<div class="flag-title">惠州南昆啥养生谷</div> 
+						<div class="flag-text">
+							<p class="hotel-title">KTV，温泉，泳池，烧烤，庭院</p>
+							<p class="old-price">原价：<span>¥1222起</span>／每晚</p>
+							<p class="price">已砍<span>￥46.8</span></p>
+							
+						</div> 
+						<a class="flag-btn" href="javascript:gotoKanjiaPage(1,2);">立即砍价</a> 
+					</div>
+				</div>	
+				<div class="flag-bottom">
+					<p class="img-txt">5房7床 宜住13人</p>
+					<p class="text">
+						<span class="time">距离结束：00:45:60</span>
+						<span class="people">参与砍价 2405人</span>
+					</p>
+				</div> 
+
+				</li>
+				-->
+			</ul>
+
+			<div class="friend-list-warp">
+				<h3>帮你砍价的好友</h3>
+				<ul id="friendList" class="friend-list">
+					<!--  
+					<li>
+						<div class="user-img"><img width="100%" src="../res/img/hotel/hotel.jpg"></div>
+						<div class="user-text">
+							<p class="phone">4244****1231</p>
+							<p class="text">砍价<span>0元入住</span>“惠州南昆养生谷”</p>
+						</div>
+					</li>
+					<li>
+						<div class="user-img"><img width="100%" src="../res/img/hotel/hotel.jpg"></div>
+						<div class="user-text">
+							<p class="phone">4244****1231</p>
+							<p class="text">砍价<span>0元入住</span>“惠州南昆养生谷”</p>
+						</div>
+					</li>
+					<li>
+						<div class="user-img"><img width="100%" src="../res/img/hotel/hotel.jpg"></div>
+						<div class="user-text">
+							<p class="phone">4244****1231</p>
+							<p class="text">砍价<span>0元入住</span>“惠州南昆养生谷”</p>
+						</div>
+					</li>
+					-->
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="../res/libs/swiper/swiper.js"></script>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			paginationType: 'fraction'
+		});
+	</script>
+	<script type="text/javascript">
+    function gotoKanjiaPage(actionId,houseId){
+    	//获取自己的openId
+    	var openId=CommonUtils.getQueryString("self");
+    	location.href="/app/action/kanjia.html?openId="+openId+"&actionId="+actionId+"&houseId="+houseId;
+    }
+    (function(){
+    	//加载砍价活动的房源列表
+    	var actionId=1;
+    	CommonUtils.async({
+			url:"/hiweb/action/getActionDetails.json",
+			data:{id:actionId},
+			success:function(result){
+				if(result.code==0){
+					var actionDetail=result.data;
+					var houses=actionDetail.houses||[];
+					var _html='';
+					//填充房源列表
+					for(var i=0,len=houses.length;i<len;i++){
+						var house=houses[i];
+						//图片
+						var imgs=house.houseImgs||[];
+						var _imgUrl="";
+						if(imgs.length>0){
+							_imgUrl=imgs[0].url;
+						}
+						//属性
+						var attributes=house.houseAttributes||[];
+						var _attrs="";
+						for(var j=0,jl=attributes.length;j<jl;j++){
+							var _attr=attributes[j];
+							if(j==0){
+								_attrs+=_attr.name;
+							}else{
+								_attrs+=","+_attr.name;
+							}
+						}
+						
+						_html+='<li class="hotel-flag" href="##">'
+							+'	<div class="flag-top">'
+							+'		<div class="holtimg">'
+							+'			<img height="100%" src="'+_imgUrl+'" alt="">'
+							+'		</div>'
+							+'		<div class="flag-item">'
+							+'			<div class="flag-title">'+house.name+'</div>'
+							+'			<div class="flag-text">'
+							+'				<p class="hotel-title">'+_attrs+'</p>'
+							+'				<p class="old-price">原价：<span>¥'+house.price+'起</span>／每晚</p>'
+							//+'				<p class="price">已砍<span>￥46.8</span></p>'
+							+'			</div>'
+							+'			<a class="flag-btn" href="javascript:gotoKanjiaPage(1,'+house.id+');">立即砍价</a>'
+							+'		</div>'
+							+'	</div>'
+							+'	<div class="flag-bottom">'
+							+'		<p class="img-txt">'+house.layoutRoom+'房'+house.bedCount+'床 宜住'+(house.bedCount*2)+'人</p>'
+							+'		<p class="text">'
+							+'			<span class="time">距离结束：00:45:60</span>'
+							//+'			<span class="people">参与砍价 2405人</span>'
+							+'		</p>'
+							+'	</div>'
+							+'</li>';
+					}
+					
+					$("#houseList").html(_html);
+				}
+			},
+			error:function(error){
+				
+			}
+		});
+    	
+    	//查询帮用户砍价的好友
+    	var openId=CommonUtils.getQueryString("self");
+    	CommonUtils.async({
+			url:"/hiweb/action/getKanJiaFiendList.json",
+			data:{openId:openId,pageSize:5},
+			success:function(result){
+				if(result.code==0){
+					var _html='';
+					var list=result.data||[];
+					
+					for(var i=0,len=list.length;i<len;i++){
+						var friend=list[i];
+						_html+='<li>'
+							+'<div class="user-img"><img width="100%" src="'+friend.headUrl+'"></div>'
+							+'<div class="user-text">'
+							+'<p class="phone">'+friend.name+'</p>'
+							+'<p class="text">砍价<span>0元入住</span>“惠州南昆养生谷”</p>'
+							+'</div>'
+							+'</li>';
+					}
+					$("#friendList").html(_html);
+				}
+			},
+			error:function(error){
+				//默认错误
+				//alert(error.msg);
+			}
+		});
+    })();
+    </script>
+</body>
+</html>

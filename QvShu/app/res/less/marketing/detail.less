@@ -1,0 +1,80 @@
+@charset "utf-8";
+@import "../mod/fn.less";
+
+.mod-detail{
+    margin-bottom: 16px/@p;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+    .detail-list{
+        .photo{
+            display: block;
+            .list-title{
+                margin-bottom: 24px/@p;
+                letter-spacing: 1px/@p;
+            }
+            .list-img{
+                width: 100%;
+                max-height: 600px/@p;
+                overflow: hidden;
+            }
+        }
+    }
+    .remark-list{
+        padding: 32px/@p 30px/@p;
+        li{
+            position: relative;
+            max-height: 10000px;    // 解决Font Boosting问题
+            padding: 0 0 24px/@p 32px/@p;
+            &:before{
+                position: absolute;
+                top: 16px/@p;
+                left: 0;
+                .setBorderWidth1px(@primary);
+            }
+            &:last-child{
+                &:before{
+                    display: none;
+                }
+            }
+        }
+        .remark-title{
+            position: relative;
+            margin-bottom: 16px/@p;
+            color: @text-light;
+            &:before{
+                position: absolute;
+                top: 50%;
+                left: -38px/@p;
+                content: "";
+                display: block;
+                width: 12px/@p;
+                height: 12px/@p;
+                margin-top: -6px/@p;
+                border-radius: 50%;
+                background-color: @primary;
+            }
+        }
+        .remark-content{
+            font-size: 28px/@p;
+            line-height: 1.5;
+        }
+    }
+}
+
+.mask{
+    .img-wrap{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow-y: hidden;
+    }
+    img{
+        position: absolute;
+        top: 50%;
+        transform: translate3D(0, -50%, 0);
+        -webkit-transform: translate3D(0, -50%, 0);
+    }
+}

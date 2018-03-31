@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- 强制让文档宽度和设备宽度保持1:1，初始缩放比例和最大缩放比例都是1.0，不允许用户缩放页面 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- 开启对web app程序的支持 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 在web app应用下设置 屏幕顶部状态条 的颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- 设备浏览网页时对数字不启用电话功能 -->
+    <meta name="format-detection" content="telephone=no">
+    <title>风险管理</title>
+    <link rel="stylesheet" href="../../res/css/global.css">
+    <link rel="stylesheet" href="../../res/css/risk/overtime.css">
+    <script src="/res/libs/flexible/flexible.js"></script>
+<body>
+    <!-- 头部 start -->
+    <div class="header-container">
+        <div class="header">
+            <a href="javascript:;" class="g-back"><!-- 返回按钮 --></a>
+            <h1>风险管理</h1>
+        </div>
+    </div>
+    <!-- 头部 end -->
+
+    <div class="tab-container">
+        <ul class="choose-tab">
+            <!-- 选中则在li标签上添加类名"on" -->
+            <li class="on"><span>深圳三区</span></li>
+            <li><span>更多筛选</span></li>
+        </ul>
+    </div>
+
+    <!--
+        用户质量等级
+        极好——perfect
+        好——excellent
+        较好——good
+        一般——normal
+        较差——bad
+        差——poor
+        极差——worst
+    -->
+    <section class="overtime-list-wrap">
+        <p class="overtime-title">8月份下单用户逾期数据</p>
+        <div class="overtime-list">
+            <dl class="list-item">
+                <dt class="item-title">逾期人数</dt>
+                <dd class="item-content"><a href="/html/data/overtime_detail.html">300</a></dd>
+            </dl>
+            <dl class="list-item">
+                <dt class="item-title">用户质量</dt>
+                <dd class="item-tag">
+                    <img src="/res/img/data/worst.png" class="imgauto">
+                </dd>
+            </dl>
+        </div>
+        <div class="overtime-gmv">
+            <p class="title">
+                <span>逾期GMV</span>
+                <a href="javascript:;" class="note">
+                    <svg class="svg-icon">
+                        <use xlink:href="/res/svg/global.svg#icon-note"><!-- 注释图标 --></use>
+                    </svg>
+                </a>
+            </p>
+            <p class="content">7,856,921元</p>
+        </div>
+        <p class="overtime-note">由于办单量不足，此逾期率仅供参考，不作为业绩考核指标。</p>
+    </section>
+
+    <section class="overtime-list-wrap">
+        <p class="overtime-title">7月份下单用户逾期数据<span class="overtime-tip">(数据已稳定不再更新)</span></p>
+        <div class="overtime-list">
+            <dl class="list-item">
+                <dt class="item-title">逾期人数</dt>
+                <dd class="item-content"><a href="/html/data/overtime_detail.html">300</a></dd>
+            </dl>
+            <dl class="list-item">
+                <dt class="item-title">用户质量</dt>
+                <dd class="item-tag">
+                    <img src="/res/img/data/worst.png" class="imgauto">
+                </dd>
+            </dl>
+        </div>
+        <div class="overtime-gmv">
+            <p class="title">
+                <span>逾期GMV</span>
+                <a href="javascript:;" class="note">
+                    <svg class="svg-icon">
+                        <use xlink:href="/res/svg/global.svg#icon-note"><!-- 注释图标 --></use>
+                    </svg>
+                </a>
+            </p>
+            <p class="content">7,856,921元</p>
+        </div>
+        <p class="overtime-note">由于办单量不足，此逾期率仅供参考，不作为业绩考核指标。</p>
+    </section>
+
+    <section class="overtime-explain">
+        <p class="explain-title">数据说明</p>
+        <p class="explain-content">
+            上月的逾期数据为阶段性的参考数据，上上月的逾期数据为相对稳定的数据，您可根据用户质量及时调整您目前的工作计划和工作方向。
+        </p>
+    </section>
+
+    <!-- 区域选择 -->
+    <div class="mask hide">
+        <div class="select-list">
+            <div class="select-area-title">
+                <!-- 选中则在span标签上添加类名"on" -->
+                <span class="subtitle"><span>大区</span></span>
+                <span class="subtitle"><span>中心</span></span>
+                <span class="subtitle"><span>大片区</span></span>
+                <span class="subtitle on"><span>小片区</span></span>
+            </div>
+            <div class="select-list-item">
+                <ul>
+                    <!-- 选中则在li标签上添加类名"selected"，此处每个li都需要添加svg节点 -->
+                    <li class="selected">普惠一区
+                        <svg class="svg-icon">
+                            <use xlink:href="/res/svg/global.svg#icon-select"><!-- 选中图标 --></use>
+                        </svg>
+                    </li>
+                    <li>普惠二区</li>
+                    <li>普惠三区</li>
+                    <li>普惠四区</li>
+                    <li>普惠五区</li>
+                    <li>普惠六区</li>
+                    <li>普惠七区</li>
+                    <li>普惠八区</li>
+                    <li>普惠九区</li>
+                    <li>普惠十区</li>
+                </ul>
+            </div>
+            <div class="select-area-btn">
+                <div class="selected">已选择：普惠一区</div>
+                <!-- 选中则在span标签上添加类名"on" -->
+                <div class="search-btn on js-area-close">立即查询</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 更多筛选 -->
+    <div class="mask hide">
+        <div class="select-box">
+            <dl class="select-item">
+                <dt class="select-title">类型</dt>
+                <!-- 选中则在dd标签上添加类名"on" -->
+                <dd class="select-content on">全部</dd>
+                <dd class="select-content">蓝领</dd>
+                <dd class="select-content">白领</dd>
+                <dd class="select-content">职校</dd>
+            </dl>
+            <dl class="select-item">
+                <dt class="select-title">角色</dt>
+                <!-- 选中则在dd标签上添加类名"on" -->
+                <dd class="select-content on">全部</dd>
+                <dd class="select-content">代理</dd>
+                <dd class="select-content">客户经理</dd>
+            </dl>
+            <dl class="select-item">
+                <dt class="select-title">姓名</dt>
+                <!-- 选中则在dd标签上添加类名"on" -->
+                <input type="text" class="select-input" placeholder="点击输入姓名" />
+            </dl>
+            <dl class="select-bottom">
+                <!-- 选中则在dd标签上添加类名"on" -->
+                <dd class="bottom-item">重置</dd>
+                <dd class="bottom-item on">完成</dd>
+            </dl>
+        </div>
+    </div>
+
+</body>
+</html>

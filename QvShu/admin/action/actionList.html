@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>活动列表</title>
+<!--#include virtual="/admin/layout/import.html"-->
+</head>
+<body>
+<!--#include virtual="/admin/layout/header.html"-->
+	<div>
+		<table>
+			<thead>
+    			<tr>
+      				<th>活动名称</th>
+      				<th>活动开始时间</th>
+      				<th>活动结束时间</th>
+    			</tr>
+  			</thead>
+  			<tbody id="list">
+  			</tbody>
+		</table>
+	</div>
+
+<script>
+(function(){
+	var param={
+		pageSize:20,
+		pageNUm:1
+	};
+	CommonUtils.async({
+		url:"/hishu/admin/getActionList.json",
+		data:param,
+		success:function(result){
+			if(result.code==0){
+				var data=result.data||{};
+				var list=data.list||[];
+				var total=data.total||0;
+				
+				var _html='';
+				
+				for(var i=0,len=list.length;i<len;i++){
+					var ac=list[i];
+					_html+='<tr>'
+						+'<td>'+ac.name+'</td>'
+						+'<td>'+(ac.startTime||'')+'</td>'
+						+'<td>'+(ac.endTime||'')+'</td>'
+						+'</tr>'
+				}
+				$("#list").html(_html);
+			}
+		}
+	});
+})();
+</script>
+</body>
+</html>

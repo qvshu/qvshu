@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- 强制让文档宽度和设备宽度保持1:1，初始缩放比例和最大缩放比例都是1.0，不允许用户缩放页面 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- 开启对web app程序的支持 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 在web app应用下设置 屏幕顶部状态条 的颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- 设备浏览网页时对数字不启用电话功能 -->
+    <meta name="format-detection" content="telephone=no">
+    <title>工作台</title>
+    <link rel="stylesheet" href="../../res/css/global.css">
+    <link rel="stylesheet" href="../../res/css/index/index.css">
+    <script src="/res/libs/flexible/flexible.js"></script>
+<body>
+    <!-- 头部 start -->
+    <!-- ios原生头部添加类名"ios-header"，andriod原生头部添加类名"android-header" -->
+    <div class="header-container">
+        <div class="header">
+            <a href="javascript:;" class="g-back"><!-- 返回按钮 --></a>
+            <h1>工作台</h1>
+            <a href="javascript:;" class="g-right">
+                <svg class="svg-icon js-open-qrcode">
+                    <use xlink:href="../../res/svg/index.svg#icon-qrcode"><!-- 二维码图标 --></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <!-- 头部 end -->
+
+    <!-- 顶部通知栏 start -->
+    <a href="/html/message/notice_detail.html" class="notice">
+        <svg class="svg-icon notice-icon">
+            <use xlink:href="../../res/svg/index.svg#icon-notice"><!-- 通知图标 --></use>
+        </svg>
+        <p class="notice-text">芝麻分640分即可开通乐卡啦！芝麻分640分即可开通乐卡啦！芝麻分640分即可开通乐卡啦！</p>
+    </a>
+    <!-- 顶部通知栏 end -->
+
+    <!-- 应用入口 start -->
+    <ul class="index-list">
+        <li>
+            <a href="/html/school/order.html">
+                <img src="../../res/img/index/order.png">
+                <p>订单管理</p>
+            </a>
+        </li>
+        <li>
+            <a href="/html/v2/marketing/index.html">
+                <img src="../../res/img/index/marketing.png">
+                <p>客户营销</p>
+            </a>
+        </li>
+        <li>
+            <a href="/html/profit/index.html">
+                <img src="../../res/img/index/profit.png">
+                <p>绩效</p>
+            </a>
+        </li>
+        <li>
+            <a href="/html/data/data_complete.html">
+                <img src="../../res/img/index/data.png">
+                <p>数据化管理</p>
+            </a>
+        </li>
+        <li>
+            <a href="/html/agent/identity_auth.html">
+                <img src="../../res/img/index/agent.png">
+                <p>代理入职</p>
+            </a>
+        </li>
+        <li>
+            <a href="/html/v2/coupon/index.html">
+                <img src="../../res/img/index/coupon.png">
+                <p>发券中心</p>
+            </a>
+        </li>
+        <li>
+            <a href="/html/data/data_overtime.html">
+                <img src="../../res/img/index/risk.png">
+                <p>风险管理</p>
+            </a>
+        </li>
+        <li>
+            <a href="/html/help/index.html">
+                <img src="../../res/img/index/help.png">
+                <p>帮助中心</p>
+            </a>
+        </li>
+        <li></li>
+    </ul>
+    <!-- 应用入口 end -->
+
+    <!-- 商品列表 start -->
+    <ul class="product-list">
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">黑色星期五 海外大牌低至5折/限时秒杀/潮流科技</p>
+                    <p class="time">活动周期：2017.7.25-2017.09.28<em>热门</em></p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">活动内容文本描述尽量简洁明了，文本限制最多两行，超过部分的话用省略号表示</p>
+                    <p class="time">活动周期：2017.7.25-2017.09.28活动周期：2017.7.25-2017.09.28活动周期：2017.7.25-2017.09.28<em>热门</em></p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">活动内容文本 描述尽量简洁明了</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">黑色星期五 海外大牌低至5折/限时秒杀/潮流科技</p>
+                    <p class="time">活动周期：2017.7.25-2017.09.28<em>热门</em></p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">活动内容文本描述尽量简洁明了，文本限制最多两行，超过部分的话用省略号表示</p>
+                    <p class="time">活动周期：2017.7.25-2017.09.28活动周期：2017.7.25-2017.09.28活动周期：2017.7.25-2017.09.28<em>热门</em></p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">活动内容文本 描述尽量简洁明了</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">黑色星期五 海外大牌低至5折/限时秒杀/潮流科技</p>
+                    <p class="time">活动周期：2017.7.25-2017.09.28<em>热门</em></p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">活动内容文本描述尽量简洁明了，文本限制最多两行，超过部分的话用省略号表示</p>
+                    <p class="time">活动周期：2017.7.25-2017.09.28活动周期：2017.7.25-2017.09.28活动周期：2017.7.25-2017.09.28<em>热门</em></p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">活动内容文本 描述尽量简洁明了</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">黑色星期五 海外大牌低至5折/限时秒杀/潮流科技</p>
+                    <p class="time">活动周期：2017.7.25-2017.09.28<em>热门</em></p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">活动内容文本描述尽量简洁明了，文本限制最多两行，超过部分的话用省略号表示</p>
+                    <p class="time">活动周期：2017.7.25-2017.09.28活动周期：2017.7.25-2017.09.28活动周期：2017.7.25-2017.09.28<em>热门</em></p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">活动内容文本 描述尽量简洁明了</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">活动内容文本 描述尽量简洁明了</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">活动内容文本描述尽量简洁明了，文本限制最多两行，超过部分的话用省略号表示</p>
+                    <p class="time">活动周期：2017.7.25-2017.09.28活动周期：2017.7.25-2017.09.28活动周期：2017.7.25-2017.09.28<em>热门</em></p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">活动内容文本 描述尽量简洁明了</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">黑色星期五 海外大牌低至5折/限时秒杀/潮流科技</p>
+                    <p class="time">活动周期：2017.7.25-2017.09.28<em>热门</em></p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">活动内容文本描述尽量简洁明了，文本限制最多两行，超过部分的话用省略号表示</p>
+                    <p class="time">活动周期：2017.7.25-2017.09.28活动周期：2017.7.25-2017.09.28活动周期：2017.7.25-2017.09.28<em>热门</em></p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">活动内容文本 描述尽量简洁明了</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/html/message/notice_detail.html">
+                <img src="../../res/img/index/product.png" class="product-img">
+                <div class="product-text">
+                    <p class="title">活动内容文本 描述尽量简洁明了</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <p class="loading">点击加载更多</p>
+    <!-- 商品列表 end -->
+
+    <!-- 底部导航 start -->
+    <div class="bottom-nav">
+        <ul class="nav-list">
+            <!-- 选中在li标签添加类名"on" -->
+            <li class="on">
+                <a href="/html/v2/index/index.html">
+                    <svg class="svg-icon">
+                        <use xlink:href="../../res/svg/index.svg#icon-desk-empty"><!-- 工作台镂空图标 --></use>
+                    </svg>
+                    <svg class="svg-icon">
+                        <use xlink:href="../../res/svg/index.svg#icon-desk-full"><!-- 工作台实心图标 --></use>
+                    </svg>
+                    <p>工作台</p>
+                </a>
+            </li>
+            <li>
+                <a href="/html/message/index.html">
+                    <span class="red-dot">
+                        <svg class="svg-icon">
+                            <use xlink:href="../../res/svg/index.svg#icon-message-empty"><!-- 工作台镂空图标 --></use>
+                        </svg>
+                        <svg class="svg-icon">
+                            <use xlink:href="../../res/svg/index.svg#icon-message-full"><!-- 工作台实心图标 --></use>
+                        </svg>
+                    </span>
+                    <p>消息</p>
+                </a>
+            </li>
+            <li>
+                <a href="/html/index/my.html">
+                    <svg class="svg-icon">
+                        <use xlink:href="../../res/svg/index.svg#icon-my-empty"><!-- 工作台镂空图标 --></use>
+                    </svg>
+                    <svg class="svg-icon">
+                        <use xlink:href="../../res/svg/index.svg#icon-my-full"><!-- 工作台实心图标 --></use>
+                    </svg>
+                    <p>我的</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 底部导航 end -->
+
+    <!-- 二维码弹窗 start -->
+    <div class="mask hide js-qrcode">
+        <div class="download-code">
+            <svg class="svg-icon icon-close js-close-qrcode">
+                <use xlink:href="../../res/svg/global.svg#icon-close"><!-- 关闭图标 --></use>
+            </svg>
+            <img class="code-img" src="../../res/img/index/code.png">
+            <div class="code-text">
+                <p>扫码注册分期乐</p>
+                <p>信用成长成就品质生活</p>
+            </div>
+        </div>
+    </div>
+    <!-- 二维码弹窗 end -->
+
+    <!-- 返回顶部 -->
+    <a href="javascript:;" class="go-top hide js-go-top"><span></span></a>
+    
+    <script src="/res/libs/zepto/1.1.4/zepto.min.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+</html>

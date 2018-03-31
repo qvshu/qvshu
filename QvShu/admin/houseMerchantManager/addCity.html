@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>新增城市</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+</head>
+<body>
+    <!-- header start-->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    <!-- header end-->
+    
+    <article class="content">
+        <!-- 左边菜单  开始-->
+        <!--#include virtual="/admin/layout/houseMerchantManagement_sidenav.html"-->
+        <!-- 左边菜单  结束-->
+        
+        <main class="main-body">
+            <div class="top-location">
+                当前位置：房源与商户管理<span class="fn-st">&gt;</span>新增城市
+            </div>
+            <div class="clearfix">
+	            <div class="">
+	                <form action="" class="form-horizontal">
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">省份：</label>
+	                        <div id="provinceWidget" class="col-sm-5">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">城市：</label>
+	                        <div class="col-sm-5">
+	                            <input id="name" class="form-control" placeholder="请输入城市名称">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">城市编码：</label>
+	                        <div class="col-sm-5">
+	                            <input id="code" class="form-control" placeholder="对应城市拼音,例如：深圳  shenzhen">
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="top-location"></div>
+	                    <div class="form-group">
+	                        <div class="col-sm-1">
+	                            <a id="saveBtn" href="javascript:void(0);" class="btn btn-block btn-success">保存</a>
+	                        </div>
+	                        <div class="col-sm-1">
+	                            <a href="/admin/houseMerchantManager/houseList.html" class="btn btn-block btn-dufaul">取消</a>
+	                        </div>
+	                        
+	                    </div>
+	
+	                </form>
+	            </div>
+    		</div>
+ 		</main>
+	</article>
+
+<script type="text/javascript" src="../res/js/houseMerchantManager/addCity.js"></script>
+</body>
+</html>

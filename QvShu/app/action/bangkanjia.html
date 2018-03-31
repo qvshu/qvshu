@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <!-- 强制让文档宽度和设备宽度保持1:1，初始缩放比例和最大缩放比例都是1.0，不允许用户缩放页面 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <!-- 开启对web app程序的支持 -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- 在web app应用下设置 屏幕顶部状态条 的颜色 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#3b9bff">
+        <!-- 设备浏览网页时对数字不启用电话功能 -->
+        <meta name="format-detection" content="telephone=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>砍砍砍，0元住别墅</title>
+		<link rel="stylesheet" href="../res/css/global.css" type="text/css"/>
+		<link rel="stylesheet" href="../res/css/hotel/index.css" type="text/css"/>
+		<script src="../res/libs/flexible/flexible.js"></script>
+		
+		<script type="text/javascript" src="../res/js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="../res/js/common.js"></script>
+	</head>
+	<body>
+		<!-- 头部 start -->
+		<div class="header-container">
+			<div class="header">
+				<a href="javascript:;" class="g-back"><!-- 返回按钮 --></a>
+				<h1>0元砍价活动</h1>
+			</div>
+		</div>
+		<!-- 头部 end -->
+
+        <div class="content">
+            <div class="cont-top">
+            <div class="swiper-container">
+            	<div class="swiper-wrapper">
+		            <div class="swiper-slide hotel-img"><img id="img1" width="100%" src="" alt="" /></div>
+		            <div class="swiper-slide hotel-img"><img id="img2" width="100%" src="" alt="" /></div>
+		            <div class="swiper-slide hotel-img"><img id="img3" width="100%" src="" alt="" /></div>
+		        </div>
+		        
+		        <div class="hotel-txt">
+		        	<div class="title"><span id="name" ></span><span id="bedroom"></span></div>
+		        	<!-- 分页器，显示页数 -->
+		        	<div class="page"><div class="swiper-pagination"></div></div>
+		        </div>
+		        
+            </div>	
+            	              
+            </div>
+            <div class="cont-min">
+            	<div class="hotel-price">
+            		<p>原价<span id="price" class="old-price"><span>元</p>
+            		<p class="time">活动距离结束：<span class="date">20:00:02</span></p>
+            	</div>
+            	<div class="hotel-bargain">
+            		<p>已砍价：<span id="hadKanjiaPrice" class="price"></span><span>(优惠2.24%)</span></p>
+            	</div>
+                <div class="btn-box">
+                    <a id="helpKanJiaBtn" href="javascript:void(0);" class="btn">帮他砍价</a>
+                </div>
+                
+				<div class="friend-list-warp">
+					<h3>帮你砍价的好友</h3>
+					<ul id="friendList" class="friend-list">
+					</ul>
+				</div>
+
+            </div>
+        </div>
+        
+	    <!--二维码弹窗 start -->
+	    <div id="qrcodeDiv" class="mask hide">
+	        <div class="download-code">
+	            <div class="code-text">
+	                <div>
+	                    <p>长按二维码</p>
+	                    <p><b>立即砍一刀!!</b></p>
+	                </div>
+	            </div>
+	            <a class="close-btn" href=""></a>
+	            <img id="qrcode" src="" class="code-img">
+	        </div>
+	    </div>
+	    <!--二维码弹窗 end-->
+        
+        
+	<script src="../res/libs/swiper/swiper.js"></script>
+	<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction'
+    });
+    </script>
+    <script type="text/javascript">
+    (function(){
+    	var openId=CommonUtils.getQueryString("openId");
+    	var friendOpenId=CommonUtils.getQueryString("friendOpenId");
+    	var actionId=CommonUtils.getQueryString("actionId");
+    	var houseId=CommonUtils.getQueryString("houseId");
+    	
+    	//查询当前砍了多少价
+    	CommonUtils.async({
+			url:"/hiweb/action/getKanJiaSum.json",
+			data:{openId:friendOpenId,actionId:actionId,houseId:houseId},
+			success:function(result){
+				if(result.code==0){
+					var data=result.data;
+					//已砍价
+					$("#hadKanjiaPrice").html(data.amount);
+					var house=data.house;
+					var imgs=house.houseImgs||[];
+					if(imgs.length>2){
+						$("#img1").attr("src",imgs[0].url);
+						$("#img2").attr("src",imgs[1].url);
+						$("#img3").attr("src",imgs[2].url);
+					}else if(imgs.length>1){
+						$("#img1").attr("src",imgs[0].url);
+						$("#img2").attr("src",imgs[1].url);
+					}else if(imgs.length>0){
+						$("#img1").attr("src",imgs[0].url);
+					}
+					
+					$("#name").html(house.name);
+					$("#bedroom").html("("+house.layoutRoom+"房"+house.bedCount+"床)");
+					$("#price").html(house.price);
+				}
+			},
+			error:function(error){
+				//默认错误
+				//alert(error.msg);
+			}
+		});
+    	
+    	//查询帮用户砍价的好友
+    	CommonUtils.async({
+			url:"/hiweb/action/getKanJiaFiendList.json",
+			data:{openId:friendOpenId,actionId:actionId,houseId:houseId,pageSize:5},
+			success:function(result){
+				if(result.code==0){
+					var _html='';
+					var list=result.data||[];
+					
+					for(var i=0,len=list.length;i<len;i++){
+						var friend=list[i];
+						_html+='<li>'
+							+'<div class="user-img"><img width="100%" src="'+friend.headUrl+'"></div>'
+							+'<div class="user-text">'
+							+'<p class="phone">'+friend.name+'</p>'
+							+'<p class="text">砍价<span>0元入住</span>“惠州南昆养生谷”</p>'
+							+'</div>'
+							+'</li>';
+					}
+					$("#friendList").html(_html);
+				}
+			},
+			error:function(error){
+				//默认错误
+				//alert(error.msg);
+			}
+		});
+    	
+    	//帮他砍价，提示二维码
+    	var getQRCodeFunction=function(){
+    		$("#helpKanJiaBtn").unbind("click");
+    		//生成一个临时二维码
+    		var param={
+				sceneStr:actionId+","+houseId+","+friendOpenId
+			};
+    		CommonUtils.async({
+    			url:"/hiweb/wx/createQrCode.json",
+    			data:param,
+    			success:function(result){
+    				if(result.code==0){
+    					//显示二维码
+    					$("#qrcodeDiv").removeClass("hide");
+    					$("#qrcode").attr("src",result.data);
+    				}
+    				$("#helpKanJiaBtn").click(getQRCodeFunction);
+    			},
+    			error:function(error){
+    				//默认错误
+    				$("#helpKanJiaBtn").click(getQRCodeFunction);
+    			}
+    		});
+    	}
+    	$("#helpKanJiaBtn").unbind("click").click(getQRCodeFunction);
+    	
+    	
+    })();
+    </script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+@import "var.less";
+
+/* 公共类名，可直接在视图使用 start */
+/* 显示和隐藏 */
+.hide{
+    display: none !important;
+}
+
+/* 图片自适应 */
+.imgauto{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* 清除浮动 */
+.clear{
+    zoom: 1;
+    &:after{
+        content: '.';
+        display: block;
+        height: 0;
+        visibility: hidden;
+        clear: both;
+    }
+}
+
+/* 长按复制 */
+.copy{
+    -webkit-user-select: auto;
+    user-select: auto;
+}
+
+/* 点击加载更多 */
+.loading{
+    display: block;
+    height: 100px/@p;
+    line-height: 100px/@p;
+    text-align: center;
+    font-size: 24px/@p;
+    color: #797979;
+}
+
+/* 出现弹窗时不让页面滑动，必须同时设置在html和body节点上 */
+.no-scroll{
+    height: 100%;
+    overflow: hidden;
+}
+/* 公共类名，可直接在视图使用 end */

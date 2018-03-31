@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>新增小区</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+<!-- 地图 -->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=I41iAGFaTPXFt7LKMECH0IcCoVRiYDQP"></script>
+</head>
+<body>
+    <!-- header start-->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    <!-- header end-->
+    
+    <article class="content">
+        <!-- 左边菜单  开始-->
+        <!--#include virtual="/admin/layout/houseMerchantManagement_sidenav.html"-->
+        <!-- 左边菜单  结束-->
+        
+        <main class="main-body">
+            <div class="top-location">
+                当前位置：房源与商户管理<span class="fn-st">&gt;</span>新增小区
+            </div>
+            <div class="clearfix">
+	            <div class="">
+	                <form action="" class="form-horizontal">
+	                    <p class="mb15">SEO优化</p>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label c-gray">优化标题：</label>
+	                        <div class="col-sm-5">
+	                            <input id="seoTitle" class="form-control" placeholder="请输入标题">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label c-gray">TAG词：</label>
+	                        <div class="col-sm-5">
+	                            <input id="tagWords" class="form-control" placeholder="请输入TAG词">
+	                        </div>
+	                    </div>
+	                    <!--  
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label c-gray">页面词：</label>
+	                        <div class="col-sm-5">
+	                            <input  class="form-control" placeholder="请输入页面词">
+	                        </div>
+	                    </div>
+	                    -->
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label c-gray">关键词：</label>
+	                        <div class="col-sm-5">
+	                            <input id="keyWords" class="form-control" placeholder="请输入关键词描述">
+	                        </div>
+	                    </div>
+	                    <div class="top-location"></div>
+	                    <p class="mb15">基本信息</p>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label c-gray">所属城市：</label>
+	                        <div id="cityWidget" class="col-sm-2">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label c-gray">小区名称：</label>
+	                        <div class="col-sm-3">
+	                            <input id="name" class="form-control" placeholder="请输入关键词描述">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label c-gray">经纬坐标：</label>
+	                        <div class="col-sm-3">
+	                            <input id="lonlat" class="form-control" placeholder="请输入关键词描述">
+	                        </div>
+	                        
+	                    </div>
+	                    <div class="form-group">
+	                    	<iframe src="/admin/layout/map.html" width="600" height="300" frameborder="0" scrolling="no">
+	                    	</iframe>
+	                    </div>
+	                    
+	                    <div class="top-location"></div>
+	                    <p class="mb15">小区景观</p>
+	                     <div class="form-group">
+	                        <div class="col-sm-10">
+	                            <div class="upload-list">
+	                                <ul class="clearfix" id="upload_list">
+	                                    <!-- 上传之后需要修改图片的样式 -->
+	                                    
+	                                    <li>
+	                                        <div id="img1"></div>
+	                                    </li>
+	                                    <li>
+	                                        <div id="img2"></div>
+	                                    </li>
+	                                    <li>
+	                                        <div id="img3"></div>
+	                                    </li>
+	                                    <li>
+	                                        <div id="img4"></div>
+	                                    </li>
+	                                    <li>
+	                                        <div id="img5"></div>
+	                                    </li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                    </div>
+	
+	                    <div class="top-location"></div>
+	                    <p class="mb15">小区介绍</p>
+	                    <div class="form-group">
+	                        <div class="col-sm-10">
+	                            <textarea id="introduce" cols="30" rows="5" class="form-control" placeholder="请输入小区介绍信息"></textarea>
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="top-location"></div>
+	                    <p class="mb15">周边游玩</p>
+	                     <div class="form-group">
+	                        <div class="col-sm-10">
+	                            <div class="upload-list">
+	                                <ul class="clearfix" id="upload_list">
+	                                    <!-- 上传之后需要修改图片的样式 -->
+	                                    
+	                                    <li>
+	                                        <div id="peripheralImg1"></div>
+	                                    </li>
+	                                    <li>
+	                                        <div id="peripheralImg2"></div>
+	                                    </li>
+	                                    <li>
+	                                        <div id="peripheralImg3"></div>
+	                                    </li>
+	                                    <li>
+	                                        <div id="peripheralImg4"></div>
+	                                    </li>
+	                                    <li>
+	                                        <div id="peripheralImg5"></div>
+	                                    </li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="top-location"></div>
+	                    <p class="mb15">周边介绍</p>
+	                    <div class="form-group">
+	                        <div class="col-sm-10">
+	                            <textarea id="peripheral" cols="30" rows="5" class="form-control" placeholder="请输入周边介绍信息"></textarea>
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="top-location"></div>
+	                    <div class="form-group">
+	                        <div class="col-sm-1">
+	                            <a id="saveBtn" class="btn btn-block btn-success">保存</a>
+	                        </div>
+	                        <div class="col-sm-1">
+	                            <a href="/admin/houseMerchantManager/houseList.html" class="btn btn-block btn-dufaul">取消</a>
+	                        </div>
+	                        
+	                    </div>
+	                </form>
+	            </div>
+    		</div>
+ 		</main>
+	</article>
+
+<script type="text/javascript" src="../res/js/houseMerchantManager/addDistrict.js"></script>
+</body>
+</html>

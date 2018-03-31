@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>优惠套餐新增</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+</head>
+<body>
+    <!-- header start-->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    <!-- header end-->
+    
+    <article class="content">
+        <!-- 左边菜单  开始-->
+        <!--#include virtual="/admin/layout/operateManagement_sidenav.html"-->
+        <!-- 左边菜单  结束-->
+        
+        <main class="main-body">
+            <div class="top-location">
+                当前位置：运营管理<span class="fn-st">&gt;</span>优惠套餐新增
+            </div>
+            <div class="clearfix">
+	            <div class="pull-left form-content">
+		            <form action="#" class="form-horizontal">
+	                    <div class="form-group">
+	                        <label for="" class="col-sm-2 control-label">名称：</label>
+	                        <div class="row col-sm-6">
+	                            <input id="name" type="text" class="form-control" placeholder="优惠套餐名称">
+	                        </div>
+	                    </div>
+                      	<div class="form-group">
+	                          <label for="" class="col-sm-2 control-label">内容：</label>
+	                          <div class="row col-sm-6">
+	                              <input id="content" type="text" class="form-control" placeholder="优惠套餐说明">
+	                          </div>
+                      	</div>
+		
+		                <div class="top-location"></div>
+		                <div class="form-group">
+			                <div class="col-sm-3">
+			                    <a id="saveBtn" class="btn btn-success btn-block">确定</a>
+			                </div>
+		                    <div class="row col-sm-3">
+		                        <a id="cancelBtn" class="btn btn-default btn-block">取消</a>
+		                    </div>
+		                </div>
+		            </form>
+	        	</div>
+    		</div>
+ 		</main>
+	</article>
+
+<script type="text/javascript" src="../res/js/operateManagement/addCouponPackage.js"></script>
+</body>
+</html>

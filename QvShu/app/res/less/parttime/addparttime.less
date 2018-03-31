@@ -1,0 +1,186 @@
+@charset "UTF-8";
+@import "../mod/fn.less";
+/* 输入框组件 */
+@p: 75px/1rem;
+
+
+/* 搜索页 start */
+.search-container{
+    height: 96px/@p;
+    .search-wrapper{
+        position: inherit;
+    }
+    .search-icon{
+        left: 0;
+    }
+
+        .search-input{
+            
+            padding:12px/@p 44px/@p 12px/@p 80px/@p !important;
+            background: #F5F7F6 !important;
+    }
+    
+}
+
+
+
+.tips{
+    margin: 32px/@p 0 16px/@p 30px/@p;
+    font-size: 24px/@p;
+    color: #B4B4B4;
+    
+}
+/* 列表 */
+.content{
+    padding-bottom: 110px/@p;
+}
+.question-list{
+//  margin-bottom: 20px/@p;
+    box-sizing: border-box;
+    padding-left: 30px/@p;
+    font-size: 28px/@p;
+    letter-spacing: 1px;
+    color: #5b5b5b;
+    background-color: #fff;
+    list-style-type: none;
+    dd{
+        vertical-align: middle;
+        
+        position: relative;
+        .db();
+        &:before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            .setBorderHeight1px(#e7e7e7);
+        }
+        &:first-child:before{
+            border:none;
+        }
+        span{
+            line-height: 90px/@p;
+            .fx1();
+        }
+        .circle{
+            display:block;
+
+            position: relative;
+            width: 32px/@p;
+            height: 32px/@p;
+            margin-top: 30px/@p;
+            margin-right: 22px/@p;
+            box-sizing: border-box;
+            border: 1px solid #DDDEE1;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px/@p;
+            .svg-icon{
+                position: absolute;
+                top: 7px/@p;
+                left: 7px/@p;
+                width: 18px/@p;
+                height:18px/@p;
+                fill: #fff;
+            }
+            
+
+        }
+        /* 输入框 */
+        .input{
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 260px/@p;
+            height: 60ox/@p;
+            margin: 0 12px/@p 0 20px/@p;
+            padding-left:14px/@p;
+            border: 1px solid #e7e7e7;
+            border-radius: 0;
+            font-size: 28px/@p;
+            color: #5b5b5b;
+            background-color: #f1f1f1;
+        }
+    }
+    /* 文本框 */
+    .question-text{
+        padding: 0;
+        padding-right: 1px/@p;
+        /* 伸缩布局 */
+        .db();
+        textarea{
+            margin-left: 0;
+            padding: 20px/@p 0;
+            border-width: 0;
+            font-size: 28px/@p;
+            line-height: 48px/@p;
+            color: #5b5b5b;
+            /* 伸缩性为1 */
+            .fx1();
+            &::-webkit-input-placeholder{ /* WebKit browsers */
+                color: #ccc;
+            }
+            &:-moz-input-placeholder{ /* Mozilla Firefox 4 to 18 */
+                color: #ccc;
+            }
+            &::-moz-input-placeholder{ /* Mozilla Firefox 19+ */
+                color: #ccc;
+            }
+            &:-ms-input-placeholder{  /* Internet Explorer 10+ */
+                color: #ccc;
+            }
+        }
+    }
+    /* 被选中 */
+    .selected{
+        .circle{
+            border-width: 0;
+            color: #fff;
+            background-color: #ff5145;
+        }
+    }
+}
+
+
+/* 暂无兼职 */
+.no-parttime{
+    text-align: center;
+    img{
+        width: 234px/@p;
+        display: inline-block;
+        margin:220px/@p 0 0 40px/@p;
+    }
+    p{
+        color: #B5BBC4;
+        font-size: 24px/@p;
+        text-align: center;
+    }
+    .no-title{
+        margin-top: 40px/@p;
+        margin-bottom: 12px/@p;
+        font-size: 32px/@p;
+        
+    }
+}
+
+
+a.add-btn{
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 90px/@p;
+    margin: 0 auto;
+    line-height: 90px/@p;
+    font-size: 32px/@p;
+    color: #ffffff;
+    background-color: #ff5145;
+    z-index: 10;
+}
+
+/* 点击加载更多 */
+.loading {
+    text-align: center;
+    font-size: 24px/@p;
+    color: #B4B4B4 !important;
+}

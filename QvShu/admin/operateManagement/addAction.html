@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>厂区经理管理</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+</head>
+<body>
+    <!-- header start-->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    <!-- header end-->
+    
+    <article class="content">
+        <!-- 左边菜单  开始-->
+        <!--#include virtual="/admin/layout/operateManagement_sidenav.html"-->
+        <!-- 左边菜单  结束-->
+        
+        <main class="main-body">
+            <div class="top-location">
+                当前位置：运营管理<span class="fn-st">&gt;</span>砍价活动
+            </div>
+            <div class="clearfix">
+	            <div class="pull-left form-content">
+		            <form action="#" class="form-horizontal">
+	                    <div class="form-group">
+	                        <label for="" class="col-sm-2 control-label">名称：</label>
+	                        <div class="row col-sm-6">
+	                            <input id="name" type="text" class="form-control" placeholder="活动名称">
+	                        </div>
+	                    </div>
+                      	<div class="form-group">
+	                          <label for="" class="col-sm-2 control-label">介绍：</label>
+	                          <div class="row col-sm-6">
+	                              <input id="introduce" type="text" class="form-control" placeholder="活动介绍">
+	                          </div>
+                      	</div>
+                        <div class="top-location"></div>
+                        <div class="form-group">
+                            <label for="" class="control-label col-sm-2">优惠券类型：</label>
+                            <div class="row col-sm-10">
+                                <ul id="type" class="tag">
+                                   <li item-value="1" class="on">立减券</li> 
+                                   <li item-value="2">打折券</li>
+                                </ul>
+                             </div>
+                        </div>
+                        <div class="form-group">
+	                        <label for="" class="col-sm-2 control-label">判断条件：</label>
+	                        <div class="row col-sm-3 mr10">
+	                                <select id="condition" class="form-control">
+	                                    <option value="greaterThan">大于</option>
+	                                    <option value="equal">等于</option>
+	                                    <option value="lessThan">小于</option>
+	                                </select>
+	                        </div>
+	                        <div class="row col-sm-5">
+	                            <input id="conditionValue" type="text" class="form-control" placeholder="¥">
+	                        </div>
+	                    </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">打折：</label>
+                            <div class="row col-sm-3">
+                                <select id="discount" class="form-control">
+                                	<option value="9">9</option>
+                                	<option value="8">8</option>
+                                    <option value="7">7</option>
+                                    <option value="6">6</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <!-- <div class="row col-sm-3">
+                                <p class="text-control">A1</p>
+                            </div> -->
+                        </div>
+                        <div class="form-group">
+	                        <label for="" class="col-sm-2 control-label">数量：</label>
+	                        <div class="row col-sm-5">
+	                            <input id="count" type="text" class="form-control" placeholder="有多少个">
+	                        </div>
+	                    </div>
+	                    <div class="top-location"></div>
+	                    <div class="panel panel-default mt30" style="width:100%;">
+		                    <div class="panel-heading">
+		                        <strong>选择酒店</strong>
+		                        <a href="#" class="pull-right add-link" id="btn_add_area">
+		                            <span class="glyphicon glyphicon-plus-sign">
+		                            </span>
+		                           	 添加新酒店
+		                        </a>
+		                    </div>
+		                    <div class="panel-body">
+		                        <table class="table table-hover">
+		                            <thead>
+		                                <tr class="active">
+		                                    <th>酒店名称</th>
+		                                    <th>所属片区</th>
+		                                    <th>商户</th>
+		                                    <th>操作</th>
+		                                </tr>
+		                            </thead>
+		                            <tbody id="school_list">
+		                                <tr>
+		                                    <td> 广州民航职业酒店</td>
+		                                    <td>增城小片区</td>
+		                                    <td>陈建浩</td>
+		                                    <td><a href="javascript:;" data-toggle="modal" data-target="#myModal">修改</a></td>
+		                                </tr>
+		                                <tr>
+		                                    <td> 广州民航职业酒店</td>
+		                                    <td>增城小片区</td>
+		                                    <td>陈建浩</td>
+		                                    <td><a href="javascript:;" data-toggle="modal" data-target="#myModal">修改</a></td>
+		                                </tr>
+		                            </tbody>
+		                        </table>
+		                    </div>
+		                </div>
+		                <div class="top-location"></div>
+		                <div class="form-group">
+		                	<label for="" class="col-sm-2 control-label">开始时间：</label>
+		                    <div class="row col-sm-4">
+		                    	<input id="startTime" type="text" class="form-control">
+		                    </div>
+		                    <span class="till">至</span>
+		                    <div class="row col-sm-4">
+		                    	<input id="endTime" type="text" class="form-control">
+		                    </div>
+		                </div>
+		
+		                <div class="top-location"></div>
+		                <div class="form-group">
+			                <div class="col-sm-3">
+			                    <button id="saveBtn" class="btn btn-success btn-block">确定</button>
+			                </div>
+		                    <div class="row col-sm-3">
+		                        <button class="btn btn-default btn-block">取消</button>
+		                    </div>
+		                            
+		                </div>
+		            </form>
+	        	</div>
+    		</div>
+ 		</main>
+	</article>
+
+<script type="text/javascript" src="../res/js/operateManagement/addAction.js"></script>
+</body>
+</html>

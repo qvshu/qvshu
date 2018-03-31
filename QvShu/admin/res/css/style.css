@@ -1,0 +1,931 @@
+ 重置 */
+.fn-st {
+  margin: 0 5px;
+}
+.fn-mlr5 {
+  margin: 0 5px;
+}
+.head-top .head-logo {
+  background: url(../../res/img/logo.jpg) no-repeat;
+  background-size: cover;
+}
+
+.d-ib{display: inline-block;}
+.f-def{float: inherit !important;}
+.fl{float: left;}
+.fr{float: right;}
+
+/* 翻页 */
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #488662;
+  border-color: #488662;
+}
+.btn-success {
+  background-color: #52936b;
+  border-color: #52936b;
+}
+.btn-success:hover {
+  background-color: #488662;
+  color: #fff;
+}
+.btn-write{ 
+    background-color: #fff;
+  border-color: #999;
+  color: #999;}
+.pagination a {
+  color: #488662;
+}
+/* 颜色 */
+.c-red {
+  color: #e93c6a;
+}
+.c-gray {
+  color: #9a9a9a;
+}
+.c-green {
+  color: #52936b;
+}
+.c-yellow {
+  color: #fec13e;
+}
+.c-orange {
+  color: #fc9900;
+}
+.c-blue {
+  color: #477bd9;
+}
+/* 文本背景色 */
+.b-green {
+  background: #488662;
+  color: #fff;
+  text-align: center;
+  padding: 6px 0;
+}
+/* 酒店管理 */
+.school-ul {
+  padding: 18px 0 40px 0;
+}
+.school-ul .school-list {
+  height: 360px;
+  margin: 0;
+}
+.school-ul .school-list .panel-heading {
+  background-color: #fff;
+  color: #6e6e6e;
+  margin: 0 15px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ddd;
+}
+.school-ul .school-li {
+  height: 288px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.school-ul .school-li li {
+  height: 32px;
+  line-height: 32px;
+  padding: 0 12px;
+}
+.school-ul .school-li li .operate-text {
+  display: none;
+}
+.school-ul .school-li li:after {
+  content: ">";
+  font-family: "\5b8b\4f53";
+  float: right;
+  display: inline-block;
+}
+.school-ul .school-li li:hover {
+  background-color: #f5f5f5;
+}
+.school-ul .school-li li:hover .operate-text {
+  display: inline-block;
+}
+.school-ul .school-li li:hover:after {
+  display: none;
+}
+.school-ul a {
+  color: #807f7f;
+}
+a.add-link {
+  color: #807f7f;
+}
+/*地址选中样式*/
+.active {
+  background-color: #f5f5f5;
+}
+/* 添加图片 */
+.upload-list li {
+  float: left;
+  width: 150px;
+  height: 150px;
+  padding:15px;
+  color: #fff;
+  font-size: 12px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  border: 1px dashed #ddd;
+  position: relative;
+  text-align: center;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+}
+.upload-list li.else {
+  border: 1px dashed #000;
+}
+.upload-list li .delete {
+  position: absolute;
+  right: 2px;
+  top: 0px;
+  z-index: 999
+}
+.upload-list .pic {
+  position: relative;
+  border: none;
+  height: 175px;
+}
+.upload-list .pic img {
+  margin-bottom: 10px;
+}
+.upload-list .pic a {
+  color: #7a7b7d;
+}
+.upload-list .pic .delete {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+}
+.upload-text a:hover {
+  text-decoration: none;
+}
+.mt30 {
+  margin-top: 30px;
+}
+.mt15 {
+  margin-top: 15px;
+}
+.mr0{margin-right: 0px;}
+.mr5{margin-right: 5px;}
+.mr10{margin-right: 10px;}
+.mr15{margin-right: 15px;}
+.ml0{margin-left: 0px;}
+.ml5{margin-left: 5px;}
+.ml10{margin-left: 10px;}
+.ml15{margin-left: 15px;}
+.mb15{margin-bottom: 15px;}
+.pl0{padding-left: 0}
+.pr0{padding-right: 0}
+/* 广告位配置 */
+.form-content {
+  width: 50%;
+}
+.pic-content {
+  width: 50%;
+}
+.pic-content .pic {
+  margin-top: 10px;
+}
+.btn-upload {
+  position: absolute;
+  height: 34px;
+  opacity: 0;
+  cursor: pointer ;
+}
+/*表单文本*/
+.text-control {
+  margin-top: 7px;
+}
+.form-error {
+  border: 1px solid red;
+}
+/* 列表缩略图 */
+.thumb {
+  display: block;
+  max-width: 123px;
+  height: auto;
+  margin: auto;
+}
+/* 广告预览图 */
+.preview {
+  width: 375px;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+div.preview-box{
+	width: 265px;
+}
+.preview-list ul {
+  width: 375px;
+  display: inline-block;
+}
+.preview dl{
+	width: 72px;
+	height: auto;
+}
+.preview dl dt{
+	width:50px;
+	height: 50px;
+	margin-left: 11px;
+}
+.preview dl dd{
+	font-size: 12px;
+	margin-top: 3px;
+}
+.preview-list ul li {
+  border: 1px solid #ccc;
+}
+.preview-list ul li:nth-child(1) {
+  width: 375px;
+  height: 110px;
+  height: auto;
+}
+.preview-list ul li:nth-child(2),
+.preview-list ul li:nth-child(3) {
+  width: 187.5px;
+  height: 180px;
+  float: left;
+}
+.preview-list ul li:nth-child(4),
+.preview-list ul li:nth-child(5) {
+  width: 187.5px;
+  height: 90px;
+  float: left;
+}
+.preview-list ul li:nth-child(6),
+.preview-list ul li:nth-child(7),
+.preview-list ul li:nth-child(8),
+.preview-list ul li:nth-child(9) {
+  width: 93.5px;
+  height: 89px;
+  float: left;
+  overflow: hidden;
+}
+.preview-list ul li:nth-child(9) {
+  width: 94.5px;
+}
+.preview-list ul li.on {
+  border: 1px solid #488662;
+}
+/*　状态 */
+.valid,
+.vacancy,
+.suspend {
+  background: #4da773;
+  padding: 4px 17px;
+  color: #fff;
+  border-radius: 50px;
+  vertical-align: middle;
+}
+.vacancy {
+  background: red;
+}
+.suspend {
+  background: #ffad33;
+}
+.clock {
+  vertical-align: middle;
+  margin-left: 4px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(/res/img/clock.png) no-repeat;
+  background-size: 100% 100%;
+}
+.clock1 {
+  vertical-align: middle;
+  margin-left: 4px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(/res/img/clock1.png) no-repeat;
+  background-size: 100% 100%;
+}
+.tag {
+  display: inline-block;
+}
+.tag li {
+  float: left;
+  padding: 8px 16px;
+  margin-right: 18px;
+  background: #f2f2f2;
+  color: #999999;
+}
+.tag li.on {
+  background: #4da773 url(/res/img/tag_ico.png) right bottom no-repeat;
+  color: #fff;
+}
+/* 大家都在买 */
+.banner-content {
+  position: relative;
+  width: 532px;
+  height: 175px;
+  border: 1px solid #e4e4e4;
+  overflow: hidden;
+  margin-top: 6px;
+  padding: 29px 29px 0 43px;
+}
+.banner-content .ico {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.banner-content .preview {
+  display: inline-block;
+  float: left;
+  max-width: 75px;
+  height: auto;
+  margin-right: 40px;
+}
+.banner-content .title {
+  margin: 0;
+  color: #595959;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.banner-content p i {
+  display: inline-block;
+  background: #f3f3f3;
+  border: 1px solid #cecece;
+  font-style: normal;
+  margin-right: 5px;
+  padding: 1px 5px;
+}
+.banner-content .info {
+  margin-top: 35px;
+  height: 42px;
+  line-height: 42px;
+}
+.banner-content .info .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #9d9d9d;
+}
+.banner-content .info .virtual-btn {
+  float: right;
+  display: inline-block;
+  width: 112px;
+  height: 42px;
+  text-align: center;
+  line-height: 42px;
+  background: #9d9d9d;
+  color: #fcfcfc;
+  border-radius: 4px;
+}
+.imgauto-else {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+.table-left {
+  text-align: left !important;
+}
+/*2016-5-25 提钱乐接入POP平台商品 S*/
+.product-edit .check-box {
+  margin-right: 10px;
+  margin-top: 6px;
+}
+.product-edit .check-box label {
+  color: #000;
+  border: 2px solid #dcdcdc;
+}
+.product-edit .check-box input:checked + label {
+  background-color: transparent;
+  border: 2px solid #5bc0de;
+  color: #000;
+}
+/*2016-5-25 提钱乐接入POP平台商品 E*/
+/* 提钱乐广告位管理二期 */
+.time-select {
+  margin-top: 7px;
+}
+.time-select a ,.time-select label{
+  display: inline-block;
+  width: 87px;
+  height: 23px;
+  text-align: center;
+  border: 1px solid #4da773;
+  border-radius: 50px;
+  color: #4da773;
+  margin-right: 14px;
+}
+.time-select a:hover {
+  text-decoration: none;
+}
+.time-select .on {
+  background: #4da773;
+  color: #fff;
+}
+/* 下拉重置 */
+.select-list {
+  position: relative;
+  display: none;
+}
+.input-select input {
+  display: block;
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px 4px 0 0;
+  padding-left: 20px;
+  outline: none;
+}
+.input-select .icon {
+  position: absolute;
+  top: 17px;
+  right: 22px;
+  display: inline-block;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+}
+.input-select ul {
+  position: absolute;
+  margin-top: 0px;
+  border: 1px solid #428bca;
+  border-top: none;
+  padding: 0px;
+  overflow-y: scroll;
+  width: 100%;
+  max-height: 300px;
+  background-color: #fff;
+  z-index: 9;
+}
+.input-select ul li {
+  list-style: none;
+  padding: 0px 20px;
+}
+.subhead {
+  font-size: 16px;
+}
+
+/* 消息管理 */
+.msg-edit {
+  margin-top: 20px;
+}
+.add-img{
+	display: inline-block;
+	width: 140px;
+	height: 140px;
+	line-height: 140px;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	background-color: #9D9D9D;
+}
+a.add-img:visited,a.add-img:hover{
+	color: #fff;
+	text-decoration: none;
+}
+.msg-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.pub-line {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+span.page-info {
+	margin: 0;
+	padding: 0;
+	margin-left: 8px;
+}
+
+.modal-body .form-wrap{height: 45px;}
+.modal-body .form-wrap label{line-height: 34px;}
+.modal-body .form-wrap .tips-text{display: block;padding: 0;}
+
+/*configure配置管理*/
+span.stop{
+	color: #ED1C24;
+}
+.btn-color:visited,.btn-color:hover{
+	background-color: #52936b;
+  border-color: #52936b;
+  color: #fff;
+}
+/*添加模块*/
+.query_form{
+	margin-top: 30px;
+}
+.label-margin{
+	margin-right: 40px;
+}
+.box-margin{
+	margin-right: 10px;
+}
+.box-padding{
+	padding-bottom: 12px;
+	border-bottom: 1px dashed #c3c3c3;
+}
+.txt-left{
+	text-align: left!important;
+	margin-left: 34px;
+	margin-top: 10px!important;
+	font-weight: bold!important;
+}
+.label-box{
+	margin-left: 27px;
+	margin-right: 14px;
+}
+.label-box2{
+	margin-left: 45px;
+	margin-top: 20px;
+}
+
+tr .search-green{
+  color: #488662;
+}
+
+/*2016-07-19 流量配置管理 */
+
+.mt110{
+    margin-top: 110px;
+}
+
+.flow{
+    margin: 7px 0 8px;
+}
+
+.add-box{
+    box-sizing: border-box;
+    border: 1px solid #f2f2f2;
+    width: 320px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 7px;
+}
+
+.add-box .bd-r{
+    border-right: 1px solid #f2f2f2;
+}
+
+.add-box .bg-green{
+    color: #fff;
+    background-color: #4da773;
+}
+
+.add-select select,.add-input input,.add-textarea textarea{
+    margin-left: -15px;
+}
+
+.add-input{
+    margin-right: -30px;
+}
+
+/* 去除文本域拖动功能 */
+.add-textarea textarea{
+    resize: none;
+}
+
+.add-list{
+  margin-top: 10px;
+}
+
+.add-list li{
+    position: relative; 
+    float: left;
+    width: 62px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+}
+
+.add-list li i{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    color: #fff;
+    background-color: #c9212b;
+    font-size: 14px;
+    font-style: normal;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.add-table{
+    float: left;
+    margin-top: 10px;
+}
+
+.add-table tbody tr td a{
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 6px;
+    width: 90px;
+    text-align: center; 
+    padding: 4px 8px;
+    border: 1px solid #f2f2f2;
+    color: #858585;
+    text-decoration: none;
+}
+
+.add-table tbody tr td .confirm{
+    margin: 6px 10px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #858585;
+    color: #858585;
+}
+
+.add-table tbody tr td input{
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 6px;
+    width: 90px;
+    text-align: center; 
+    padding: 3px 8px;
+    border: 1px solid #f2f2f2;
+    color: #858585;
+}
+
+/* 改变number类型input框的默认样式 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.add-table tbody tr td .on{
+    color: #fff;
+    background-color: #4da773;
+}
+
+.add-table tbody tr .option{
+    text-align: left;
+}
+
+/* 批量查询  */
+.batch-check{
+	text-align: center;
+	display: block;
+	line-height: 34px;
+}
+.batch-check:visited,.batch-check:hover{text-decoration: none;}
+textarea{resize: none;}
+.form-group div a.batch-back{text-align: left; margin-left: -10px;}
+.txt-ml{margin-left: 22px;}
+.form-mb{margin-bottom: 80px;}
+
+/*2016-08-03 注册白名单 */
+.mr-lf{
+  margin-left: 30px;
+}
+/* 配置系统二期  */
+.nav-margin{
+	margin-left: 38px;
+	padding-top: 10px;
+	border-top: 1px solid #ddd;
+}
+.nav li{
+	
+}
+.nav li a.tab-pad{
+	padding: 10px 40px;
+	margin-right: 0;
+	color: #555;
+}
+.text-label{
+	padding-top: 7px;
+	margin-left: 12px;
+}
+.btn-field{
+	background: #fff;
+	border-color: #52936b;
+	color: #52936b;
+	padding: 6px 60px;
+	margin-left: 50px;
+}
+.btn-field:hover{
+	color: #52936b;
+}
+.box-position{
+	position: relative;
+}
+.button-position{
+	  position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.table-margin{
+	margin-left: 38px;
+}
+.tr-border{
+	border-bottom: 1px solid #DDDDDD;
+}
+.table tbody tr td.td-left{
+	text-align: left;
+	padding-left: 32px;
+}
+td div.tb-form-margin{
+	margin-bottom: 0;
+}
+.text-form-label{
+	padding-top: 7px;
+	margin-left: 23px;
+	margin-right: 6px;
+}
+.text-box-label{
+	padding-top: 7px;
+	margin-left: 12px;
+	margin-right: 17px;
+}
+/* 通讯录敏感词 */
+div.group-change{
+    margin-bottom: 0px;
+}
+.label-change{
+  float:left;
+  margin-right:20px;
+}
+/*决策引擎测试工具*/
+.btn-sure{
+	width:110px;
+	font-size:16px;
+	margin-top: 20px;
+}
+.btn-ok{
+	width:110px;
+	font-size:16px;
+}
+.panel-content{
+	position: relative;
+	overflow: hidden;
+}
+.panel-content .ico-up{
+		display: block;
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-style: solid;
+    border-color: #b6b6b6;
+    border-width: 1px 1px 0 0;
+    -ms-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: 16px;
+    top:18px;
+}
+.panel-content .ico-down{
+		display: block;
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-style: solid;
+    border-color: #b6b6b6;
+    border-width: 1px 1px 0 0;
+    -ms-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    right: 16px;
+    top:10px;
+}
+.panel-content .form-group:last-child{
+	margin-bottom: 0;
+}
+/*片区行政区关系配置*/
+.area-detail{
+	padding-left: 10px;
+}
+/*代理管理详情*/
+.from-spacing{
+		padding-top: 7px;
+    float: left;
+    margin-left: 15px;
+}
+.from-spacing-tip{
+    padding-top: 7px;
+    display: inline-block;
+    color: red;
+    font-size: 18px;
+}
+.from-radio-tip{
+    position: relative;
+    top: 4px;
+    left: 24px;
+    display: inline-block;
+    color: red;
+    font-size: 14px;
+}
+.form-btn{
+    margin-top: 20px;
+}
+.form-btn .btn{
+  margin-right: 20px;
+}
+.per-table{
+	margin-bottom:10px;
+}
+.per-table tr td:first-child{
+	padding-right: 10px;
+}
+.radio-spacing-tip{
+    position: relative; 
+}
+.radio-spacing-tip:before{
+    position: absolute;
+    content: "*";
+    top: 8px;
+    left: 102px;
+    display: inline-block;
+    color: red;
+    font-size: 18px;
+}
+.txt-detail{
+    padding-left: 134px;
+}
+.txt-title{
+    float: left;
+    margin-left: 15px;
+}
+.control-line{
+    width: 1%;
+    padding-top: 7px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: -19px;
+}
+.control-time{
+    padding-left: 2px;
+}
+.label-spacing{
+    margin-left: -45px;
+}
+.from-tip{
+    padding-top: 7px;
+    float: left;
+    color: #E94828;
+		margin-left: inherit;
+}
+
+/* 2017-03-16 销售系统帮助中心 start */
+/* 添加子目录 */
+.add-sublist{
+    display: inline-block;
+    padding: 4px 12px;
+    border: 1px solid #52936b;
+    border-radius: 4px;
+    color: #52936b;
+}
+.add-sublist:hover{
+    color: #52936b;
+    text-decoration: none;
+}
+
+/* 子目录 */
+.sublist{
+    display: inline-block;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+}
+.sublist .title{
+    margin-right: 16px;
+    font-weight: bold;
+    color: #3c3c3c;
+}
+.sublist .btn{
+    display: inline-block;
+    padding: 0 8px;
+    color: #52936b;
+}
+.add-sublist-title{
+    margin-left: 60px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #3c3c3c;
+}
+
+/*  2017-03-16 销售系统帮助中心 end 

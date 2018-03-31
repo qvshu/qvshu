@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* 常用函数，只能通过less引用 start */
+/* 伸缩布局容器 */
+/* 伸缩性 */
+/* 伸缩方向为垂直方向 */
+/* 水平方向居中对齐 */
+/* 侧轴方向居中对齐 */
+/* 垂直方向居中对齐 */
+/* 水平和垂直方向居中对齐 */
+/* 文字溢出隐藏--控制文本单行溢出用省略号表示 */
+/* 文字溢出隐藏--控制文本多行溢出用省略号表示 */
+/* 旋转变换 */
+/* 清除浮动 */
+/* 1:横向border 一般在伪类中引用 (配合定位使用) */
+/* 2:纵向border 一般在伪类中引用 (配合定位使用) */
+/* 常用函数，只能通过less引用 end */
+/* 搜索页 start */
+.search-container {
+  height: 1.28rem;
+}
+.search-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+  box-sizing: border-box;
+  width: 100%;
+  height: 1.28rem;
+  padding: 0.21333333rem 0.32rem 0.21333333rem 0.4rem;
+  border-bottom: 1px solid #e7e7e7;
+  margin: 0 auto;
+  background-color: #fff;
+  overflow: hidden;
+}
+.search-wrapper .input-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0.8rem;
+  border-radius: 0.13333333rem;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.search-wrapper .input-wrapper .search-input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0.16rem 1.6rem 0.16rem 0.32rem;
+  border-radius: 0.13333333rem;
+  font-size: 0.37333333rem;
+  color: #5b5b5b;
+  background-color: #ededed;
+}
+.search-wrapper .input-wrapper .search-clear {
+  position: absolute;
+  top: 0;
+  right: 1.01333333rem;
+  display: block;
+  width: 0.53333333rem;
+  height: 0.8rem;
+}
+.search-wrapper .input-wrapper .search-clear .svg-icon {
+  display: block;
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  margin: 0.18666667rem 0 0 0.05333333rem;
+  fill: #b4b4b4;
+}
+.search-wrapper .input-wrapper .search-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.01333333rem;
+  height: 0.8rem;
+}
+.search-wrapper .input-wrapper .search-icon .svg-icon {
+  display: block;
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  margin: 0.18666667rem 0 0 0.29333333rem;
+  fill: #b4b4b4;
+}
+.search-wrapper .cancel {
+  display: block;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  padding-left: 0.32rem;
+  font-size: 0.34666667rem;
+  color: #5b5b5b;
+}
+/* 搜索结果页弹层 */
+.result-mask {
+  position: fixed;
+  top: 1.17333333rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow: hidden;
+}
+.result-mask .result-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0.4rem;
+  right: 0.4rem;
+  bottom: 1.33333333rem;
+  overflow-y: scroll;
+}
+.result-mask .result-wrapper .result-title {
+  margin: 0.74666667rem 0;
+  font-size: 0.37333333rem;
+  color: #b4b4b4;
+}
+.result-mask .result-wrapper .history-clear {
+  float: right;
+}
+.result-mask .result-wrapper .history-clear .svg-icon {
+  display: block;
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  fill: #b4b4b4;
+}
+.result-mask .result-wrapper .result-list li {
+  margin-bottom: 0.56rem;
+  font-size: 0.37333333rem;
+  color: #5b5b5b;
+  /*文字溢出隐藏--控制文本单行出省略号*/
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* 搜索页 end */

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- 强制让文档宽度和设备宽度保持1:1，初始缩放比例和最大缩放比例都是1.0，不允许用户缩放页面 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- 开启对web app程序的支持 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 在web app应用下设置 屏幕顶部状态条 的颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- 设备浏览网页时对数字不启用电话功能 -->
+    <meta name="format-detection" content="telephone=no">
+    <title>公共弹窗</title>
+    <link rel="stylesheet" href="../../res/css/global.css">
+    <link rel="stylesheet" href="../../res/css/mod/box_private.css">
+    <script src="../../res/libs/flexible/flexible.js"></script>
+</head>
+<body>
+    <!-- 头部 start -->
+    <div class="header-container">
+        <div class="header">
+            <a href="javascript:;" class="g-back"><!-- 返回按钮 --></a>
+            <h1>公共弹窗</h1>
+            <a href="javascript:;" class="g-right hide">首页</a>
+            <a href="javascript:;" class="g-right">
+                <svg class="svg-icon">
+                    <use xlink:href="/res/svg/global.svg#icon-home"><!-- 主页图标 --></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <!-- 头部 end -->
+
+    <!-- 水平/垂直居中弹窗 start -->
+    <div class="mask hide js-center-mask">
+        <!-- 添加类名"tip-big-box"可增加弹窗宽度 -->
+        <div class="tip-box">
+            <!-- 弹窗标题，可删除 -->
+            <div class="tip-title">提示</div>
+            <!-- 弹窗文字内容 -->
+            <div class="tip-text">描述内容尽可能简单地明了，在正常情况下不可超过三行，文本居中对齐，另外结尾无需标点符号</div>
+            <!-- 弹窗列表内容 -->
+            <ol class="tip-list-text hide">
+                <li>当内容多时，选用此种样式弹窗</li>
+                <li>文本居左对齐</li>
+                <li>描述内容尽可能简单明了，另外结尾无需标点符号</li>
+            </ol>
+            <!-- 单列布局 -->
+            <div class="tip-btn hide">
+                <a href="javascript:;" class="tip-btn-item">按钮文本</a>
+            </div>
+            <!-- 多列布局 -->
+            <div class="tip-btn ">
+                <!-- 默认是橙色，如果是灰色，则加上类名grey，如果是淡橙色，则加上类名light -->
+                <a href="javascript:;" class="tip-btn-item grey js-center-close">取消</a>
+                <a href="javascript:;" class="tip-btn-item js-center-close">确认</a>
+            </div>
+        </div>
+    </div>
+    <!-- 水平/垂直居中弹窗 end -->
+
+    <!-- 地区级联选择弹窗 start -->
+    <div class="mask hide js-area-mask">
+        <div class="select-list js-area-list">
+            <div class="select-area-title">
+                <!-- 选中则在span标签上添加类名"on" -->
+                <span class="subtitle"><span>大区</span></span>
+                <span class="subtitle"><span>中心</span></span>
+                <span class="subtitle"><span>大片区</span></span>
+                <span class="subtitle on"><span>小片区</span></span>
+            </div>
+            <div class="select-list-item">
+                <ul>
+                    <!-- 选中则在li标签上添加类名"selected"，此处每个li都需要添加svg节点 -->
+                    <li class="selected">普惠一区
+                        <svg class="svg-icon">
+                            <use xlink:href="/res/svg/global.svg#icon-select"><!-- 选中图标 --></use>
+                        </svg>
+                    </li>
+                    <li>普惠二区</li>
+                    <li>普惠三区</li>
+                    <li>普惠四区</li>
+                    <li>普惠五区</li>
+                    <li>普惠六区</li>
+                    <li>普惠七区</li>
+                    <li>普惠八区</li>
+                    <li>普惠九区</li>
+                    <li>普惠十区</li>
+                </ul>
+            </div>
+            <div class="select-area-btn">
+                <div class="selected">已选择：普惠一区</div>
+                <!-- 选中则在span标签上添加类名"on" -->
+                <div class="search-btn on js-area-close">立即查询</div>
+            </div>
+        </div>
+    </div>
+    <!-- 地区级联选择弹窗 end -->
+
+    <!-- 状态/时间选择弹窗 start -->
+    <div class="mask hide js-time-mask">
+        <div class="select-list js-time-list">
+            <div class="select-list-title">
+                <svg class="svg-icon">
+                    <use xlink:href="/res/svg/global.svg#icon-close"><!-- 关闭图标 --></use>
+                </svg>
+                时间
+            </div>
+            <div class="select-list-item">
+                <ul>
+                    <!-- 选中则在li标签上添加类名"selected"，此处每个li都需要添加svg节点 -->
+                    <li class="selected">2017年6月
+                        <svg class="svg-icon">
+                            <use xlink:href="/res/svg/global.svg#icon-select"><!-- 选中图标 --></use>
+                        </svg>
+                    </li>
+                    <li>2017年5月</li>
+                    <li>2017年4月</li>
+                    <li>2017年3月</li>
+                    <li>2017年2月</li>
+                    <li>2017年1月</li>
+                    <li>2016年12月</li>
+                    <li>2016年11月</li>
+                    <li>2016年10月</li>
+                    <li>2016年9月</li>
+                </ul>
+            </div>
+            <div class="select-list-btn js-time-close">确定</div>
+        </div>
+    </div>
+    <!-- 状态/时间选择弹窗 end -->
+
+    <!-- 状态扭转弹窗 start -->
+    <div class="mask hide js-status-mask">
+        <div class="select-list select-center-list js-status-list">
+            <div class="select-list-item">
+                <ul>
+                    <li>关单</li>
+                    <li>转单</li>
+                    <li>移除</li>
+                    <li>上传图片</li>
+                    <li>发起问卷</li>
+                    <li>关单</li>
+                    <li>转单</li>
+                    <li>移除</li>
+                    <li>上传图片</li>
+                    <li>发起问卷</li>
+                </ul>
+            </div>
+            <div class="select-list-btn js-status-close">取消</div>
+        </div>
+    </div>
+    <!-- 状态扭转弹窗 end -->
+
+    <!-- 日历选择弹窗 start -->
+    <div class="mask hide js-calendar-mask">
+        <div class="select-list js-calendar-list">
+            <div class="select-list-title">
+                <svg class="svg-icon">
+                    <use xlink:href="/res/svg/global.svg#icon-close"><!-- 关闭图标 --></use>
+                </svg>
+                选择开始日期
+            </div>
+            <div class="select-calendar-list">
+                <ul class="select-calendar-week">
+                    <li>日</li>
+                    <li>一</li>
+                    <li>二</li>
+                    <li>三</li>
+                    <li>四</li>
+                    <li>五</li>
+                    <li>六</li>
+                </ul>
+                <ul class="select-calendar-month">
+                    <li><!-- 左箭头 --></li>
+                    <li>2017年6月</li>
+                    <li><!-- 右箭头 --></li>
+                </ul>
+                <ul class="select-calendar-day">
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p>1</p></li>
+                </ul>
+                <!-- 选择时添加类名"select" -->
+                <ul class="select-calendar-day">
+                    <li><p>2</p></li>
+                    <li><p>3</p></li>
+                    <li class="select"><p>4</p></li>
+                    <li class="select"><p>5</p></li>
+                    <li class="select"><p>6</p></li>
+                    <li class="select"><p>7</p></li>
+                    <li class="select"><p>8</p></li>
+                </ul>
+                <ul class="select-calendar-day">
+                    <li class="select"><p>9</p></li>
+                    <li class="select"><p>10</p></li>
+                    <li class="select"><p>11</p></li>
+                    <li class="select"><p>12</p></li>
+                    <li class="select"><p>13</p></li>
+                    <li class="select"><p>14</p></li>
+                    <li class="select"><p>15</p></li>
+                </ul>
+                <ul class="select-calendar-day">
+                    <li class="select"><p>16</p></li>
+                    <li class="select"><p>17</p></li>
+                    <li class="select"><p>18</p></li>
+                    <li class="select"><p>19</p></li>
+                    <li class="select"><p>20</p></li>
+                    <li><p>21</p></li>
+                    <li><p>22</p></li>
+                </ul>
+                <!-- 不可选时添加类名"deselect" -->
+                <ul class="select-calendar-day">
+                    <li class="deselect"><p>23</p></li>
+                    <li class="deselect"><p>24</p></li>
+                    <li class="deselect"><p>25</p></li>
+                    <li class="deselect"><p>26</p></li>
+                    <li class="deselect"><p>27</p></li>
+                    <li class="deselect"><p>28</p></li>
+                    <li class="deselect"><p>29</p></li>
+                </ul>
+                <ul class="select-calendar-day">
+                    <li class="deselect"><p>30</p></li>
+                    <li class="deselect"><p>31</p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                </ul>
+            </div>
+            <div class="select-calendar-btn">
+                <!-- 当按钮可点击时添加类名"click" -->
+                <div class="select-btn-item click js-calendar-close">重置</div>
+                <div class="select-btn-item click js-calendar-close">确认</div>
+            </div>
+        </div>
+    </div>
+    <!-- 日历选择弹窗 end -->
+    
+    <!-- 支付功能弹窗 start -->
+    <div class="mask  js-payment-mask">
+        <div class="pay-box">
+            <!-- 支付弹窗标题 -->
+            <div class="pay-title">
+                <span>支付金额</span>
+                <span class="price">￥88.00</span></div>
+            <!--右侧关闭按钮-->
+            <a class="btn-close" href="">
+                <svg class="svg-icon">
+                    <use xlink:href="/res/svg/global.svg#icon-close">
+                        <!-- 关闭图标 -->
+                    </use>
+                </svg>
+            </a>
+            <!-- 发送短信提示文案 -->
+            <p class="pay-text">将发送验证码到<span>185****6678</span></p>
+            <div class="auth-code-wrap">
+                <table border="" cellspacing="0" cellpadding="0">
+                	<tr>
+                	    <td>2</td>
+                	    <td>5</td>
+                	    <td>m</td>
+                	    <td></td>
+                	    <td></td>
+                	    <td></td>
+                	</tr>
+                </table>
+                <input class="code-input" type="txt" name="" id="" value="" />
+            </div>
+            <p class="resend">
+                <a class="disable" href="">重新发送（60S）</a>
+            </p>
+            <div class="btn-box">
+                <!--去掉on按钮置灰-->
+                <a href="javascript:;" class="btn on">确认</a>
+            </div>
+            <p class="pay-tips">
+                提示：如更换手机号无法接收验证码，请联系运营支持修改手机号，再重新点击“确认付款”获取验证码
+            </p>
+        </div>
+    </div>
+    <!-- 支付功能弹窗 end -->
+    
+    <!-- 提示小弹窗 start -->
+    <div class="msg-mode hide js-mode">请检查姓名、身份证号是否正确</div>
+    <!-- 提示小弹窗 end -->
+
+    <ul class="box-list">
+        <li class="js-center-box">水平/垂直居中弹窗</li>
+        <li class="js-area-box">地区级联选择弹窗</li>
+        <li class="js-time-box">状态/时间选择弹窗</li>
+        <li class="js-status-box">状态扭转弹窗</li>
+        <li class="js-calendar-box">日历选择弹窗</li>
+        <li class="js-small-box">提示小弹窗</li>
+        <li class="js-payment-box">支付弹窗</li>
+    </ul>
+
+    <script type="text/javascript" src="/res/libs/zepto/1.1.4/zepto.min.js"></script>
+    <script type="text/javascript" src="./box.js"></script>
+</body>
+</html>

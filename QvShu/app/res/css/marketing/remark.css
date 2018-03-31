@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* 常用函数，只能通过less引用 start */
+/* 伸缩布局容器 */
+/* 伸缩性 */
+/* 伸缩方向为垂直方向 */
+/* 水平方向居中对齐 */
+/* 侧轴方向居中对齐 */
+/* 垂直方向居中对齐 */
+/* 水平和垂直方向居中对齐 */
+/* 文字溢出隐藏--控制文本单行溢出用省略号表示 */
+/* 文字溢出隐藏--控制文本多行溢出用省略号表示 */
+/* 旋转变换 */
+/* 清除浮动 */
+/* 1:横向border 一般在伪类中引用 (配合定位使用) */
+/* 2:纵向border 一般在伪类中引用 (配合定位使用) */
+/* 常用函数，只能通过less引用 end */
+.remark-list {
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  margin-top: 0.21333333rem;
+  font-size: 0.37333333rem;
+  color: #5b5b5b;
+  background-color: #fff;
+}
+.remark-list dt {
+  position: relative;
+  height: 1.17333333rem;
+  line-height: 1.17333333rem;
+  padding-left: 0.4rem;
+  border-bottom: 1px solid #e7e7e7;
+}
+.remark-list dd {
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+  height: 1.17333333rem;
+  line-height: 1.17333333rem;
+  padding-left: 0.4rem;
+  overflow: hidden;
+}
+.remark-list dd .icon-select {
+  position: relative;
+  top: 50%;
+  display: inline-block;
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 50%;
+  margin-top: -0.21333333rem;
+  margin-right: 0.32rem;
+  fill: transparent;
+}
+.remark-list dd .select-text {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  width: initial;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  border-bottom: 1px solid #e7e7e7;
+}
+.remark-list dd:last-child .select-text {
+  border-bottom: 0;
+}
+.remark-list dd .select-time {
+  position: relative;
+  color: #5c9dff;
+}
+.remark-list dd .select-time:after {
+  content: "";
+  position: relative;
+  top: 0.05333333rem;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin: 0 0.10666667rem;
+  border-width: 0.10666667rem 0.08rem;
+  border-style: solid;
+  border-color: #5c9dff transparent transparent transparent;
+}
+.remark-list dd .select-time input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+.remark-list .other {
+  display: block;
+  height: inherit;
+  padding: 0 0.4rem 1.06666667rem 0.4rem;
+}
+.remark-list .other .icon-select {
+  top: 0.08rem;
+  margin-right: 0.21333333rem;
+}
+.remark-list .other textarea {
+  display: none;
+  width: 88%;
+  height: 3.33333333rem;
+  border: 1px solid #f1f1f1;
+  margin-left: 0.8rem;
+  font-size: 0.37333333rem;
+  color: #5b5b5b;
+}
+.remark-list .selected .icon-select {
+  fill: #333333;
+}
+.remark-list .selected textarea {
+  display: block;
+}
+.btn-box {
+  padding-top: 0.85333333rem;
+  padding-bottom: 0.58666667rem;
+}

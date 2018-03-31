@@ -1,0 +1,186 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新建房源</title>
+<!--#include virtual="/html/import.html"-->
+</head>
+<body>
+	<table>
+		<tr>
+			<td>商户:</td>
+			<td><input type="text" id="merchantId" /></td>
+		</tr>
+		<tr>
+			<td>小区:</td>
+			<td><input type="text" id="districtId" /></td>
+		</tr>
+		<tr>
+			<td>名称:</td>
+			<td><input type="text" id="name" /></td>
+		</tr>
+		<tr>
+			<td>房源类型:</td>
+			<td><input type="text" id="type" /></td>
+		</tr>
+		<tr>
+			<td>分享图片:</td>
+			<td><input type="text" id="shareImgUrl" /></td>
+		</tr>
+		<tr>
+			<td>分享内容:</td>
+			<td><input type="text" id="shareContent" /></td>
+		</tr>
+		<tr>
+			<td>分享标题:</td>
+			<td><input type="text" id="shareTitle" /></td>
+		</tr>
+		<tr>
+			<td>可玩人数:</td>
+			<td><input type="text" id="funCount" /></td>
+		</tr>
+		<tr>
+			<td>可住人数:</td>
+			<td><input type="text" id="liveCount" /></td>
+		</tr>
+		<tr>
+			<td>停车场类型:</td>
+			<td><input type="text" id="parking" /></td>
+		</tr>
+		<tr>
+			<td>是否实地考察:</td>
+			<td><input type="text" id="isSpotCheck" /></td>
+		</tr>
+		<tr>
+			<td>独立卫生间数:</td>
+			<td><input type="text" id="toiletIndependen" /></td>
+		</tr>
+		<tr>
+			<td>公共卫生间数:</td>
+			<td><input type="text" id="toiletCommon" /></td>
+		</tr>
+		<tr>
+			<td>阳台数:</td>
+			<td><input type="text" id="layoutBalcony" /></td>
+		</tr>
+		<tr>
+			<td>厨房数:</td>
+			<td><input type="text" id="layoutKitchen" /></td>
+		</tr>
+		<tr>
+			<td>厅数:</td>
+			<td><input type="text" id="layoutOffice" /></td>
+		</tr>
+		<tr>
+			<td>房数:</td>
+			<td><input type="text" id="layoutRoom" /></td>
+		</tr>
+		<tr>
+			<td>面积:</td>
+			<td><input type="text" id="area" /></td>
+		</tr>
+		<tr>
+			<td>同类房源数:</td>
+			<td><input type="text" id="similarHouseCount" /></td>
+		</tr>
+		<tr>
+			<td>房源管理类型:</td>
+			<td><input type="text" id="manageType" /></td>
+		</tr>
+		<tr>
+			<td>详细介绍:</td>
+			<td><input type="text" id="introduction" /></td>
+		</tr>
+		<tr>
+			<td>简介:</td>
+			<td><input type="text" id="subIntroduction" /></td>
+		</tr>
+		<tr>
+			<td>线下房源号:</td>
+			<td><input type="text" id="offlineNo" /></td>
+		</tr>
+	</table>
+	<div>
+		<a id="saveBtn" href="javascript:void(0);">提交</a>
+	</div>
+<script>
+(function(){
+	$("#saveBtn").unbind("click").click(function(){
+		
+		var merchantId=$("#merchantId").val();
+		var districtId=$("#districtId").val();
+		var name=$("#name").val();
+		var type=$("#type").val();
+		var shareImgUrl=$("#shareImgUrl").val();
+		var shareContent=$("#shareContent").val();
+		var shareTitle=$("#shareTitle").val();
+		var funCount=$("#funCount").val();
+		var liveCount=$("#liveCount").val();
+		var parking=$("#parking").val();
+		var isSpotCheck=$("#isSpotCheck").val();
+		var toiletIndependen=$("#toiletIndependen").val();
+		var toiletCommon=$("#toiletCommon").val();
+		var layoutBalcony=$("#layoutBalcony").val();
+		var layoutKitchen=$("#layoutKitchen").val();
+		var layoutOffice=$("#layoutOffice").val();
+		var layoutRoom=$("#layoutRoom").val();
+		var floorCount=$("#floorCount").val();
+		var area=$("#area").val();
+		var similarHouseCount=$("#similarHouseCount").val();
+		var manageType=$("#manageType").val();
+		var introduction=$("#introduction").val();
+		var subIntroduction=$("#subIntroduction").val();
+		var offlineNo=$("#offlineNo").val();
+		
+		var house={
+			merchantId:merchantId,
+			districtId:districtId,
+			name:name,
+			type:type,
+			shareImgUrl:shareImgUrl,
+			shareContent:shareContent,
+			shareTitle:shareTitle,
+			funCount:funCount,
+			shareTitle:shareTitle,
+			funCount:funCount,
+			liveCount:liveCount,
+			parking:parking,
+			isSpotCheck:isSpotCheck,
+			toiletIndependen:toiletIndependen,
+			toiletCommon:toiletCommon,
+			layoutBalcony:layoutBalcony,
+			layoutKitchen:layoutKitchen,
+			layoutOffice:layoutOffice,
+			layoutRoom:layoutRoom,
+			floorCount:floorCount,
+			area:area,
+			similarHouseCount:similarHouseCount,
+			manageType:manageType,
+			introduction:introduction,
+			subIntroduction:subIntroduction,
+			offlineNo:offlineNo
+		};
+		
+		//TODO 校验
+		
+		//保存
+		CommonUtils.async({
+			url:"",
+			data:house,
+			success:function(result){
+				if(result.code==0){
+					CommonUtils.Msg.info("成功");
+					//TODO 跳转列表页
+				}else{
+					CommonUtils.Msg.alert("失败");
+				}
+			},
+			error:function(error){
+				CommonUtils.Msg.alert("失败");
+			}
+		});
+		
+	});
+})();
+</script>
+</body>
+</html>

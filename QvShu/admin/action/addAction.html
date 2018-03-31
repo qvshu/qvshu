@@ -1,0 +1,113 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新增活动</title>
+<!--#include virtual="/admin/layout/import.html"-->
+</head>
+<body>
+<!--#include virtual="/admin/layout/header.html"-->
+	<div>
+		<table>
+			<tr>
+				<td>名称:</td>
+				<td><input id="name" type="text" /></td>
+			</tr>
+			<tr>
+				<td>介绍:</td>
+				<td><input id="introduce" type="text" /></td>
+			</tr>
+			<tr>
+				<td>优惠券类型:</td>
+				<td>
+					<!-- $("input[name='rd']:checked").val(); -->
+					<input name="type" type="radio" value="1" checked="checked" />立减券
+					<input name="type" type="radio" value="2" />打折券
+				</td>
+			</tr>
+			<tr>
+				<td>判断条件:</td>
+				<td>
+					<select id="condition">
+					  	<option value="greaterThan">大于</option>
+					  	<option value="lessThan">小于</option>
+					</select>
+					<input id="conditionValue" type="text" />
+				</td>
+			</tr>
+			<tr>
+				<td>打折:</td>
+				<td>
+					<select id="discount">
+					  	<option value="9">9折</option>
+					  	<option value="8">8折</option>
+					  	<option value="7">7折</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>数量:</td>
+				<td><input id="count" type="text" /></td>
+			</tr>
+			<tr>
+				<td>开始时间:<input id="startTime" type="text" value="2017-10-01 00:00:00" /></td>
+				<td>结束时间:<input id="endTime" type="text" value="2017-10-08 00:00:00" /></td>
+			</tr>
+		</table>
+		<div>
+			<a id="saveBtn" href="javascript:void(0);">保存</a>
+		</div>
+	</div>
+
+
+<script type="text/javascript">
+(function(){
+	$("#saveBtn").unbind("click").click(function(){
+		var name=$("#name").val();
+		var introduce=$("#introduce").val();
+		var type=$("input[name='type']:checked").val();
+		
+		var condition=$("#condition").val();
+		var conditionValue=$("#conditionValue").val();
+		
+		var discount=$("#discount").val();
+		var startTime=$("#startTime").val();
+		var endTime=$("#endTime").val();
+		var count=$("#count").val();
+
+		//alert(name+","+introduce+","+type+","+condition+","+conditionValue+","+discount+","+startTime+","+endTime);
+		
+		var action={
+			name:name,
+			type:type,
+			houseIds:"",
+			content:introduce,
+			startTime:startTime,
+			endTime:endTime,
+			count:count,
+			condition:condition,
+			conditionValue:conditionValue,
+			discount:discount
+		};
+		
+		CommonUtils.async({
+			url:"/hishu/admin/addAction.json",
+			data:action,
+			success:function(result){
+				if(result.code==0){
+					CommonUtils.Msg.info("成功",function(){
+						location.href="/admin/action/actionList.html";
+					});
+				}else{
+					CommonUtils.Msg.alert("失败");
+				}
+			},
+			error:function(){
+				CommonUtils.Msg.alert("失败");
+			}
+			
+		});
+	});
+})();
+</script>
+</body>
+</html>

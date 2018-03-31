@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- 强制让文档宽度和设备宽度保持1:1，初始缩放比例和最大缩放比例都是1.0，不允许用户缩放页面 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- 开启对web app程序的支持 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 在web app应用下设置 屏幕顶部状态条 的颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- 设备浏览网页时对数字不启用电话功能 -->
+    <meta name="format-detection" content="telephone=no">
+    <title>公共表单</title>
+    <link rel="stylesheet" href="../../res/css/global.css">
+    <link rel="stylesheet" href="/res/css/mod/form_private.css">
+    <script src="/res/libs/flexible/flexible.js"></script>
+<body>
+    <!-- 头部 start -->
+    <div class="header-container">
+        <div class="header">
+            <a href="javascript:;" class="g-back"><!-- 返回按钮 --></a>
+            <h1>公共表单</h1>
+        </div>
+    </div>
+    <!-- 头部 end -->
+
+    <!-- 输入框组件 start -->
+    <ul class="form-new">
+        <li class="form-input">
+            <!-- label的for属性值要和input输入框的id保持一致 -->
+            <label class="input-label" for="tel">手机号码</label>
+            <div class="input-wrap">
+                <input type="tel" id="tel" placeholder="请输入手机号码">
+                <a class="input-clear" href="javascript:;">
+                    <svg class="svg-icon">
+                        <use xlink:href="/res/svg/global.svg#icon-clear"><!-- 关闭图标 --></use>
+                    </svg>
+                </a>
+            </div>
+        </li>
+        <li class="form-input">
+            <!-- label的for属性值要和input输入框的id保持一致 -->
+            <label class="input-label" for="verify_code1">验证码</label>
+            <div class="input-wrap">
+                <input type="number" id="verify_code1" placeholder="请输入手机验证码">
+                <a class="input-clear" href="javascript:;">
+                    <svg class="svg-icon">
+                        <use xlink:href="/res/svg/global.svg#icon-clear"><!-- 关闭图标 --></use>
+                    </svg>
+                </a>
+            </div>
+            <span>获取验证码</span>
+        </li>
+        <li class="form-input">
+            <!-- label的for属性值要和input输入框的id保持一致 -->
+            <label class="input-label" for="verify_code2">验证码</label>
+            <div class="input-wrap">
+                <input type="number" id="verify_code2" placeholder="请输入图片验证码">
+                <a class="input-clear" href="javascript:;">
+                    <svg class="svg-icon">
+                        <use xlink:href="/res/svg/global.svg#icon-clear"><!-- 关闭图标 --></use>
+                    </svg>
+                </a>
+            </div>
+            <img src="/res/img/login/imgcode.png">
+        </li>
+        <li class="form-input">
+            <!-- label的for属性值要和input输入框的id保持一致 -->
+            <label class="input-label" for="password1">密码</label>
+            <div class="input-wrap">
+                <input type="password" id="password1" placeholder="请输入密码">
+                <a class="input-clear" href="javascript:;">
+                    <svg class="svg-icon">
+                        <use xlink:href="/res/svg/global.svg#icon-clear"><!-- 关闭图标 --></use>
+                    </svg>
+                </a>
+            </div>
+            <a href="javascript:;" class="show-password">
+                <svg class="svg-icon">
+                    <use xlink:href="/res/svg/mod.svg#icon-showpassword"><!-- 显示密码图标 --></use>
+                </svg>
+            </a>
+        </li>
+        <li class="form-input">
+            <!-- label的for属性值要和input输入框的id保持一致 -->
+            <label class="input-label" for="password2">密码</label>
+            <div class="input-wrap">
+                <input type="password" id="password2" placeholder="请输入密码">
+                <a class="input-clear" href="javascript:;">
+                    <svg class="svg-icon">
+                        <use xlink:href="/res/svg/global.svg#icon-clear"><!-- 关闭图标 --></use>
+                    </svg>
+                </a>
+            </div>
+            <a href="javascript:;" class="hide-password">
+                <svg class="svg-icon">
+                    <use xlink:href="/res/svg/mod.svg#icon-hidepassword"><!-- 显示密码图标 --></use>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    <!-- 输入框组件 end -->
+
+    <!-- 下拉选择框组件 start -->
+    <ul class="form-new">
+        <li class="form-select">
+            <label class="select-label">上传用户头像（代理清晰自拍照）</label>
+            <div class="select-wrap">
+                <img class="user-photo" src="/res/img/index/agent.png">
+                <input type="file" class="upload">
+            </div>
+        </li>
+        <li class="form-select">
+            <label class="select-label">所属区域</label>
+            <div class="select-wrap">
+                <!-- 可点击添加类名"click" -->
+                <div class="select-text">普惠一区>深圳营销中心</div>
+            </div>
+        </li>
+        <li class="form-select">
+            <label class="select-label">所属区域</label>
+            <div class="select-wrap">
+                <!-- 可点击添加类名"click" -->
+                <div class="select-text click">请选择区域</div>
+                <select>
+                    <option>南山区</option>
+                    <option>宝安区</option>
+                    <option>龙岗区</option>
+                </select>
+            </div>
+        </li>
+    </ul>
+    <!-- 下拉选择框组件 end -->
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+@import "var.less";
+
+/* 常用函数，只能通过less引用 start */
+/* 伸缩布局容器 */
+.db(){
+    display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+    display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+ */
+    display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Android 4.4+ */
+}
+
+/* 伸缩性 */
+.fx1(@num: 1){
+    -webkit-box-flex: @num;
+    -webkit-flex: @num;
+    flex: @num;
+}
+
+/* 伸缩方向为垂直方向 */
+.v(){
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+/* 水平方向居中对齐 */
+.hc(){
+    display: -webkit-box;
+    -webkit-box-pack: center;
+}
+
+/* 侧轴方向居中对齐 */
+.vh(){
+    display:-webkit-box;
+    display:box;
+    -webkit-box-align:center;
+    box-align:center;
+}
+/* 垂直方向居中对齐 */
+.vc(){
+    display: -webkit-box;
+    -webkit-box-align: center;
+}
+
+/* 水平和垂直方向居中对齐 */
+.bc() {
+    display: -webkit-box;
+    -webkit-box-pack: center; 
+    -webkit-box-align: center; 
+}
+
+/* 文字溢出隐藏--控制文本单行溢出用省略号表示 */
+.ellipsis(@w: initial) {
+    width: @w;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* 文字溢出隐藏--控制文本多行溢出用省略号表示 */
+.ellipsisMore(@line:2, @lineheight: 60px/@p) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @line;
+    height: (@lineheight * @line);
+    line-height: @lineheight;
+    overflow: hidden;
+}
+
+/* 旋转变换 */
+.tr(@num: 45deg){
+    -webkit-transform: rotate(@num);
+    transform: rotate(@num);
+}
+
+/* 清除浮动 */
+.fn-clear(){
+    zoom: 1;
+    &:after{
+        content: '.';
+        display: block;
+        height: 0;
+        visibility: hidden;
+        clear: both;
+    }
+}
+
+/* 1:横向border 一般在伪类中引用 (配合定位使用) */
+.setBorderHeight1px(@borderColor: @border-outer) {
+    display: block;
+    content: "";
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid @borderColor;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+/* 2:纵向border 一般在伪类中引用 (配合定位使用) */
+.setBorderWidth1px(@borderColor: @border-outer) {
+    display: block;
+    content: "";
+    height: 100%;
+    box-sizing: border-box;
+    border-right: 1px solid @borderColor;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+/* 常用函数，只能通过less引用 end */

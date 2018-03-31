@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>新增订单</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+<link rel="stylesheet" href="/admin/res/css/ddgl/index.css">
+</head>
+<body>
+    <!-- header start-->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    <!-- header end-->
+    
+    <article class="content">
+        <!-- 左边菜单  开始-->
+        <!--#include virtual="/admin/layout/orderManagement_sidenav.html"-->
+        <!-- 左边菜单  结束-->
+        
+        <main class="main-body">
+            <div class="top-location">
+                当前位置：订单管理<span class="fn-st">&gt;</span>新增订单
+            </div>
+            <div class="clearfix">
+            	<div class="">
+	                <form action="" class="form-horizontal">
+	                    <p class="mb15">订单信息</p>
+	
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">订单来源：</label>
+	                        <div id="orderTypeWidget" class="col-sm-3 ">
+	                        </div>
+	                    </div>
+	                    <div id="houseTypeDiv" class="form-group hide">
+	                        <label class="col-sm-1 control-label ">房源类型：</label>
+	                        <div class="col-sm-6 pr0">
+	                        <!-- 房源类型（system-系统房源，other-系统外房源） -->
+	                            <label class="control-label fl mr20"><input checked="true" class="ml10" type="radio" name="houseType" value="system">&nbsp;系统房源</label>
+	                            <label class="control-label fl mr20"><input class="ml10" type="radio" name="houseType" value="other">&nbsp;系统外房源</label>
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">预定套数：</label>
+	                        <div class="col-sm-3">
+	                            <input id="houseBookCount" class="form-control" placeholder="">
+	                        </div>
+	                    </div>
+	                    <div id="hadHouseInfo" class="form-group hide">
+	                        <label class="col-sm-1 control-label ">房源名称：</label>
+	                        <div class="col-sm-3">
+	                            <input id="houseName" class="form-control" disabled="disabled" placeholder="">
+	                        </div>
+	                    </div>
+	                    <div id="NoHouseInfo" class="form-group hide">
+	                        <label class="col-sm-1 control-label ">所属小区：</label>
+                            <div id="districtWidget" class="col-sm-3">
+                            </div>
+	                        <label class="col-sm-1 control-label ">房源名称：</label>
+	                        <div id="houseWidget" class="col-sm-3">
+	                        </div>
+	                    </div>
+	                    <div id="otherSystemHouseInfo" class="form-group hide">
+	                        <label class="col-sm-1 control-label ">所属小区：</label>
+                            <div class="col-sm-3">
+	                            <input id="otherSystemHouseDistrict" class="form-control" placeholder="">
+	                        </div>
+	                        <label class="col-sm-1 control-label ">房源名称：</label>
+	                        <div class="col-sm-3">
+	                            <input id="otherSystemHouseName" class="form-control" placeholder="">
+	                        </div>
+	                    </div>
+	                    <div class="top-location"></div>
+	                    <p class="mb15">用户信息：</p>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">客户名称：</label>
+	                        <div class="col-sm-3">
+	                            <input id="userName" class="form-control" placeholder="">
+	                        </div>
+	                        <label class="col-sm-1 control-label ">下单时间：</label>
+	                        <div class="col-sm-3">
+	                            <input id="bookTime" class="form-control" placeholder="yyyy-MM-dd">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">联系电话：</label>
+	                        <div class="col-sm-3">
+	                            <input id="userPhone" class="form-control" placeholder="">
+	                        </div>
+	
+	                    </div>
+	                    
+	                    <div class="top-location"></div>
+	                    <p class="mb15">预定信息</p>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">入住日期：</label>
+	                        <div class="col-sm-3">
+	                            <input id="bookLiveTime" class="form-control" placeholder="yyyy-MM-dd">
+	                        </div>
+	                        <label class="col-sm-1 control-label ">退房日期：</label>
+	                        <div class="col-sm-3">
+	                            <input id="bookLeaveTime" class="form-control" placeholder="yyyy-MM-dd">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">订单总额：</label>
+	                        <div class="col-sm-3">
+	                            <input id="bookAmount" class="form-control" placeholder="">
+	                        </div>
+	                        <label class="col-sm-1 control-label ">代收款：</label>
+	                        <div class="col-sm-3">
+	                            <input id="bookCollectionAmount" class="form-control" placeholder="">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">订单优惠：</label>
+	                        <div class="col-sm-3">
+	                            <input id="bookDiscountAmount" class="form-control" placeholder="">
+	                        </div>
+	
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">预定类型：</label>
+	                        <div class="col-sm-6 pr0">
+	                        <!-- 预定类型（1-收全款，2-收定金） -->
+	                            <label class="control-label fl mr20"><input class="ml10" type="radio" name="bookType" value="1">&nbsp;全收款</label>
+	                            <label class="control-label fl mr20"><input class="ml10" type="radio" name="bookType" value="2">&nbsp;收定金</label>
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">收款金额：</label>
+	                        <div class="col-sm-3">
+	                            <input id="bookGetAmount" class="form-control" placeholder="">
+	                        </div>
+	
+	                    </div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">收款方式：</label>
+	                        <div id="bookPaymentTypeWidget" class="col-sm-3">
+	                        </div> 
+	                        <label class="col-sm-1 control-label ">收款时间：</label>
+	                        <div class="col-sm-3">
+	                            <input id="bookPaymentTime" class="form-control" placeholder="yyyy-MM-dd">
+	                        </div>
+	                    </div>
+	
+	                    <div class="top-location"></div>
+	                    <p class="mb15">备注信息</p>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">备注：</label>
+	                        <div class="col-sm-10">
+	                            <textarea id="remark" cols="30" rows="5" class="form-control" placeholder=""></textarea>
+	                        </div>
+	                    </div>
+	
+	                    <div class="top-location"></div>
+	                    <div class="form-group">
+	                        <label class="col-sm-1 control-label ">&nbsp;</label>
+	                        <div class="col-sm-1">
+	                            <a id="saveBtn" href="javascript:void(0);" class="btn btn-block btn-success">确定</a>
+	                        </div>
+	                        <div class="col-sm-1">
+	                            <a href="/admin/orderManagement/orderList.html" class="btn btn-block btn-dufaul">取消</a>
+	                        </div>
+	                        
+	                    </div>
+	
+	                </form>
+	            </div>
+    		</div>
+ 		</main>
+	</article>
+
+<script type="text/javascript" src="../res/js/orderManagement/addOrder.js"></script>
+</body>
+</html>

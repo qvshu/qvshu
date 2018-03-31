@@ -1,0 +1,199 @@
+@import "fn.less";
+
+.header-container{
+    height: 88px;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 88px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: @primary;
+    z-index: 99;
+    // 返回按钮
+    .g-back{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 88px;
+        height: 88px;
+        &:before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 60%; 
+            width: 16px;
+            height: 16px;
+            margin-top: -11px;
+            margin-left: -11px;
+            border-style: solid;
+            border-color: #fff;
+            border-width: 0 0 5px 5px;
+            /* 旋转变换 */
+            .tr(45deg);
+        }
+    }
+    // 页面标题
+    h1{
+        height: 88px;
+        line-height: 88px;
+        margin: 0 auto;
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: #fff;
+        /* 文字溢出用省略号表示，参数是width，默认值是initial */
+        .ellipsis(76%);
+    }
+    // 标题栏右侧文字和图标
+    .g-right{
+        position: absolute;
+        top: 0;
+        right: 30px;
+        min-width: 58px;
+        height: 88px;
+        line-height: 88px;
+        font-size: 30px;
+        text-align: right;
+        color: #fff;
+        .svg-icon{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            margin-top: -16px;
+            fill: #fff;
+        }
+    }
+    
+    
+//  添加代理
+    .add-parttime{
+        position: absolute;
+        display: block;
+        width: 104px;
+        height: 88px;
+        line-height: 88px;
+        color: #fff !important;
+        font-size:30px;
+        font-weight: 100;
+        top: 0px;
+        right: 0px;
+        img{
+            margin: 0 auto 0 auto;
+            vertical-align: middle; 
+            width: 64px;
+            height: 64px;
+            
+        }
+    }
+}
+
+.ios-header{
+    padding-top: 40px;
+    .header{
+        padding-top: 40px;
+        .g-back, .g-right{
+            top: 40px;
+        }
+    }
+}
+
+.android-header{
+    padding-top: 50px;
+    .header{
+        padding-top: 50px;
+        .g-back, .g-right{
+            top: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .header-container{
+        height: 132px;
+    }
+    .header{
+        height: 132px;
+        .g-back{
+            width: 132px;
+            height: 132px;
+            &:before{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 60%; 
+                width: 24px;
+                height: 24px;
+                margin-top: -17px;
+                margin-left: -17px;
+                border-style: solid;
+                border-color: #fff;
+                border-width: 0 0 8px 8px;
+                /* 旋转变换 */
+                .tr(45deg);
+            }
+        }
+        h1{
+            height: 132px;
+            line-height: 132px;
+            font-size: 48px;
+        }
+        .g-right{
+            height: 132px;
+            line-height: 132px;
+            font-size: 45px;
+            .svg-icon{
+                width: 48px;
+                height: 48px;
+                margin-top: -24px;
+            }
+        }
+        //  添加代理
+        .add-parttime{
+            position: absolute;
+            display: block;
+            width: 154px;
+            height: 132px;
+            line-height: 132px;
+            color: #fff !important;
+            font-size:45px;
+            top: 0px;
+            right: 0px;
+            img{
+                margin: 0 auto 0 auto;
+                vertical-align: middle;
+                width: 90px;
+                height: 90px;
+                
+            }
+        }
+    }
+    .ios-header{
+        padding-top: 60px;
+        .header{
+            padding-top: 60px;
+            .g-back, .g-right{
+                top: 60px;
+            }
+        }
+    }
+
+    .android-header{
+        padding-top: 75px;
+        .header{
+            padding-top: 75px;
+            .g-back, .g-right{
+                top: 75px;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@import "../mod/fn.less";
+.payform {
+    margin-top: 16px/@p;
+    padding: 34px/@p 0 0 30px/@p;
+    background: #fff;
+    border-top: 1px #e8eaee solid;
+    color: #566272;
+    .pay-title {
+        font-size: 30px/@p;
+        margin-bottom: 26px/@p;
+    }
+    .paywrap {
+        border-bottom: 1px #f4f4f4 solid;
+        .db();
+        .yen {
+            font-size: 48px/@p;
+            line-height: 48px/@p;
+            height: 48px/@p;
+            margin-top: 24px/@p;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        input {
+            display: block;
+            .fx1();
+            font-size: 72px/@p;
+            
+        }
+    }
+    .pay-tips {
+        height: 80px/@p;
+        line-height: 60px/@p;
+        font-size: 24px/@p;
+        color: #B5BBC4;
+    }
+}

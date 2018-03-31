@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>房源价格管理</title>
+<!-- libs start -->
+<!--#include virtual="/admin/layout/libs.html"-->
+<!-- libs end -->
+<style type="text/css">
+	.label input{border: 0;background: transparent;color: #fff;outline: none;}
+	input::-webkit-input-placeholder{
+            color:#fff;
+        }
+    .table p{margin-bottom: 5px;}
+</style>
+</head>
+<body>
+    <!-- header start-->
+    <!--#include virtual="/admin/layout/topNav.html"-->
+    <!-- header end-->
+    
+    <article class="content">
+        <!-- 左边菜单  开始-->
+        <!--#include virtual="/admin/layout/houseMerchantManagement_sidenav.html"-->
+        <!-- 左边菜单  结束-->
+        
+        <main class="main-body">
+            <div class="top-location">
+                当前位置：房源与商户管理<span class="fn-st">&gt;</span>房源价格管理
+            </div>
+            <div class="clearfix">
+            	<div class="">
+	                <form action="" class="form-horizontal">
+	                    <div class="form-group">
+	                        <div id="cityWidget" class="col-sm-1 pr0">
+	                        </div>
+	                        <div id="districtWidget" class="col-sm-1 pr0">
+	                        </div>
+	                        <div id="merchantWidget" class="col-sm-1 pr0">
+	                        </div>
+	                        <div class="col-sm-1 pr0">
+	                            <input id="name" class="form-control" placeholder="房源名称检索">
+	                        </div>
+	                        <div class="col-sm-1">
+	                            <a id="searchBtn" class="btn btn-success btn-block">搜索</a>
+	                        </div>
+	                        <div class="col-sm-5 text-right">
+	                            <span id="beOverdueFilter" class="label label-danger">房源价格已到期<span id="beOverdue"></span></span>
+	                            <span id="willBeOverdueFilter" class="label label-danger">房源价格即将到期<span id="willBeOverdue"></span></span>
+	                        </div>
+	
+	                    </div>
+	
+	                    <div class="col-sm-12 min-wrap">
+	                        <div id="tableList" class="col-sm-3 wrap-l">
+	                            <!--  
+	                            <ul>
+	                                <li>
+	                                    <p class="t-t">棕榈滩2区5房7床度假别墅</p>
+	                                    <p class="t-d">十里银滩-町格微旅</p>
+	                                </li>
+	                                <li class="on">
+	                                    <p class="t-t">棕榈滩2区5房7床度假别墅</p>
+	                                    <p class="t-d">十里银滩-町格微旅</p>
+	                                </li>
+	                                <li>
+	                                    <p class="t-t">棕榈滩2区5房7床度假别墅</p>
+	                                    <p class="t-d">十里银滩-町格微旅</p>
+	                                </li>
+	                                <li>
+	                                    <p class="t-t">棕榈滩2区5房7床度假别墅</p>
+	                                    <p class="t-d">十里银滩-町格微旅</p>
+	                                </li>
+	                            </ul>
+	                            -->
+	                        </div>
+	                        <div class="col-sm-9 wrap-r">
+	                            <div class="col-sm-12">
+	                                <form action="" class="form-horizontal">
+	                                    <div class="form-group">
+	                                        <div class="col-sm-2 pr0">
+	                                            <a id="previousYear" class="arraw" href="javascript:void(0);"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	                                            <span id="year">2017年</span>
+	                                            <a id="nextYear" class="arraw" href="javascript:void(0);"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	                                        </div>
+	                                        <div class="col-sm-2 pr0">
+	                                            <a id="previousMonth" class="arraw" href="javascript:void(0);"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	                                            <span id="month">7月</span>
+	                                            <a id="nextMonth" class="arraw" href="javascript:void(0);"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	                                        </div>
+	                                        <label class="mr10"><input id="priceType_collection" class="ml10" type="radio" name="priceType" value="collection" checked="true">&nbsp;代收款</label>
+	                                        <label class=""><input id="priceType_commission" class="ml10" type="radio" name="priceType" value="commission">&nbsp;佣金<input id="commissionRate" class="hide" style="width:80px;" type="text"></label>
+	                                    </div>
+	                                </form>
+	                            </div>
+	
+	                            <div class="col-sm-12">
+	                                <table class="table">
+	                                    <tr>
+	                                        <th>星期一</th>
+	                                        <th>星期二</th>
+	                                        <th>星期三</th>
+	                                        <th>星期四</th>
+	                                        <th>星期五</th>
+	                                        <th>星期六</th>
+	                                        <th>星期日</th>
+	                                    </tr>
+	                                    <tr>
+	                                        <td>
+	                                            <p><span class="label label-danger"><input id="cell1_dsk" style="width:60px;" type="text" placeholder="代收款"></span></p>
+	                                            <p><span class="label label-success"><input id="cell1_ddj" style="width:60px;" type="text" placeholder="订单价"></span></p>
+	                                        </td>
+	                                        <td>
+	                                            <p><span class="label label-danger"><input id="cell2_dsk" style="width:60px;" type="text" placeholder="代收款"></span></p>
+	                                            <p><span class="label label-success"><input id="cell2_ddj" style="width:60px;" type="text" placeholder="订单价"></span></p>
+	                                        </td>
+	                                        <td>
+	                                            <p><span class="label label-danger"><input id="cell3_dsk" style="width:60px;" type="text" placeholder="代收款"></span></p>
+	                                            <p><span class="label label-success"><input id="cell3_ddj" style="width:60px;" type="text" placeholder="订单价"></span></p>
+	                                        </td>
+	                                        <td>
+	                                            <p><span class="label label-danger"><input id="cell4_dsk" style="width:60px;" type="text" placeholder="代收款"></span></p>
+	                                            <p><span class="label label-success"><input id="cell4_ddj" style="width:60px;" type="text" placeholder="订单价"></span></p>
+	                                        </td>
+	                                        <td>
+	                                            <p><span class="label label-danger"><input id="cell5_dsk" style="width:60px;" type="text" placeholder="代收款"></span></p>
+	                                            <p><span class="label label-success"><input id="cell5_ddj" style="width:60px;" type="text" placeholder="订单价"></span></p>
+	                                        </td>
+	                                        <td>
+	                                            <p><span class="label label-danger"><input id="cell6_dsk" style="width:60px;" type="text" placeholder="代收款"></span></p>
+	                                            <p><span class="label label-success"><input id="cell6_ddj" style="width:60px;" type="text" placeholder="订单价"></span></p>
+	                                        </td>
+	                                        <td>
+	                                            <p><span class="label label-danger"><input id="cell7_dsk" style="width:60px;" type="text" placeholder="代收款"></span></p>
+	                                            <p><span class="label label-success"><input id="cell7_ddj" style="width:60px;" type="text" placeholder="订单价"></span></p>
+	                                        </td>
+	                                    </tr>
+	                                    
+	                                    <tr>
+	                                        <td class="date" id="id0">
+	                                        </td>
+	                                        <td class="date" id="id1">
+	                                        </td>
+	                                        <td class="date" id="id2">
+	                                        </td>
+	                                        <td class="date" id="id3">
+	                                        </td>
+	                                        <td class="date" id="id4">
+	                                        </td>
+	                                        <td class="date" id="id5">
+	                                        </td>
+	                                        <td class="date" id="id6">
+	                                        </td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td class="date" id="id7">
+	                                        </td>
+	                                        <td class="date" id="id8">
+	                                        </td>
+	                                        <td class="date" id="id9">
+	                                        </td>
+	                                        <td class="date" id="id10">
+	                                        </td>
+	                                        <td class="date" id="id11">
+	                                        </td>
+	                                        <td class="date" id="id12">
+	                                        </td>
+	                                        <td class="date" id="id13">
+	                                        </td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td class="date" id="id14">
+	                                        </td>
+	                                        <td class="date" id="id15">
+	                                        </td>
+	                                        <td class="date" id="id16">
+	                                        </td>
+	                                        <td class="date" id="id17">
+	                                        </td>
+	                                        <td class="date" id="id18">
+	                                        </td>
+	                                        <td class="date" id="id19">
+	                                        </td>
+	                                        <td class="date" id="id20">
+	                                        </td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td class="date" id="id21">
+	                                        </td>
+	                                        <td class="date" id="id22">
+	                                        </td>
+	                                        <td class="date" id="id23">
+	                                        </td>
+	                                        <td class="date" id="id24">
+	                                        </td>
+	                                        <td class="date" id="id25">
+	                                        </td>
+	                                        <td class="date" id="id26">
+	                                        </td>
+	                                        <td class="date" id="id27">
+	                                        </td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td class="date" id="id28">
+	                                        </td>
+	                                        <td class="date" id="id29">
+	                                        </td>
+	                                        <td class="date" id="id30">
+	                                        </td>
+	                                        <td class="date" id="id31">
+	                                        </td>
+	                                        <td class="date" id="id32">
+	                                        </td>
+	                                        <td class="date" id="id33">
+	                                        </td>
+	                                        <td class="date" id="id34">
+	                                        </td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td class="date" id="id35">
+	                                        </td>
+	                                        <td class="date" id="id36">
+	                                        </td>
+	                                        <td class="date" id="id37">
+	                                        </td>
+	                                        <td class="date" id="id38">
+	                                        </td>
+	                                        <td class="date" id="id39">
+	                                        </td>
+	                                        <td class="date" id="id40">
+	                                        </td>
+	                                        <td class="date" id="id41">
+	                                        </td>
+	                                    </tr>
+	                                </table>
+	                            </div>
+	                        </div>
+	                    </div>
+	
+	                    <table class="table table-hover">
+	                        
+	                        <tbody>
+	                            <tr>
+	                                
+	                            </tr>
+	                            
+	                            
+	
+	
+	                        </tbody>
+	                    </table>
+	
+	
+	                </form>
+	            </div>
+	            
+    		</div>
+ 		</main>
+	</article>
+
+<script type="text/javascript" src="/admin/res/js/houseMerchantManager/housePrice.js"></script>
+</body>
+</html>

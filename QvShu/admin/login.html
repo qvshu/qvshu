@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>趣墅管理后台</title>
+        <link rel="stylesheet" href="res/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="res/css/global.css">
+        <link rel="stylesheet" href="res/css/style.css">
+        <style type="text/css">
+            body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+dl dt {
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+}
+a:active {
+  color: red;
+}
+* :not(input,textarea) {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+body {
+  background-color: #f7fafc;
+  min-height: 900px;
+
+}
+.hide, .fn-hide {
+    display: none!important;
+}
+.login {
+  margin: auto;
+  width: 320px;
+  padding-top: 80px;
+}
+.login .title {
+  font-size: 70px;
+  font-weight: normal;
+  color: #5d9b70;
+  text-align: center;
+}
+.login .subtitle {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  color: #555;
+}
+.login .login-form {
+  border: 1px solid #5d9b70;
+  background: #fff;
+  margin-top: 30px;
+  border-radius: 4px;
+  padding: 1px 0;
+}
+.login .login-form .input-text {
+  position: relative;
+  height: 47px;
+}
+.login .login-form .input-text input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 47px;
+  border: 0;
+  outline: none;
+  padding-left: 10px;
+  font-size: 14px;
+  font-family: "";
+  color: #555;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.login .login-form .input-text:nth-child(n+2):before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: #d5d5d5;
+}
+.login .login-form .input-text .captcha-input {
+  width: 205px;
+}
+.login .login-form .input-text .captcha {
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+.login .btn.btn-disabled{
+  
+  color:hsla(0,0%,100%,.6) !important;
+}
+.login .btn.btn-disabled:hover{
+  background: #0f88eb;
+   color:hsla(0,0%,100%,.6) !important;
+}
+.login .btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: 41px;
+  background: #5d9b70;
+  border: 0;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-family: "";
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.login .btn:hover {
+  background: #92d2a7;
+}
+.login .btn-primary {
+  color: #5d9b70;
+  border: 1px solid #5d9b70;
+  background: #fff;
+}
+.login .btn-primary:hover {
+  background: none;
+}
+.login .info {
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.login .info a {
+  color: #5ca5e8;
+  font-size: 14px;
+}
+.login .info a:hover {
+  text-decoration: underline;
+}
+.qr {
+  margin-top: 20px;
+  display: none;
+  text-align: center;
+}
+.qr img {
+  max-width: 100%;
+  height: auto;
+}
+.qr .return {
+  margin-top: 15px;
+  text-align: center;
+}
+.qr .return a {
+  color: #0f88eb;
+  font-size: 14px;
+}
+.qr .return a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 720px) and (min-width: 320px) {
+  .login {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+    padding-top: 30px;
+  }
+}
+
+        </style>
+    </head>
+    <body>
+        <!-- 头部 -->
+        <header>
+            <div class="head-top clearfix">
+                <div class="pull-left">
+                    <a href="#" class="head-logo"></a>
+                    <span class="logo-text">管理系统</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="login">
+    <h1 class="title">趣墅</h1>
+    <p class="subtitle">管理系统</p>
+    <form role="form" method="post" id="form_login" onsubmit="return false;">
+        <div class="login-form">
+            <div class="input-text">
+                <input type="text" class="form-control" id="account" autofocus="autofocus" autocomplete="off" autocapitalize="off" autocorrect="off" required="required" data-empty="请输入账号" data-error="请输入账号" placeholder="账号" title="请输入账号">
+            </div>
+            <div class="input-text">
+                <input type="password" class="form-control" id="password" required="required" placeholder="密码" data-empty="请输入登录密码" data-error="请输入登录密码" title="请输入登录密码">
+            </div>
+        </div>
+        <div id="errorMsg" class="info">
+        </div>
+        <div class="info">
+            <a href="javascript:;" id="scanImg">忘记密码</a>
+        </div>
+                <button id="loginBtn" class="btn" id="js_btn_login" data-loading-text="登录中...">登 录</button>
+        <input type="hidden" name="action" value="user_login">
+    </form>
+        <!-- 二维码 -->
+    <div class="qr" id="scanImgTarget">
+        <img src="" data-origin="/user/qrcode?token=17f18de02fc1eb2d8c36746ae754d681" width="280" height="280" alt="扫描登录" style="opacity: 1;">
+        <div class="return">
+            <a href="javascript:;" id="backLoginForm">密码登录</a>
+        </div>
+    </div>
+    </div>
+    
+    <script src="res/js/jquery-2.1.1.min.js"></script>
+    <script src="res/js/common.js"></script>
+    <script src="res/js/login.js"></script>
+    </body>
+</html>

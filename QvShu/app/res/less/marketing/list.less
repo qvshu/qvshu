@@ -1,0 +1,110 @@
+@charset "utf-8";
+@import "../mod/fn.less";
+@import "./remark.less";
+
+.total{
+    height: 56px/@p;
+    line-height: 56px/@p;
+    font-size: 24px/@p;
+    text-align: center;
+    color: #d6d6d6;
+}
+
+.order-list{
+    padding-bottom: 0;
+    margin-bottom: 16px/@p;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+    li{
+        .status{
+            .fx1();
+            text-align: right;
+            color: @primary;
+        }
+        .tel{
+            color: @text-dark;
+        }
+        .remark{
+            position: relative;
+            top: -2px/@p;
+            padding: 2px/@p 20px/@p;
+            margin-right: 16px/@p;
+            border-radius: 4px/@p;
+            color: #fff;
+            background-color: @primary;
+            opacity: .4;
+        }
+        em{
+            color: @text-light;
+            .ellipsis();
+            max-width: 76%;
+        }
+    }
+    .operate{
+        padding-top: 32px/@p;
+        padding-right: 0;
+        justify-content: flex-end;
+        a{
+            display: block;
+            box-sizing: border-box;
+            width: 128px/@p;
+            height: 96px/@p;
+            padding-top: 24px/@p;
+            text-align: center;
+        }
+        .svg-icon{
+            display: inline-block;
+            width: 32px/@p;
+            height: 32px/@p;
+            margin: 0;
+            fill: @blue;
+        }
+        .icon-note{
+            width: 30px/@p;
+            height: 30px/@p;
+        }
+        .icon-wechat{
+            width: 36px/@p;
+            height: 36px/@p;
+        }
+    }
+}
+
+.type-box{
+    padding: 40px/@p 0 48px/@p;
+    .tip-title{
+        margin-bottom: 44px/@p;
+    }
+    .remark-list{
+        border-top: 0;
+        dd{
+            padding-left: 60px/@p;
+            border-top: 1px solid @border-outer;
+            .svg-icon{
+                margin-right: 0;
+            }
+            .select-text{
+                padding-left: 72px/@p;
+                border: 0;
+                text-align: left;
+            }
+        }
+    }
+    .btn-wrap{
+        .db();
+        .btn{
+            display: block;
+            height: 88px/@p;
+            line-height: 88px/@p;
+            margin: 48px/@p 52px/@p 0;
+            text-align: center;
+            border-radius: 8px/@p;
+            font-size: 28px/@p;
+            font-weight: 700;
+            color: #fff;
+            background-color: @primary;
+            .fx1();
+        }
+    }
+}

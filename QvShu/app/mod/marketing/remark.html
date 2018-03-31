@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- 强制让文档宽度和设备宽度保持1:1，初始缩放比例和最大缩放比例都是1.0，不允许用户缩放页面 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- 开启对web app程序的支持 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 在web app应用下设置 屏幕顶部状态条 的颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- 设备浏览网页时对数字不启用电话功能 -->
+    <meta name="format-detection" content="telephone=no">
+    <title>备注</title>
+    <link rel="stylesheet" href="../../res/css/global.css">
+    <link rel="stylesheet" href="../../res/css/marketing/remark.css">
+    <script src="/res/libs/flexible/flexible.js"></script>
+<body>
+    <!-- 头部 start -->
+    <div class="header-container">
+        <div class="header">
+            <a href="javascript:;" class="g-back"><!-- 返回按钮 --></a>
+            <h1>备注</h1>
+        </div>
+    </div>
+    <!-- 头部 end -->
+
+    <dl class="remark-list">
+        <dt>用户备忘</dt>
+        <!-- 选中则在dd标签上添加类名"selected" -->
+        <dd>
+            <svg class="svg-icon icon-select">
+                <use xlink:href="../../res/svg/global.svg#icon-select"><!-- 选中图标 --></use>
+            </svg>
+            <p class="select-text">客户电话暂时无人接听</p>
+        </dd>
+        <dd>
+            <svg class="svg-icon icon-select">
+                <use xlink:href="../../res/svg/global.svg#icon-select"><!-- 选中图标 --></use>
+            </svg>
+            <p class="select-text">客户暂时不方便接听，<em class="select-time">选择时间<input type="datetime-local"></em>再联系用户</p>
+        </dd>
+        <dd>
+            <svg class="svg-icon icon-select">
+                <use xlink:href="../../res/svg/global.svg#icon-select"><!-- 选中图标 --></use>
+            </svg>
+            <p class="select-text">客户暂时不方便接听，<em class="select-time">12月21日17:30<input type="datetime-local"></em>再联系用户</p>
+        </dd>
+        <dd>
+            <svg class="svg-icon icon-select">
+                <use xlink:href="../../res/svg/global.svg#icon-select"><!-- 选中图标 --></use>
+            </svg>
+            <p class="select-text">客户暂时不想消费</p>
+        </dd>
+        <dd class="other selected">
+            <svg class="svg-icon icon-select">
+                <use xlink:href="../../res/svg/global.svg#icon-select"><!-- 选中图标 --></use>
+            </svg>
+            其他<textarea></textarea>
+        </dd>
+    </dl>
+
+    <div class="btn-box">
+        <a href="javascript:;" class="btn on">添加</a>
+    </div>
+
+</body>
+</html>
